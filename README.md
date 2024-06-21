@@ -1,1 +1,1 @@
-# FurnitAR
+# DecoAR
