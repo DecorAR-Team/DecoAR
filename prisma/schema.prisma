@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Category {
+  id              String          @id @default(auto()) @map("_id") @db.ObjectId
+  name            String
+  subcategories   Subcategory[]   @relation("CategorySubcategory")
+
+}
+
+model Subcategory {
+  id                  String    @id @default(auto()) @map("_id") @db.ObjectId
+  category_id         String    @db.ObjectId 
+  name                String
+  subcategory_ikea_id String
+  category            Category  @relation(fields: [category_id], references: [id], name: "CategorySubcategory")
+}
