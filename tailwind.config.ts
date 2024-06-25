@@ -18,6 +18,7 @@ const config: Config = {
         'custom-button': '#1469C2',
         'custom-input': '#E8EDF2',
         'custom-input-text': '#4F7396',
+        'custom-logout' : '#F3F2F0'
       },
     },
   },
