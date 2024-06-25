@@ -1,40 +1,88 @@
 const categories = [
-  { name: 'Kitchen' },
-  { name: 'Living Room' },
-  { name: 'Bathroom' },
-  { name: 'Bedroom' },
-  { name: 'Outdoor' },
-  { name: 'Office' },
-  { name: 'Kids & Baby' },
-  { name: 'Dining' },
-  { name: 'Decor' },
-  { name: 'Storage & Organization' },
+  {
+    _id: {
+      $oid: '66798544ee251e9881be4060',
+    },
+    name: 'Kitchen',
+  },
+  {
+    _id: {
+      $oid: '66798198ee251e9881be4047',
+    },
+    name: 'Living Room',
+  },
+  {
+    _id: {
+      $oid: '66798198ee251e9881be4048',
+    },
+    name: 'Bathroom',
+  },
+  {
+    _id: {
+      $oid: '66798198ee251e9881be4049',
+    },
+    name: 'Bedroom',
+  },
+  {
+    _id: {
+      $oid: '66798198ee251e9881be404a',
+    },
+    name: 'Outdoor',
+  },
+  {
+    _id: {
+      $oid: '66798198ee251e9881be404b',
+    },
+    name: 'Office',
+  },
+  {
+    _id: {
+      $oid: '66798198ee251e9881be404c',
+    },
+    name: 'Kids & Baby',
+  },
+  {
+    _id: {
+      $oid: '66798198ee251e9881be404e',
+    },
+    name: 'Decor',
+  },
+  {
+    _id: {
+      $oid: '66798198ee251e9881be404f',
+    },
+    name: 'Storage & Organization',
+  },
 ];
 
 const subcategories = [
   {
     _id: {
-      $oid: '667991ffee251e9881be40c3',
+      $oid: '667aac74547fb73491fc8ce4',
     },
     subcategory_ikea_id: '10475',
     category_id: {
       $oid: '66798198ee251e9881be4047',
     },
     name: 'TV & media furniture',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/besta-tv-bench-with-doors-black-brown-hedeviken-stubbarp-oak-veneer__0999553_pe823672_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40c4',
+      $oid: '667aac74547fb73491fc8ce5',
     },
     subcategory_ikea_id: '10659',
     category_id: {
       $oid: '66798198ee251e9881be4047',
     },
     name: 'Decorative pillows & cushion covers',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/sanela-cushion-cover-dark-blue__0888821_pe623735_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40c5',
+      $oid: '667aac74547fb73491fc8ce6',
     },
     subcategory_ikea_id: '10653',
     category_id: {
@@ -44,47 +92,55 @@ const subcategories = [
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40c6',
+      $oid: '667aac74547fb73491fc8ce7',
     },
     subcategory_ikea_id: '30454',
     category_id: {
       $oid: '66798198ee251e9881be4047',
     },
     name: 'Living room & entryway tables',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/besta-storage-combination-with-doors-white-stained-oak-effect-lappviken-stubbarp-white-stained-oak-effect__0427715_pe583066_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40c7',
+      $oid: '667aac74547fb73491fc8ce8',
     },
     subcategory_ikea_id: 'fu003',
     category_id: {
       $oid: '66798198ee251e9881be4047',
     },
     name: 'Sofas & sectionals',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/kivik-sofa-with-chaise-tresund-light-beige__1124121_pe875025_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40c8',
+      $oid: '667aac74547fb73491fc8ce9',
     },
     subcategory_ikea_id: '10555',
     category_id: {
       $oid: '66798198ee251e9881be4048',
     },
     name: 'Bathroom accessories',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/skoghall-hook-self-adhesive-black__1278772_pe944164_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40c9',
+      $oid: '667aac74547fb73491fc8cea',
     },
     subcategory_ikea_id: '10736',
     category_id: {
       $oid: '66798198ee251e9881be4048',
     },
     name: 'Bathroom lighting',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/silverglans-led-bathroom-lighting-strip-dimmable-anthracite__0969496_pe810801_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40ca',
+      $oid: '667aac74547fb73491fc8ceb',
     },
     subcategory_ikea_id: '20719',
     category_id: {
@@ -94,7 +150,7 @@ const subcategories = [
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40cb',
+      $oid: '667aac74547fb73491fc8cec',
     },
     subcategory_ikea_id: '20723',
     category_id: {
@@ -104,77 +160,91 @@ const subcategories = [
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40cc',
+      $oid: '667aac74547fb73491fc8ced',
     },
     subcategory_ikea_id: 'ba002',
     category_id: {
       $oid: '66798198ee251e9881be4048',
     },
     name: 'Bathroom storage',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/finningen-shower-shelf-black__0981045_pe815248_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40cd',
+      $oid: '667aac74547fb73491fc8cee',
     },
     subcategory_ikea_id: '19053',
     category_id: {
       $oid: '66798198ee251e9881be4049',
     },
     name: 'Armoires & wardrobes',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/brimnes-wardrobe-with-3-doors-white__1268954_pe928893_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40ce',
+      $oid: '667aac74547fb73491fc8cef',
     },
     subcategory_ikea_id: '20656',
     category_id: {
       $oid: '66798198ee251e9881be4049',
     },
     name: 'Nightstands',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/brimnes-nightstand-black__1326549_pe944271_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40cf',
+      $oid: '667aac74547fb73491fc8cf0',
     },
     subcategory_ikea_id: '700513',
     category_id: {
       $oid: '66798198ee251e9881be4049',
     },
     name: 'Beds with mattresses included',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/malm-bed-frame-with-mattress-black-brown-vesteroey-medium-firm__1101514_pe866693_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40d0',
+      $oid: '667aac74547fb73491fc8cf1',
     },
     subcategory_ikea_id: 'tl004',
     category_id: {
       $oid: '66798198ee251e9881be4049',
     },
     name: 'Bedding',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/bergpalm-duvet-cover-and-pillowcase-s-green-stripe__0883243_pe692782_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40d1',
+      $oid: '667aac74547fb73491fc8cf2',
     },
     subcategory_ikea_id: 'st004',
     category_id: {
       $oid: '66798198ee251e9881be4049',
     },
     name: 'Dressers & storage drawers',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/malm-2-drawer-chest-white__1154585_pe886214_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40d2',
+      $oid: '667aac74547fb73491fc8cf3',
     },
     subcategory_ikea_id: '17887',
     category_id: {
       $oid: '66798198ee251e9881be404a',
     },
     name: 'Outdoor umbrellas, canopies, gazebos & more',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/seglaroe-umbrella-hanging-beige-tilting__1216882_pe912540_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40d3',
+      $oid: '667aac74547fb73491fc8cf4',
     },
     subcategory_ikea_id: '17893',
     category_id: {
@@ -184,17 +254,19 @@ const subcategories = [
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40d4',
+      $oid: '667aac74547fb73491fc8cf5',
     },
     subcategory_ikea_id: '17897',
     category_id: {
       $oid: '66798198ee251e9881be404a',
     },
     name: 'Outdoor lighting',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/solvinden-led-floor-lamp-battery-operated-outdoor__1237050_pe917802_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40d5',
+      $oid: '667aac74547fb73491fc8cf6',
     },
     subcategory_ikea_id: '34204',
     category_id: {
@@ -204,7 +276,7 @@ const subcategories = [
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40d6',
+      $oid: '667aac74547fb73491fc8cf7',
     },
     subcategory_ikea_id: '700349',
     category_id: {
@@ -214,67 +286,79 @@ const subcategories = [
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40d7',
+      $oid: '667aac74547fb73491fc8cf8',
     },
     subcategory_ikea_id: 'fu004',
     category_id: {
       $oid: '66798198ee251e9881be404b',
     },
     name: 'Tables & desks',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/knarrevik-nightstand-bright-yellow__1295983_pe935638_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40d8',
+      $oid: '667aac74547fb73491fc8cf9',
     },
     subcategory_ikea_id: 'fu002',
     category_id: {
       $oid: '66798198ee251e9881be404b',
     },
     name: 'Chairs',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/poaeng-armchair-birch-veneer-knisa-light-beige__0837298_pe666936_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40d9',
+      $oid: '667aac74547fb73491fc8cfa',
     },
     subcategory_ikea_id: '46052',
     category_id: {
       $oid: '66798198ee251e9881be404b',
     },
     name: 'Storage solution systems',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/ivar-shelf-unit-pine__1288311_pe934155_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40da',
+      $oid: '667aac74547fb73491fc8cfb',
     },
     subcategory_ikea_id: '10574',
     category_id: {
       $oid: '66798198ee251e9881be404b',
     },
     name: 'Bulletin boards, peg boards, pin boards & more',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/skadis-pegboard-white__1165860_pe890993_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40db',
+      $oid: '667aac74547fb73491fc8cfc',
     },
     subcategory_ikea_id: '16195',
     category_id: {
       $oid: '66798198ee251e9881be404b',
     },
     name: 'Cable management & cord organizers',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/signum-cable-management-horizontal-silver-color__0256614_pe400752_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40dc',
+      $oid: '667aac74547fb73491fc8cfd',
     },
     subcategory_ikea_id: '18690',
     category_id: {
       $oid: '66798198ee251e9881be404c',
     },
     name: 'Baby textiles',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/droemslott-baby-blanket-puppy-pattern-dot-pattern-multicolor__1056642_pe848442_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40dd',
+      $oid: '667aac74547fb73491fc8cfe',
     },
     subcategory_ikea_id: '18767',
     category_id: {
@@ -284,17 +368,19 @@ const subcategories = [
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40de',
+      $oid: '667aac74547fb73491fc8cff',
     },
     subcategory_ikea_id: '45780',
     category_id: {
       $oid: '66798198ee251e9881be404c',
     },
     name: 'Nursery furniture',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-white-white__0876101_pe649630_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40df',
+      $oid: '667aac74547fb73491fc8d00',
     },
     subcategory_ikea_id: '18706',
     category_id: {
@@ -304,47 +390,55 @@ const subcategories = [
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40e0',
+      $oid: '667aac74547fb73491fc8d01',
     },
     subcategory_ikea_id: '18714',
     category_id: {
       $oid: '66798198ee251e9881be404c',
     },
     name: 'Kids tableware & dinnerware',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/kalas-tumbler-mixed-colors__0998032_pe822923_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40e1',
+      $oid: '667aac74547fb73491fc8d02',
     },
     subcategory_ikea_id: '10550',
     category_id: {
       $oid: '66798198ee251e9881be404f',
     },
     name: 'Storage boxes & organization bins',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/tigerfink-storage-with-compartments-turquoise__1092598_pe862931_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40e2',
+      $oid: '667aac74547fb73491fc8d03',
     },
     subcategory_ikea_id: '19059',
     category_id: {
       $oid: '66798198ee251e9881be404f',
     },
     name: 'Underbed storage bags & bins',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/malm-underbed-storage-box-for-high-bed-blue__1330508_pe945707_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40e3',
+      $oid: '667aac74547fb73491fc8d04',
     },
     subcategory_ikea_id: '24255',
     category_id: {
       $oid: '66798198ee251e9881be404f',
     },
     name: 'Kitchen drawer organization',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/stoedja-flatware-tray-white__0260314_pe404031_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40e4',
+      $oid: '667aac74547fb73491fc8d05',
     },
     subcategory_ikea_id: '48925',
     category_id: {
@@ -354,103 +448,123 @@ const subcategories = [
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40e5',
+      $oid: '667aac74547fb73491fc8d06',
     },
     subcategory_ikea_id: '10471',
     category_id: {
       $oid: '66798544ee251e9881be4060',
     },
     name: 'Kitchen islands & carts',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/vesken-cart-white__0832010_pe777549_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40e6',
+      $oid: '667aac74547fb73491fc8d07',
     },
     subcategory_ikea_id: '15934',
     category_id: {
       $oid: '66798544ee251e9881be4060',
     },
     name: 'Knives & cutting boards',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/aptitlig-cutting-board-bamboo__0896405_pe609820_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40e7',
+      $oid: '667aac74547fb73491fc8d08',
     },
     subcategory_ikea_id: '15937',
     category_id: {
       $oid: '66798544ee251e9881be4060',
     },
     name: 'Food storage & organizing',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/ikea-365-food-container-with-lid-large-rectangular-stainless-steel-plastic__1301433_pe937427_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40e8',
+      $oid: '667aac74547fb73491fc8d09',
     },
     subcategory_ikea_id: '15938',
     category_id: {
       $oid: '66798544ee251e9881be4060',
     },
     name: 'Dishwashing accessories',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/staemling-dish-drainer-off-white__1274936_pe930496_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40e9',
+      $oid: '667aac74547fb73491fc8d0a',
     },
     subcategory_ikea_id: '18850',
     category_id: {
       $oid: '66798544ee251e9881be4060',
     },
     name: 'Kitchen linens & textiles',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/mariatheres-childrens-apron-beige__0918057_pe786117_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40ea',
+      $oid: '667aac74547fb73491fc8d0b',
     },
     subcategory_ikea_id: '10757',
     category_id: {
       $oid: '66798198ee251e9881be404e',
     },
     name: 'Wall décor',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/knoppaeng-frame-with-poster-set-of-8-flower-market__1244657_pe921235_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40eb',
+      $oid: '667aac74547fb73491fc8d0c',
     },
     subcategory_ikea_id: '10759',
     category_id: {
       $oid: '66798198ee251e9881be404e',
     },
     name: 'Clocks',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/pluttis-wall-clock-black__1013115_pe829056_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40ec',
+      $oid: '667aac74547fb73491fc8d0d',
     },
     subcategory_ikea_id: '10760',
     category_id: {
       $oid: '66798198ee251e9881be404e',
     },
     name: 'Candle holders & candles',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/finsmak-tealight-holder-clear-glass__0966528_pe809828_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40ed',
+      $oid: '667aac74547fb73491fc8d0e',
     },
     subcategory_ikea_id: '10769',
     category_id: {
       $oid: '66798198ee251e9881be404e',
     },
     name: 'Vases & decorating bowls',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/stilren-vase-white__1091034_pe862271_s5.jpg',
   },
   {
     _id: {
-      $oid: '667991ffee251e9881be40ee',
+      $oid: '667aac74547fb73491fc8d0f',
     },
     subcategory_ikea_id: '24924',
     category_id: {
       $oid: '66798198ee251e9881be404e',
     },
     name: 'Table decor & decorative accessories',
+    imageUrl:
+      'https://www.ikea.com/us/en/images/products/traedgraensen-wall-decoration-set-of-2-ceramic-stones-beige__1168084_pe891772_s5.jpg',
   },
 ];
 
@@ -28478,11 +28592,11 @@ const products = [
   },
 ];
 
-const producIdsByCategory = [
+const producIdsBySubcategory = [
   {
     subcategory_name: 'TV & media furniture',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40c3',
+      $oid: '667aac74547fb73491fc8ce4',
     },
     products: [
       's19566512',
@@ -28500,7 +28614,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Decorative pillows & cushion covers',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40c4',
+      $oid: '667aac74547fb73491fc8ce5',
     },
     products: [
       '60343646',
@@ -28518,7 +28632,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Rugs',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40c5',
+      $oid: '667aac74547fb73491fc8ce6',
     },
     products: [
       '40559166',
@@ -28536,7 +28650,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Living room & entryway tables',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40c6',
+      $oid: '667aac74547fb73491fc8ce7',
     },
     products: [
       's49139722',
@@ -28554,7 +28668,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Sofas & sectionals',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40c7',
+      $oid: '667aac74547fb73491fc8ce8',
     },
     products: [
       's29482847',
@@ -28572,7 +28686,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Bathroom accessories',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40c8',
+      $oid: '667aac74547fb73491fc8ce9',
     },
     products: [
       '60579229',
@@ -28590,7 +28704,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Bathroom lighting',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40c9',
+      $oid: '667aac74547fb73491fc8cea',
     },
     products: [
       '10489820',
@@ -28608,7 +28722,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Bathroom vanities',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40ca',
+      $oid: '667aac74547fb73491fc8ceb',
     },
     products: [
       's39530715',
@@ -28626,7 +28740,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Bathroom sinks',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40cb',
+      $oid: '667aac74547fb73491fc8cec',
     },
     products: [
       's89516905',
@@ -28644,7 +28758,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Bathroom storage',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40cc',
+      $oid: '667aac74547fb73491fc8ced',
     },
     products: [
       '60574905',
@@ -28662,7 +28776,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Armoires & wardrobes',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40cd',
+      $oid: '667aac74547fb73491fc8cee',
     },
     products: [
       '90574800',
@@ -28680,7 +28794,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Nightstands',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40ce',
+      $oid: '667aac74547fb73491fc8cef',
     },
     products: [
       '80214549',
@@ -28698,7 +28812,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Beds with mattresses included',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40cf',
+      $oid: '667aac74547fb73491fc8cf0',
     },
     products: [
       's09544568',
@@ -28716,7 +28830,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Bedding',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40d0',
+      $oid: '667aac74547fb73491fc8cf1',
     },
     products: [
       '10423184',
@@ -28734,7 +28848,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Dressers & storage drawers',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40d1',
+      $oid: '667aac74547fb73491fc8cf2',
     },
     products: [
       '10576191',
@@ -28752,7 +28866,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Outdoor umbrellas, canopies, gazebos & more',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40d2',
+      $oid: '667aac74547fb73491fc8cf3',
     },
     products: [
       '30387868',
@@ -28770,7 +28884,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Outdoor cushions',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40d3',
+      $oid: '667aac74547fb73491fc8cf4',
     },
     products: [
       's59253081',
@@ -28788,7 +28902,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Outdoor lighting',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40d4',
+      $oid: '667aac74547fb73491fc8cf5',
     },
     products: [
       '00570590',
@@ -28806,7 +28920,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Outdoor rugs',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40d5',
+      $oid: '667aac74547fb73491fc8cf6',
     },
     products: [
       '80198295',
@@ -28824,7 +28938,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Outdoor kitchen & accessories',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40d6',
+      $oid: '667aac74547fb73491fc8cf7',
     },
     products: [
       '00553388',
@@ -28842,7 +28956,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Tables & desks',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40d7',
+      $oid: '667aac74547fb73491fc8cf8',
     },
     products: [
       's99431982',
@@ -28860,7 +28974,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Chairs',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40d8',
+      $oid: '667aac74547fb73491fc8cf9',
     },
     products: [
       's59305928',
@@ -28878,7 +28992,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Storage solution systems',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40d9',
+      $oid: '667aac74547fb73491fc8cfa',
     },
     products: [
       '00522330',
@@ -28896,7 +29010,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Bulletin boards, peg boards, pin boards & more',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40da',
+      $oid: '667aac74547fb73491fc8cfb',
     },
     products: [
       '10321618',
@@ -28914,7 +29028,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Cable management & cord organizers',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40db',
+      $oid: '667aac74547fb73491fc8cfc',
     },
     products: [
       '30200253',
@@ -28932,7 +29046,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Baby textiles',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40dc',
+      $oid: '667aac74547fb73491fc8cfd',
     },
     products: [
       '60526373',
@@ -28950,7 +29064,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Kids furniture',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40dd',
+      $oid: '667aac74547fb73491fc8cfe',
     },
     products: [
       '50298418',
@@ -28968,7 +29082,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Nursery furniture',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40de',
+      $oid: '667aac74547fb73491fc8cff',
     },
     products: [
       '50248541',
@@ -28986,7 +29100,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Kids storage & organization',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40df',
+      $oid: '667aac74547fb73491fc8d00',
     },
     products: [
       's69228473',
@@ -29004,7 +29118,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Kids tableware & dinnerware',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40e0',
+      $oid: '667aac74547fb73491fc8d01',
     },
     products: [
       '80461380',
@@ -29021,7 +29135,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Storage boxes & organization bins',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40e1',
+      $oid: '667aac74547fb73491fc8d02',
     },
     products: [
       '60580812',
@@ -29039,7 +29153,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Underbed storage bags & bins',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40e2',
+      $oid: '667aac74547fb73491fc8d03',
     },
     products: [
       '50590166',
@@ -29057,7 +29171,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Kitchen drawer organization',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40e3',
+      $oid: '667aac74547fb73491fc8d04',
     },
     products: [
       '40544194',
@@ -29075,7 +29189,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Laundry cabinets & shelving',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40e4',
+      $oid: '667aac74547fb73491fc8d05',
     },
     products: [
       's69548894',
@@ -29093,7 +29207,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Kitchen islands & carts',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40e5',
+      $oid: '667aac74547fb73491fc8d06',
     },
     products: [
       '40391657',
@@ -29111,7 +29225,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Knives & cutting boards',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40e6',
+      $oid: '667aac74547fb73491fc8d07',
     },
     products: [
       '80233430',
@@ -29129,7 +29243,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Food storage & organizing',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40e7',
+      $oid: '667aac74547fb73491fc8d08',
     },
     products: [
       's29563117',
@@ -29147,7 +29261,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Dishwashing accessories',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40e8',
+      $oid: '667aac74547fb73491fc8d09',
     },
     products: [
       '80461276',
@@ -29165,7 +29279,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Kitchen linens & textiles',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40e9',
+      $oid: '667aac74547fb73491fc8d0a',
     },
     products: [
       '20476346',
@@ -29183,7 +29297,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Wall décor',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40ea',
+      $oid: '667aac74547fb73491fc8d0b',
     },
     products: [
       '00570482',
@@ -29201,7 +29315,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Clocks',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40eb',
+      $oid: '667aac74547fb73491fc8d0c',
     },
     products: [
       '10540847',
@@ -29219,7 +29333,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Candle holders & candles',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40ec',
+      $oid: '667aac74547fb73491fc8d0d',
     },
     products: [
       '00470982',
@@ -29237,7 +29351,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Vases & decorating bowls',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40ed',
+      $oid: '667aac74547fb73491fc8d0e',
     },
     products: [
       '10442045',
@@ -29255,7 +29369,7 @@ const producIdsByCategory = [
   {
     subcategory_name: 'Table decor & decorative accessories',
     subcategory_id: {
-      $oid: '667991ffee251e9881be40ee',
+      $oid: '667aac74547fb73491fc8d0f',
     },
     products: [
       '50537664',
@@ -29325,4 +29439,10 @@ const productsWith3dUrls = [
   },
 ];
 
-module.exports = { categories, subcategories, products, producIdsByCategory };
+module.exports = {
+  products,
+  categories,
+  subcategories,
+  producIdsBySubcategory,
+  productsWith3dUrls,
+};

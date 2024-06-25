@@ -7,7 +7,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be4047"
     },
-    "name": "TV & media furniture"
+    "name": "TV & media furniture",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/besta-tv-bench-with-doors-black-brown-hedeviken-stubbarp-oak-veneer__0999553_pe823672_s5.jpg"
   },
   {
     "_id": {
@@ -17,7 +18,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be4047"
     },
-    "name": "Decorative pillows & cushion covers"
+    "name": "Decorative pillows & cushion covers",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/sanela-cushion-cover-dark-blue__0888821_pe623735_s5.jpg"
   },
   {
     "_id": {
@@ -37,7 +39,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be4047"
     },
-    "name": "Living room & entryway tables"
+    "name": "Living room & entryway tables",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/besta-storage-combination-with-doors-white-stained-oak-effect-lappviken-stubbarp-white-stained-oak-effect__0427715_pe583066_s5.jpg"
   },
   {
     "_id": {
@@ -47,7 +50,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be4047"
     },
-    "name": "Sofas & sectionals"
+    "name": "Sofas & sectionals",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/kivik-sofa-with-chaise-tresund-light-beige__1124121_pe875025_s5.jpg"
   },
   {
     "_id": {
@@ -57,7 +61,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be4048"
     },
-    "name": "Bathroom accessories"
+    "name": "Bathroom accessories",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/skoghall-hook-self-adhesive-black__1278772_pe944164_s5.jpg"
   },
   {
     "_id": {
@@ -67,7 +72,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be4048"
     },
-    "name": "Bathroom lighting"
+    "name": "Bathroom lighting",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/silverglans-led-bathroom-lighting-strip-dimmable-anthracite__0969496_pe810801_s5.jpg"
   },
   {
     "_id": {
@@ -97,7 +103,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be4048"
     },
-    "name": "Bathroom storage"
+    "name": "Bathroom storage",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/finningen-shower-shelf-black__0981045_pe815248_s5.jpg"
   },
   {
     "_id": {
@@ -107,7 +114,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be4049"
     },
-    "name": "Armoires & wardrobes"
+    "name": "Armoires & wardrobes",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/brimnes-wardrobe-with-3-doors-white__1268954_pe928893_s5.jpg"
   },
   {
     "_id": {
@@ -117,7 +125,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be4049"
     },
-    "name": "Nightstands"
+    "name": "Nightstands",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/brimnes-nightstand-black__1326549_pe944271_s5.jpg"
   },
   {
     "_id": {
@@ -127,7 +136,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be4049"
     },
-    "name": "Beds with mattresses included"
+    "name": "Beds with mattresses included",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/malm-bed-frame-with-mattress-black-brown-vesteroey-medium-firm__1101514_pe866693_s5.jpg"
   },
   {
     "_id": {
@@ -137,7 +147,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be4049"
     },
-    "name": "Bedding"
+    "name": "Bedding",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/bergpalm-duvet-cover-and-pillowcase-s-green-stripe__0883243_pe692782_s5.jpg"
   },
   {
     "_id": {
@@ -147,7 +158,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be4049"
     },
-    "name": "Dressers & storage drawers"
+    "name": "Dressers & storage drawers",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/malm-2-drawer-chest-white__1154585_pe886214_s5.jpg"
   },
   {
     "_id": {
@@ -157,7 +169,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be404a"
     },
-    "name": "Outdoor umbrellas, canopies, gazebos & more"
+    "name": "Outdoor umbrellas, canopies, gazebos & more",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/seglaroe-umbrella-hanging-beige-tilting__1216882_pe912540_s5.jpg"
   },
   {
     "_id": {
@@ -177,7 +190,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be404a"
     },
-    "name": "Outdoor lighting"
+    "name": "Outdoor lighting",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/solvinden-led-floor-lamp-battery-operated-outdoor__1237050_pe917802_s5.jpg"
   },
   {
     "_id": {
@@ -207,7 +221,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be404b"
     },
-    "name": "Tables & desks"
+    "name": "Tables & desks",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/knarrevik-nightstand-bright-yellow__1295983_pe935638_s5.jpg"
   },
   {
     "_id": {
@@ -217,7 +232,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be404b"
     },
-    "name": "Chairs"
+    "name": "Chairs",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/poaeng-armchair-birch-veneer-knisa-light-beige__0837298_pe666936_s5.jpg"
   },
   {
     "_id": {
@@ -227,7 +243,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be404b"
     },
-    "name": "Storage solution systems"
+    "name": "Storage solution systems",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/ivar-shelf-unit-pine__1288311_pe934155_s5.jpg"
   },
   {
     "_id": {
@@ -237,7 +254,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be404b"
     },
-    "name": "Bulletin boards, peg boards, pin boards & more"
+    "name": "Bulletin boards, peg boards, pin boards & more",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/skadis-pegboard-white__1165860_pe890993_s5.jpg"
   },
   {
     "_id": {
@@ -247,7 +265,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be404b"
     },
-    "name": "Cable management & cord organizers"
+    "name": "Cable management & cord organizers",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/signum-cable-management-horizontal-silver-color__0256614_pe400752_s5.jpg"
   },
   {
     "_id": {
@@ -257,7 +276,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be404c"
     },
-    "name": "Baby textiles"
+    "name": "Baby textiles",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/droemslott-baby-blanket-puppy-pattern-dot-pattern-multicolor__1056642_pe848442_s5.jpg"
   },
   {
     "_id": {
@@ -277,7 +297,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be404c"
     },
-    "name": "Nursery furniture"
+    "name": "Nursery furniture",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-white-white__0876101_pe649630_s5.jpg"
   },
   {
     "_id": {
@@ -297,7 +318,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be404c"
     },
-    "name": "Kids tableware & dinnerware"
+    "name": "Kids tableware & dinnerware",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/kalas-tumbler-mixed-colors__0998032_pe822923_s5.jpg"
   },
   {
     "_id": {
@@ -307,7 +329,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be404f"
     },
-    "name": "Storage boxes & organization bins"
+    "name": "Storage boxes & organization bins",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/tigerfink-storage-with-compartments-turquoise__1092598_pe862931_s5.jpg"
   },
   {
     "_id": {
@@ -317,7 +340,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be404f"
     },
-    "name": "Underbed storage bags & bins"
+    "name": "Underbed storage bags & bins",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/malm-underbed-storage-box-for-high-bed-blue__1330508_pe945707_s5.jpg"
   },
   {
     "_id": {
@@ -327,7 +351,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be404f"
     },
-    "name": "Kitchen drawer organization"
+    "name": "Kitchen drawer organization",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/stoedja-flatware-tray-white__0260314_pe404031_s5.jpg"
   },
   {
     "_id": {
@@ -347,7 +372,8 @@
     "category_id": {
       "$oid": "66798544ee251e9881be4060"
     },
-    "name": "Kitchen islands & carts"
+    "name": "Kitchen islands & carts",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/vesken-cart-white__0832010_pe777549_s5.jpg"
   },
   {
     "_id": {
@@ -357,7 +383,8 @@
     "category_id": {
       "$oid": "66798544ee251e9881be4060"
     },
-    "name": "Knives & cutting boards"
+    "name": "Knives & cutting boards",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/aptitlig-cutting-board-bamboo__0896405_pe609820_s5.jpg"
   },
   {
     "_id": {
@@ -367,7 +394,8 @@
     "category_id": {
       "$oid": "66798544ee251e9881be4060"
     },
-    "name": "Food storage & organizing"
+    "name": "Food storage & organizing",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/ikea-365-food-container-with-lid-large-rectangular-stainless-steel-plastic__1301433_pe937427_s5.jpg"
   },
   {
     "_id": {
@@ -377,7 +405,8 @@
     "category_id": {
       "$oid": "66798544ee251e9881be4060"
     },
-    "name": "Dishwashing accessories"
+    "name": "Dishwashing accessories",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/staemling-dish-drainer-off-white__1274936_pe930496_s5.jpg"
   },
   {
     "_id": {
@@ -387,7 +416,8 @@
     "category_id": {
       "$oid": "66798544ee251e9881be4060"
     },
-    "name": "Kitchen linens & textiles"
+    "name": "Kitchen linens & textiles",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/mariatheres-childrens-apron-beige__0918057_pe786117_s5.jpg"
   },
   {
     "_id": {
@@ -397,7 +427,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be404e"
     },
-    "name": "Wall décor"
+    "name": "Wall décor",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/knoppaeng-frame-with-poster-set-of-8-flower-market__1244657_pe921235_s5.jpg"
   },
   {
     "_id": {
@@ -407,7 +438,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be404e"
     },
-    "name": "Clocks"
+    "name": "Clocks",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/pluttis-wall-clock-black__1013115_pe829056_s5.jpg"
   },
   {
     "_id": {
@@ -417,7 +449,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be404e"
     },
-    "name": "Candle holders & candles"
+    "name": "Candle holders & candles",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/finsmak-tealight-holder-clear-glass__0966528_pe809828_s5.jpg"
   },
   {
     "_id": {
@@ -427,7 +460,8 @@
     "category_id": {
       "$oid": "66798198ee251e9881be404e"
     },
-    "name": "Vases & decorating bowls"
+    "name": "Vases & decorating bowls",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/stilren-vase-white__1091034_pe862271_s5.jpg"
   },
   {
     "_id": {
@@ -437,6 +471,7 @@
     "category_id": {
       "$oid": "66798198ee251e9881be404e"
     },
-    "name": "Table decor & decorative accessories"
+    "name": "Table decor & decorative accessories",
+    "imageUrl": "https://www.ikea.com/us/en/images/products/traedgraensen-wall-decoration-set-of-2-ceramic-stones-beige__1168084_pe891772_s5.jpg"
   }
 ]

@@ -1,12 +1,12 @@
 import { PrismaClient } from '@prisma/client';
 
-const db = new PrismaClient();
+const prisma = new PrismaClient();
 
 export default async function Home() {
-  // const cats = await db.category.findMany();
-  // console.log(cats);
+  const cats = await prisma.subcategoryWithProductIds.findMany();
+  console.log(cats);
 
-  // const categoryWithSubcategories = await db.category.findUnique({
+  // const categoryWithSubcategories = await prisma.category.findUnique({
   //   where: { id: '66798544ee251e9881be4060' },
   //   include: { subcategories: true },
   // });
