@@ -42,7 +42,7 @@ model Product {
   id                 String                @id @default(auto()) @map("_id") @db.ObjectId
   categoryPath       ProductCategoryPath[]
   contextualImageUrl String?
-  id_                String                @map("id")
+  id_                String                @map("id") @unique
   image              String
   imageAlt           String
   measurement        String
@@ -51,13 +51,15 @@ model Product {
   typeName           String
   url                String
   variants           ProductVariants[]
+  productWith3d      ProductWith3d?       
 }
 
 model ProductWith3d {
   id          String @id @default(auto()) @map("_id") @db.ObjectId
-  productId   String
+  productId   String @unique
   productName String
   url         String
+  product     Product @relation(fields: [productId], references: [id_])
 }
 
 
