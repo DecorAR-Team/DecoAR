@@ -31,28 +31,26 @@ export default function LoginForm() {
   }
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <LoginHeaders Login={loginText} Message={messageText} />
+    <main className="flex flex-col items-center justify-center min-h-screen bg-custom-bg">
+      <LoginHeaders Login={loginText} Message={messageText}/>
 
-      <form  className="w-full max-w-sm bg-white p-8 rounded shadow-md" onSubmit={handlerSubmit}>
-        <div className="mb-4">
-          <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Email</label>
+      <form className="w-full max-w-sm p-8 rounded" onSubmit={handlerSubmit}>
+        <div className="mb-6">
           <input
             type="text"
             placeholder="Email"
             id="email"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="bg-custom-input border rounded-xl w-full py-3.5 px-3 text-custom-input-text placeholder-custom-input-text leading-tight"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="mb-6">
-          <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">Password</label>
           <input
             type="password"
             placeholder="Password"
             id="password"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="bg-custom-input border rounded-xl w-full py-3.5 px-3 text-custom-input-text placeholder-custom-input-text leading-tight"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
@@ -60,17 +58,17 @@ export default function LoginForm() {
         <div className="flex items-center justify-between">
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-custom-button hover:bg-blue-500 text-white font-medium py-3 px-3 rounded-xl focus:outline-none focus:shadow-outline mx-auto w-full"
           >
             Login
           </button>
         </div>
       </form>
 
-      <div className="mt-4">
-        <p className="text-gray-600">Don't have an account?</p>
-        <span className="text-blue-500 hover:underline cursor-pointer">Sign up</span>
+      <div className="mt-4 flex justify-center align-middle">
+        <p className="text-black font-semibold text-lg">Don&apos;t have an account? </p>
+        <span className="text-blue-500 hover:underline cursor-pointer font-semibold pl-1 text-lg"> Sign up</span>
       </div>
     </main>
-  )
+  );
 }
