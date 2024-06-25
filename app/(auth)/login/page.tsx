@@ -1,8 +1,8 @@
 
 
+import LoginForm from '@/app/ui/auth/login/loginForm';
 import { PrismaClient } from '@prisma/client'
 
-import LoginForm from "@/components/LoginForm";
 
 const prisma = new PrismaClient();
 

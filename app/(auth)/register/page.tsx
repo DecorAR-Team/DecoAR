@@ -1,6 +1,7 @@
 'use client';
 
-import LoginHeaders from "@/components/loginHeaders";
+import LoginHeaders from "@/app/ui/loginHeaders";
+
 const { useState } = require("react");
 
 export default function Register() {

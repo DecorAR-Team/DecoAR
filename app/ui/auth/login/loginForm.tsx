@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react'
-import LoginHeaders from './loginHeaders'
+import LoginHeaders from '../../loginHeaders';
 
 
 export default function LoginForm() {
