@@ -1,0 +1,86 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+type ProductCategoryPath {
+  key  String
+  name String
+}
+
+type ProductPrice {
+  currency     String
+  /// Multiple data types found: Float: 72.4%, Int: 27.6% out of 439 sampled entries
+  currentPrice Float
+  discounted   Boolean
+}
+
+type ProductVariants {
+  contextualImageUrl String?
+  id                 String
+  image              String
+  imageAlt           String
+  measurement        String
+  name               String
+  price              ProductVariantsPrice
+  typeName           String
+  url                String
+}
+
+type ProductVariantsPrice {
+  currency     String
+  /// Multiple data types found: Float: 56.8%, Int: 43.2% out of 778 sampled entries
+  currentPrice Float
+  discounted   Boolean
+}
+
+model Product {
+  id                 String                @id @default(auto()) @map("_id") @db.ObjectId
+  categoryPath       ProductCategoryPath[]
+  contextualImageUrl String?
+  id_                String                @map("id") @unique
+  image              String
+  imageAlt           String
+  measurement        String
+  name               String
+  price              ProductPrice
+  typeName           String
+  url                String
+  variants           ProductVariants[]
+  productWith3d      ProductWith3d?       
+}
+
+model ProductWith3d {
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  productId   String @unique
+  productName String
+  url         String
+  product     Product @relation(fields: [productId], references: [id_])
+}
+
+
+model Category {
+  id   String @id @default(auto()) @map("_id") @db.ObjectId
+  name String
+  subcategories   Subcategory[]   @relation("CategorySubcategory")
+}
+
+model Subcategory {
+  id                  String  @id @default(auto()) @map("_id") @db.ObjectId
+  category_id         String  @db.ObjectId
+  imageUrl            String?
+  name                String
+  subcategory_ikea_id String
+  category            Category  @relation(fields: [category_id], references: [id], name: "CategorySubcategory")
+}
+
+model SubcategoryWithProductIds {
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  products         String[]
+  subcategory_id   String   @db.ObjectId
+  subcategory_name String
+}
