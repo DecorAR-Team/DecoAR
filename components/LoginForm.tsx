@@ -9,40 +9,25 @@ export default function LoginForm() {
   const loginText = 'Login';
   const messageText = 'Welcome Back';
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handlerSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    try {
-      const response = await fetch('/api/auth/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
-      });
-      const data = await response.json();
-      console.log(data);
-
-    } catch (e) {
-      console.log(`There has been an error with handlerSubmit: ${e}`);
-    }
+  
+  const loginButton = async (formData : FormData) => {
+    const email = formData.get('email');
+    const password = formData.get('password');
   }
+  
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-custom-bg">
       <LoginHeaders Login={loginText} Message={messageText}/>
 
-      <form className="w-full max-w-sm p-8 rounded" onSubmit={handlerSubmit}>
+      <form action={loginButton} className="w-full max-w-sm p-8 rounded" >
         <div className="mb-6">
           <input
             type="text"
             placeholder="Email"
             id="email"
+            name="email"
             className="bg-custom-input border rounded-xl w-full py-3.5 px-3 text-custom-input-text placeholder-custom-input-text leading-tight"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="mb-6">
@@ -50,9 +35,8 @@ export default function LoginForm() {
             type="password"
             placeholder="Password"
             id="password"
+            name='password'
             className="bg-custom-input border rounded-xl w-full py-3.5 px-3 text-custom-input-text placeholder-custom-input-text leading-tight"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
           />
         </div>
         <div className="flex items-center justify-between">
