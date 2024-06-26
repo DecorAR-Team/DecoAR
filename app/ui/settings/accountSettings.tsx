@@ -12,12 +12,12 @@ export default function AccountSettings () {
 
 
   return (
-    <main className="flex justify-center flex-col items-center min-h-full">
+    <main className="flex justify-center flex-col items-center min-h-full md:mx-32">
       <div className="flex flex-row items-center justify-center mt-10 w-full">
-        <IoMdArrowBack className="text-2xl ml-5
-         md:ml-10 md:text-3xl"/>
+        <IoMdArrowBack className="text-2xl ml-5 
+         md:ml-10 md:text-4xl md:mt-12"/>
         <h1 className="text-xl font-bold mx-auto w-full text-center 
-        md:text-4xl md:text-left ml-16">
+        md:text-4xl md:text-left md:ml-32 md:mt-12" >
           Account Settings</h1>
       </div>
       
@@ -81,18 +81,24 @@ export default function AccountSettings () {
           <h2 className="text-base 
           md:text-xl md:font-semibold">Marketing</h2> 
           <input 
-          className="w-5 md:w-7 mr-5 md:mr-20"
-          type="checkbox" 
-          />
-        </div>
-        <div className="flex flex-row justify-between mx-5 mt-5 
-        md:mt-10 md:ml-20 md:flex-col">
-          <h2 className="md:text-xl md:font-semibold">Reminders</h2> 
-          <input 
-          className="w-5 
-          md:w-7 mr-5 md:mr-20"
+          className="w-5 mr-5
+          md:w-7 md:mr-20"
           type="checkbox" />
         </div>
+        <div className="flex flex-row justify-between mx-5 mt-5 
+        md:mt-10 md:ml-20 md:flex-row">
+          <h2 className="md:text-xl md:font-semibold">Reminders</h2> 
+          <input 
+          className="w-5 mr-5
+          md:w-7 md:mr-20"
+          type="checkbox" />
+        </div>
+      </div>
+
+
+      <div className="flex-grow flex flex-col justify-end items-center">
+        <button className="border bg-custom-logout text-black w-auto px-40 py-2 font-bold rounded-xl text-lg mt-96">Sign Out</button> 
+        {/* fix the button */}
       </div>
 
     </main>
