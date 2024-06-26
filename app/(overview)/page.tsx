@@ -1,9 +1,13 @@
 import { PrismaClient } from '@prisma/client';
+import products from '../lib/json-data/products.json';
 
 const prisma = new PrismaClient();
 
 export default async function Home() {
-  const cats = await prisma.subcategoryWithProductIds.findMany();
+  //TODO create an (overview) with root page, /[catID]/products and a common layout for these 2 pages: <SearchBar>,<NavBar>
+
+  // const cats = await prisma.subcategoryWithProductIds.findMany();
+
   // console.log(cats);
 
   // const categoryWithSubcategories = await prisma.subcategory.findUnique({
@@ -16,5 +20,5 @@ export default async function Home() {
   //   where: { id: '667ad8c6547fb73491fc9140' },
   // });
 
-  return <div>Check the console</div>;
+  return <h1>HOME page</h1>;
 }
