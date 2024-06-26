@@ -21,3 +21,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+//TODO create dark mode https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually
