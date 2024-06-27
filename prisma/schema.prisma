@@ -72,7 +72,7 @@ model Category {
 model Subcategory {
   id                  String  @id @default(auto()) @map("_id") @db.ObjectId
   category_id         String  @db.ObjectId
-  imageUrl            String?
+  imageUrl            String
   name                String
   subcategory_ikea_id String
   category            Category  @relation(fields: [category_id], references: [id], name: "CategorySubcategory")
