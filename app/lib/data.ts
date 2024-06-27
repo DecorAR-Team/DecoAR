@@ -32,12 +32,12 @@ export async function fetchSubcategoryWithProductIds() {
   }
 }
 
-export async function fetchSubCategoryProducts() { 
- try {
-  
-  
- } catch (error) {
-  console.error('Database Error:', error);
+export async function fetchProducts() {
+  try {
+    const products = await prisma.product.findMany();
+    return products;
+  } catch (error) {
+    console.error('Database Error:', error);
     throw new Error('Failed to fetch categories.');
- } 
+  }
 }

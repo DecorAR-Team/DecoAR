@@ -13,6 +13,7 @@ export default function CategoryTilesRow ( {src, alt, name, price}: CategoryTile
 
   
   
+  
    return (
     <ul className="DiscoveryMoviesRow">
       
