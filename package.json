@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@prisma/client": "^5.15.1",
+    "@prisma/client": "^5.16.0",
     "formik": "^2.4.6",
     "next": "14.2.4",
     "react": "^18",
