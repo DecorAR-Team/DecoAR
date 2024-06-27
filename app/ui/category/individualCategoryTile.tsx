@@ -1,4 +1,3 @@
-import { fetchProducts, fetchSubcategoryWithProductIds } from "@/app/lib/data";
 import Image from "next/image"
 
 type IndividualCategoryTileProps = {
@@ -8,28 +7,14 @@ type IndividualCategoryTileProps = {
   price: number;
 }
 
-export default async function IndividualCategoryTile ( {src, alt, name, price}: IndividualCategoryTileProps ) {
+export default function IndividualCategoryTile ( {src, alt, name, price}: IndividualCategoryTileProps ) {
 
-//retrieve params from the URL
-
-//replace the retrieved param from the URL with the hardcoded value
-const categories = await fetchSubcategoryWithProductIds();
-const category = categories.filter((category) => {
-  return category.subcategory_id === '667aac74547fb73491fc8d0a';
-});
-
-//retrieve the product ids from the category
-const productIds = category.map((ids) => ids.products);
-
-// check on Product database to see if ids match, if yes, return the product
-const products = await fetchProducts();
-const product = products.filter((product) => {
-
+console.log(src, alt, name, price);
 
   return (
 <div>
     <div>
-      <Image src={src} alt={alt}/>
+      <Image src={src} alt={alt} width={50} height={50}/>
     </div>
 
     <div>
@@ -37,7 +22,7 @@ const product = products.filter((product) => {
     </div>
 
     <div>
-      <h2> price={price} </h2>
+      <h2> price={price.currentPrice} </h2>
     </div>
  </div>
   )

@@ -1,22 +1,14 @@
 'use client';
-import { fetchSubcategoryWithProductIds } from "@/app/lib/data";
-import { useEffect, useState } from "react";
+import IndividualCategoryTile from "./individualCategoryTile";
 
-type CategoryTilesRowProps = {
-  src: string;
-  alt: string;
-  name: string;
-  price: number;
-}
 
-export default function CategoryTilesRow ( {src, alt, name, price}: CategoryTilesRowProps) {
 
-  
-  
+export default function CategoryTilesRow ({ product }: { product: any }) {
+
   
    return (
     <ul className="DiscoveryMoviesRow">
-      
+      <IndividualCategoryTile src={product?.image} alt={product?.name} name={product?.name} price={product?.price}/>
     </ul>
   )
 }
