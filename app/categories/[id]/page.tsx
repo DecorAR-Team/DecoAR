@@ -12,7 +12,6 @@ export default async function Categories ({ params }: { params: { id: string } }
     console.log(product);
   }
 
-
   return (
     <div>
       <h1 className='flex flex-row justify-left align-middle ml-5 mt-10 text-3xl font-semibold'>Browse furniture</h1>
