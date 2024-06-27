@@ -4,7 +4,14 @@ import Loadmore from '@/app/ui/category/loadmore';
 export default async function Categories () {
 
   const categories = await fetchSubcategoryWithProductIds();
-  console.log(categories);
+  
+  const category = categories.filter((category) => {
+    return category.subcategory_id === '667aac74547fb73491fc8d0a';
+  });
+
+  console.log(category);
+
+
 
   
   return (
