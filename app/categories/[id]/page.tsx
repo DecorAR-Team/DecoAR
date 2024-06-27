@@ -4,7 +4,7 @@ import Loadmore from '@/app/ui/category/loadmore';
 export default async function Categories () {
 
   const categories = await fetchSubcategoryWithProductIds();
-  console.log(categories.subcategory_id);
+  console.log(categories);
 
   
   return (

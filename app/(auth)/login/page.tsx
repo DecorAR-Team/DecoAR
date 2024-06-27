@@ -8,17 +8,17 @@ const prisma = new PrismaClient();
 
 export default function Login() {
 
-  const allUsers = async () => {  
-  try {
-    const Users = await prisma.user.findMany() 
-    console.log(Users);
+  // const allUsers = async () => {  
+  // try {
+  //   const Users = await prisma.user.findMany() 
+  //   console.log(Users);
     
-  } catch (e) {
-    console.log(`There has been an error with allUsers: ${e}`);
-  }
-  }
+  // } catch (e) {
+  //   console.log(`There has been an error with allUsers: ${e}`);
+  // }
+  // }
 
-  allUsers();
+  // allUsers();
 
   
 

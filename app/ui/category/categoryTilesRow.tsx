@@ -9,9 +9,7 @@ type CategoryTilesRowProps = {
   price: number;
 }
 
-
-
-export default async function CategoryTilesRow ( {src, alt, name, price}: CategoryTilesRowProps) {
+export default function CategoryTilesRow ( {src, alt, name, price}: CategoryTilesRowProps) {
 
   
   
