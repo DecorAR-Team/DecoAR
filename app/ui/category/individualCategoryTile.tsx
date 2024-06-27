@@ -4,7 +4,9 @@ type IndividualCategoryTileProps = {
   src: string;
   alt: string;
   name: string;
-  price: number;
+  price: {
+    currentPrice: number;
+  };
 }
 
 export default function IndividualCategoryTile ( {src, alt, name, price}: IndividualCategoryTileProps ) {
@@ -18,11 +20,11 @@ console.log(src, alt, name, price);
     </div>
 
     <div>
-      <h2> name={name} </h2>
+      <h2> {name} </h2>
     </div>
 
     <div>
-      <h2> price={price.currentPrice} </h2>
+      <h2> ${price.currentPrice} </h2>
     </div>
  </div>
   )

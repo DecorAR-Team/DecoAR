@@ -25,11 +25,13 @@ console.log(products);
     <div>
       <h1 className='flex flex-row justify-left align-middle ml-5 mt-10 text-3xl font-semibold'>Browse furniture</h1>
       {/* <SearchBar /> */}
-      {products?.map((product) => (
-        <li key={product?.id}>
-          <CategoryTilesRow product={product}/>
-        </li>
-      ))}
+      <ul>
+            {products?.map((product) => (
+                <li key={product?.id}>
+                    <CategoryTilesRow product={product}/>
+                </li>
+            ))}
+        </ul>
       <Loadmore />
     </div>
   )
