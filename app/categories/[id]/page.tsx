@@ -1,3 +1,4 @@
+import { fetchSubcategoryWithProductIds } from '@/app/lib/data';
 import Loadmore from '@/app/ui/category/loadmore';
 
 export default async function Categories () {
