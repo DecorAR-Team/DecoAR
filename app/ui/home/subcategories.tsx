@@ -11,13 +11,13 @@ export default function Subcategories({
     <div className="py-4 flex overflow-auto	text-slate-400 no-scrollbar">
       {tabSubcategories.map((subcategory) => (
         <Link
-          className="hover:bg-slate-50 p-4"
           href={`/categories/${subcategory.id}`}
+          className="hover:bg-slate-50 p-4"
           key={subcategory.id}
         >
           <div className=" flex-shrink-0  relative w-[200px] h-[80px]">
             <Image
-              className="rounded"
+              className="rounded-lg"
               src={subcategory.imageUrl}
               alt={subcategory.name}
               fill
