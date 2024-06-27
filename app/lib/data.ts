@@ -21,10 +21,15 @@ export async function fetchSubCategories() {
     throw new Error('Failed to fetch categories.');
   }
 }
-
-export async function fetchSubcategoryWithProductIds() {
+// TODO fix the findMany to findUnique
+export async function fetchSubcategoryWithProductIds(id : string) {
   try {
-    const subcategorieswithproductIds = await prisma.subcategoryWithProductIds.findMany();
+    const subcategorieswithproductIds = await prisma.subcategoryWithProductIds.findMany(
+      {
+        where: {
+          subcategory_id: id
+  }
+  });
     return subcategorieswithproductIds;
   } catch (error) {
     console.error('Database Error:', error);
@@ -32,10 +37,15 @@ export async function fetchSubcategoryWithProductIds() {
   }
 }
 
-export async function fetchProducts() {
+export async function fetchProduct(product_id : string) {
   try {
-    const products = await prisma.product.findMany();
-    return products;
+    const product = await prisma.product.findUnique(
+      {
+        where: {
+          id_: product_id
+   }
+  } );
+    return product;
   } catch (error) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch categories.');
