@@ -1,52 +1,32 @@
 'use client';
 
-import { Category } from '@prisma/client';
-import { useEffect, useState } from 'react';
+import { Category, Subcategory } from '@prisma/client';
+import { useState } from 'react';
 import Subcategories from './subcategories';
-import { getSubcategories } from '@/app/lib/actions';
 import clsx from 'clsx';
 
 export default function CategoriesTabs({
   categories,
+  subcategories,
 }: {
   categories: Category[];
+  subcategories: Subcategory[];
 }) {
   const [activeTab, setActiveTab] = useState(categories[0].id);
-  // const [subcategories, setSubcategories] = useState<
-  //   {
-  //     id: string;
-  //     category_id: string;
-  //     imageUrl: string | null;
-  //     name: string;
-  //     subcategory_ikea_id: string;
-  //   }[]
-  // >([]);
+  const [tabSubcategories, setTabSubcategories] = useState(
+    subcategories.filter(
+      (subcategory) => subcategory.category_id === categories[0].id,
+    ),
+  );
 
-  useEffect(() => {
-    console.log('CategoriesTabs component mounted.', activeTab);
-
-    return () => {
-      console.log('CategoriesTabs component unmounted.');
-    };
-  });
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const firstTabSubcategories = await getSubcategories(categories[0].id);
-  //     console.log(firstTabSubcategories);
-  //     setSubcategories(firstTabSubcategories);
-  //   };
-  //   fetchData();
-  // }, []);
-
-  async function handleChange(
-    event: React.MouseEvent<HTMLButtonElement>,
-    // categoryId: string,
-  ) {
+  async function handleChange(event: React.MouseEvent<HTMLButtonElement>) {
     const target = event.target as HTMLButtonElement;
     setActiveTab(target.dataset.id!); //fix this
-    // const fetchedSubcategories = await getSubcategories(categoryId);
-    // setSubcategories(fetchedSubcategories);
+    setTabSubcategories(
+      subcategories.filter(
+        (subcategory) => subcategory.category_id === target.dataset.id!,
+      ),
+    );
   }
 
   return (
@@ -55,8 +35,8 @@ export default function CategoriesTabs({
         {categories.map((category) => (
           <button
             className={clsx(
-              { 'border-black': activeTab === category.id },
-              'text-nowrap p-4 border-b-2 cursor-pointer transition-all delay-50 hover:bg-slate-50 hover:border-black',
+              { 'border-slate-800': activeTab === category.id },
+              'text-nowrap p-4 border-b-2 cursor-pointer transition-all delay-50 hover:bg-slate-50 hover:border-slate-900',
             )}
             key={category.id}
             onClick={(e) => handleChange(e)}
@@ -66,7 +46,7 @@ export default function CategoriesTabs({
           </button>
         ))}
       </div>
-      <Subcategories activeTab={activeTab} />
+      <Subcategories tabSubcategories={tabSubcategories} />
     </>
   );
 }

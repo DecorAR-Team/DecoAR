@@ -1,49 +1,37 @@
-import { getSubcategories } from '@/app/lib/actions';
-import { useEffect, useState } from 'react';
+import { Subcategory } from '@prisma/client';
+import Image from 'next/image';
+import Link from 'next/link';
 
-export default function Subcategories({ activeTab }: { activeTab: string }) {
-  //   console.log(activeTab);
-  const [subcategories, setSubcategories] = useState<
-    {
-      id: string;
-      category_id: string;
-      imageUrl: string;
-      name: string;
-      subcategory_ikea_id: string;
-    }[]
-  >([]);
-  //TODO update Subcategories db json, take from mongodb
-  useEffect(() => {
-    console.log('Subcategories component mounted.', subcategories);
-
-    return () => {
-      console.log('Subcategories component unmounted.');
-    };
-  });
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const newsubcategories = await getSubcategories(activeTab);
-      //   console.log(newsubcategories);
-      setSubcategories(newsubcategories);
-    };
-    fetchData();
-  }, [activeTab]);
-
-  return;
-  // <div className="flex overflow-auto gap-4	text-slate-400 no-scrollbar">
-  //   {subcategories.map((category) => (
-  //     <button
-  //       className={clsx(
-  //         { 'border-black': activeTab === category.id },
-  //         'text-nowrap p-4 border-b-2 cursor-pointer transition-all delay-50 hover:bg-slate-50 hover:border-black',
-  //       )}
-  //       key={subcategories.id}
-  //       onClick={(e) => handleChange(e)}
-  //       data-id={category.id}
-  //     >
-  //       {category.name}
-  //     </button>
-  //   ))}
-  // </div>
+export default function Subcategories({
+  tabSubcategories,
+}: {
+  tabSubcategories: Subcategory[];
+}) {
+  return (
+    <div className="py-4 flex overflow-auto	text-slate-400 no-scrollbar">
+      {tabSubcategories.map((subcategory) => (
+        <Link
+          className="hover:bg-slate-50 p-4"
+          href={`/categories/${subcategory.id}`}
+          key={subcategory.id}
+        >
+          <div className=" flex-shrink-0  relative w-[200px] h-[80px]">
+            <Image
+              className="rounded"
+              src={subcategory.imageUrl}
+              alt={subcategory.name}
+              fill
+              priority
+              style={{
+                objectFit: 'cover',
+                objectPosition: 'center',
+              }}
+              sizes="(max-width: 640px) 100vw, 200px" //TODO: check this
+            ></Image>
+          </div>
+          <p className="py-3 text-slate-800">{subcategory.name}</p>
+        </Link>
+      ))}
+    </div>
+  );
 }
