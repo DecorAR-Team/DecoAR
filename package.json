@@ -9,13 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@prisma/client": "^5.16.1",
+    "@heroicons/react": "^2.1.4",
+    "@prisma/client": "^5.15.1",
+    "clsx": "^2.1.1",
     "formik": "^2.4.6",
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
-    "react-router-dom": "^6.23.1"
+    "react-router-dom": "^6.23.1",
+    "use-debounce": "^10.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",

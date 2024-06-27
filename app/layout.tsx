@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
-import { Fanwood_Text } from 'next/font/google';
+import { Fanwood_Text, Quattrocento } from 'next/font/google';
 import './globals.css';
 
 const fanwoodText = Fanwood_Text({ weight: '400', subsets: ['latin'] });
+export const quattrocento = Quattrocento({ weight: '700', subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'DecoAR app',
@@ -16,8 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html suppressHydrationWarning lang="en">
       <body className={fanwoodText.className}>{children}</body>
     </html>
   );
 }
+
+//TODO create dark mode https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually

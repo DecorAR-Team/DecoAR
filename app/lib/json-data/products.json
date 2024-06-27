@@ -4994,86 +4994,7 @@
     ],
     "variants": []
   },
-  {
-    "id": "20468105",
-    "name": "NOJIG",
-    "price": {
-      "currency": "USD",
-      "currentPrice": 0.99,
-      "discounted": false
-    },
-    "measurement": "7 ¾x9 ¾x4 \"",
-    "typeName": "Organizer",
-    "image": "https://www.ikea.com/us/en/images/products/nojig-organizer-plastic-beige__0954730_pe804516_s5.jpg",
-    "contextualImageUrl": "https://www.ikea.com/us/en/images/products/nojig-organizer-plastic-beige__0954732_pe804518_s5.jpg",
-    "imageAlt": "NOJIG Organizer, plastic/beige, 7 ¾x9 ¾x4 \"",
-    "url": "https://www.ikea.com/us/en/p/nojig-organizer-plastic-beige-20468105/",
-    "categoryPath": [
-      {
-        "name": "Storage & organization",
-        "key": "st001"
-      },
-      {
-        "name": "Storage containers, organizers & baskets",
-        "key": "st007"
-      },
-      {
-        "name": "Paper & media organizers",
-        "key": "10551"
-      },
-      {
-        "name": "Paper & media storage boxes",
-        "key": "16202"
-      }
-    ],
-    "variants": [
-      {
-        "id": "50468104",
-        "name": "NOJIG",
-        "price": {
-          "currency": "USD",
-          "currentPrice": 0.49,
-          "discounted": false
-        },
-        "measurement": "6x7 ¾x2 \"",
-        "typeName": "Organizer",
-        "image": "https://www.ikea.com/us/en/images/products/nojig-organizer-plastic-beige__0954157_pe804499_s5.jpg",
-        "contextualImageUrl": "https://www.ikea.com/us/en/images/products/nojig-organizer-plastic-beige__0954109_pe804512_s5.jpg",
-        "imageAlt": "NOJIG Organizer, plastic/beige, 6x7 ¾x2 \"",
-        "url": "https://www.ikea.com/us/en/p/nojig-organizer-plastic-beige-50468104/"
-      },
-      {
-        "id": "60477037",
-        "name": "NOJIG",
-        "price": {
-          "currency": "USD",
-          "currentPrice": 0.29,
-          "discounted": false
-        },
-        "measurement": "4x4x2 \"",
-        "typeName": "Organizer",
-        "image": "https://www.ikea.com/us/en/images/products/nojig-organizer-plastic-beige__0954108_pe804511_s5.jpg",
-        "contextualImageUrl": "https://www.ikea.com/us/en/images/products/nojig-organizer-plastic-beige__0954109_pe804512_s5.jpg",
-        "imageAlt": "NOJIG Organizer, plastic/beige, 4x4x2 \"",
-        "url": "https://www.ikea.com/us/en/p/nojig-organizer-plastic-beige-60477037/"
-      },
-      {
-        "id": "70457487",
-        "name": "NOJIG",
-        "price": {
-          "currency": "USD",
-          "currentPrice": 0.39,
-          "discounted": false
-        },
-        "measurement": "4x7 ¾x2 \"",
-        "typeName": "Organizer",
-        "image": "https://www.ikea.com/us/en/images/products/nojig-organizer-plastic-beige__0954145_pe804497_s5.jpg",
-        "contextualImageUrl": "https://www.ikea.com/us/en/images/products/nojig-organizer-plastic-beige__0954158_pe804500_s5.jpg",
-        "imageAlt": "NOJIG Organizer, plastic/beige, 4x7 ¾x2 \"",
-        "url": "https://www.ikea.com/us/en/p/nojig-organizer-plastic-beige-70457487/"
-      }
-    ]
-  },
+
   {
     "id": "30408979",
     "name": "BROGRUND",
@@ -7199,52 +7120,7 @@
     ],
     "variants": []
   },
-  {
-    "id": "00471222",
-    "name": "VESKEN",
-    "price": {
-      "currency": "USD",
-      "currentPrice": 9.99,
-      "discounted": false
-    },
-    "measurement": "21 1/4x7 1/8x28 \"",
-    "typeName": "Cart",
-    "image": "https://www.ikea.com/us/en/images/products/vesken-cart-white__0832009_pe777548_s5.jpg",
-    "contextualImageUrl": "https://www.ikea.com/us/en/images/products/vesken-cart-white__0832010_pe777549_s5.jpg",
-    "imageAlt": "VESKEN Cart, white, 21 1/4x7 1/8x28 \"",
-    "url": "https://www.ikea.com/us/en/p/vesken-cart-white-00471222/",
-    "categoryPath": [
-      {
-        "name": "Furniture",
-        "key": "fu001"
-      },
-      {
-        "name": "Utility Carts, Rolling Carts & Storage Carts",
-        "key": "fu005"
-      },
-      {
-        "name": "Kitchen islands & carts",
-        "key": "10471"
-      }
-    ],
-    "variants": [
-      {
-        "id": "60471224",
-        "name": "VESKEN",
-        "price": {
-          "currency": "USD",
-          "currentPrice": 9.99,
-          "discounted": false
-        },
-        "measurement": "21 1/4x7 1/8x28 \"",
-        "typeName": "Cart",
-        "image": "https://www.ikea.com/us/en/images/products/vesken-cart-black__0832005_pe777545_s5.jpg",
-        "contextualImageUrl": "https://www.ikea.com/us/en/images/products/vesken-cart-black__0832006_pe777546_s5.jpg",
-        "imageAlt": "VESKEN Cart, black, 21 1/4x7 1/8x28 \"",
-        "url": "https://www.ikea.com/us/en/p/vesken-cart-black-60471224/"
-      }
-    ]
-  },
+
   {
     "id": "80535319",
     "name": "ÄNGSJÖN",
@@ -15316,67 +15192,7 @@
     ],
     "variants": []
   },
-  {
-    "id": "s69548912",
-    "name": "BOAXEL",
-    "price": {
-      "currency": "USD",
-      "currentPrice": 150,
-      "discounted": false
-    },
-    "measurement": "89 1/2x15 3/4x39 5/8 \"",
-    "typeName": "Laundry combination",
-    "image": "https://www.ikea.com/us/en/images/products/boaxel-laundry-combination-anthracite-metal__1302029_pe937617_s5.jpg",
-    "contextualImageUrl": "https://www.ikea.com/us/en/images/products/boaxel-laundry-combination-anthracite-metal__1302028_pe937618_s5.jpg",
-    "imageAlt": "BOAXEL Laundry combination, anthracite/metal, 89 1/2x15 3/4x39 5/8 \"",
-    "url": "https://www.ikea.com/us/en/p/boaxel-laundry-combination-anthracite-metal-s69548912/",
-    "categoryPath": [
-      {
-        "name": "Bathroom",
-        "key": "ba001"
-      },
-      {
-        "name": "Laundry",
-        "key": "ba003"
-      },
-      {
-        "name": "Drying racks",
-        "key": "20602"
-      }
-    ],
-    "variants": [
-      {
-        "id": "s19332410",
-        "name": "BOAXEL",
-        "price": {
-          "currency": "USD",
-          "currentPrice": 150,
-          "discounted": false
-        },
-        "measurement": "89 1/2x15 3/4x39 5/8 \"",
-        "typeName": "Laundry combination",
-        "image": "https://www.ikea.com/us/en/images/products/boaxel-laundry-combination-white-metal__0802038_pe770067_s5.jpg",
-        "contextualImageUrl": "https://www.ikea.com/us/en/images/products/boaxel-laundry-combination-white-metal__1237319_pe917916_s5.jpg",
-        "imageAlt": "BOAXEL Laundry combination, white/metal, 89 1/2x15 3/4x39 5/8 \"",
-        "url": "https://www.ikea.com/us/en/p/boaxel-laundry-combination-white-metal-s19332410/"
-      },
-      {
-        "id": "s89386485",
-        "name": "BOAXEL",
-        "price": {
-          "currency": "USD",
-          "currentPrice": 150,
-          "discounted": false
-        },
-        "measurement": "89 1/2x15 3/4x39 5/8 \"",
-        "typeName": "Laundry combination",
-        "image": "https://www.ikea.com/us/en/images/products/boaxel-laundry-combination-white__0901551_pe782715_s5.jpg",
-        "contextualImageUrl": "https://www.ikea.com/us/en/images/products/boaxel-laundry-combination-white__1237313_pe917915_s5.jpg",
-        "imageAlt": "BOAXEL Laundry combination, white, 89 1/2x15 3/4x39 5/8 \"",
-        "url": "https://www.ikea.com/us/en/p/boaxel-laundry-combination-white-s89386485/"
-      }
-    ]
-  },
+
   {
     "id": "50494297",
     "name": "BROR",
@@ -17466,120 +17282,7 @@
     ],
     "variants": []
   },
-  {
-    "id": "s69228473",
-    "name": "TROFAST",
-    "price": {
-      "currency": "USD",
-      "currentPrice": 79.99,
-      "discounted": true
-    },
-    "measurement": "39x17 3/8x22 \"",
-    "typeName": "Storage combination with boxes",
-    "image": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-white-white__0535774_pe649629_s5.jpg",
-    "contextualImageUrl": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-white-white__0876101_pe649630_s5.jpg",
-    "imageAlt": "TROFAST Storage combination with boxes, white/white, 39x17 3/8x22 \"",
-    "url": "https://www.ikea.com/us/en/p/trofast-storage-combination-with-boxes-white-white-s69228473/",
-    "categoryPath": [
-      {
-        "name": "Furniture",
-        "key": "fu001"
-      },
-      {
-        "name": "Nursery Furniture",
-        "key": "45780"
-      },
-      {
-        "name": "Toy storage",
-        "key": "20474"
-      },
-      {
-        "name": "TROFAST system",
-        "key": "700556"
-      },
-      {
-        "name": "TROFAST combinations",
-        "key": "700557"
-      }
-    ],
-    "variants": [
-      {
-        "id": "s09328791",
-        "name": "TROFAST",
-        "price": {
-          "currency": "USD",
-          "currentPrice": 79.99,
-          "discounted": true
-        },
-        "measurement": "39x17 3/8x22 \"",
-        "typeName": "Storage combination with boxes",
-        "image": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-white-gray__0807381_pe770402_s5.jpg",
-        "contextualImageUrl": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-white-gray__1046445_pe842968_s5.jpg",
-        "imageAlt": "TROFAST Storage combination with boxes, white/gray, 39x17 3/8x22 \"",
-        "url": "https://www.ikea.com/us/en/p/trofast-storage-combination-with-boxes-white-gray-s09328791/"
-      },
-      {
-        "id": "s19335531",
-        "name": "TROFAST",
-        "price": {
-          "currency": "USD",
-          "currentPrice": 79.99,
-          "discounted": true
-        },
-        "measurement": "39x17 3/8x22 \"",
-        "typeName": "Storage combination with boxes",
-        "image": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-white-green-white__0808021_pe770655_s5.jpg",
-        "contextualImageUrl": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-white-green-white__1046484_pe842990_s5.jpg",
-        "imageAlt": "TROFAST Storage combination with boxes, white green/white, 39x17 3/8x22 \"",
-        "url": "https://www.ikea.com/us/en/p/trofast-storage-combination-with-boxes-white-green-white-s19335531/"
-      },
-      {
-        "id": "s39335511",
-        "name": "TROFAST",
-        "price": {
-          "currency": "USD",
-          "currentPrice": 79.99,
-          "discounted": true
-        },
-        "measurement": "39x17 3/8x22 \"",
-        "typeName": "Storage combination with boxes",
-        "image": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-white-white-orange__0808587_pe770789_s5.jpg",
-        "contextualImageUrl": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-white-white-orange__1046522_pe843009_s5.jpg",
-        "imageAlt": "TROFAST Storage combination with boxes, white white/orange, 39x17 3/8x22 \"",
-        "url": "https://www.ikea.com/us/en/p/trofast-storage-combination-with-boxes-white-white-orange-s39335511/"
-      },
-      {
-        "id": "s89335504",
-        "name": "TROFAST",
-        "price": {
-          "currency": "USD",
-          "currentPrice": 79.99,
-          "discounted": true
-        },
-        "measurement": "39x17 3/8x22 \"",
-        "typeName": "Storage combination with boxes",
-        "image": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-white-white-pink__0808585_pe770787_s5.jpg",
-        "contextualImageUrl": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-white-white-pink__1046611_pe843068_s5.jpg",
-        "imageAlt": "TROFAST Storage combination with boxes, white white/pink, 39x17 3/8x22 \"",
-        "url": "https://www.ikea.com/us/en/p/trofast-storage-combination-with-boxes-white-white-pink-s89335504/"
-      },
-      {
-        "id": "s99328796",
-        "name": "TROFAST",
-        "price": {
-          "currency": "USD",
-          "currentPrice": 79.99,
-          "discounted": true
-        },
-        "measurement": "39x17 3/8x22 \"",
-        "typeName": "Storage combination with boxes",
-        "image": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-white-turquoise__0807390_pe770405_s5.jpg",
-        "contextualImageUrl": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-white-turquoise__1046711_pe843095_s5.jpg",
-        "imageAlt": "TROFAST Storage combination with boxes, white/turquoise, 39x17 3/8x22 \"",
-        "url": "https://www.ikea.com/us/en/p/trofast-storage-combination-with-boxes-white-turquoise-s99328796/"
-      }
-    ]
-  },
+
   {
     "id": "s69478711",
     "name": "TROFAST",
@@ -17788,135 +17491,7 @@
     ],
     "variants": []
   },
-  {
-    "id": "s09480854",
-    "name": "TROFAST",
-    "price": {
-      "currency": "USD",
-      "currentPrice": 159.99,
-      "discounted": false
-    },
-    "measurement": "36 5/8x17 3/8x20 1/2 \"",
-    "typeName": "Storage combination with boxes",
-    "image": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-light-white-stained-pine-light-green-gray__1087975_pe860969_s5.jpg",
-    "contextualImageUrl": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-light-white-stained-pine-light-green-gray__1102498_pe867003_s5.jpg",
-    "imageAlt": "TROFAST Storage combination with boxes, light white stained pine/light green-gray, 36 5/8x17 3/8x20 1/2 \"",
-    "url": "https://www.ikea.com/us/en/p/trofast-storage-combination-with-boxes-light-white-stained-pine-light-green-gray-s09480854/",
-    "categoryPath": [
-      {
-        "name": "Furniture",
-        "key": "fu001"
-      },
-      {
-        "name": "Nursery Furniture",
-        "key": "45780"
-      },
-      {
-        "name": "Toy storage",
-        "key": "20474"
-      },
-      {
-        "name": "TROFAST system",
-        "key": "700556"
-      },
-      {
-        "name": "TROFAST combinations",
-        "key": "700557"
-      }
-    ],
-    "variants": [
-      {
-        "id": "s19533258",
-        "name": "TROFAST",
-        "price": {
-          "currency": "USD",
-          "currentPrice": 159.99,
-          "discounted": false
-        },
-        "measurement": "36 5/8x17 3/8x20 1/2 \"",
-        "typeName": "Storage combination with boxes",
-        "image": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-light-white-stained-pine-light-red__1087962_pe860975_s5.jpg",
-        "contextualImageUrl": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-light-white-stained-pine-light-red__1102495_pe867006_s5.jpg",
-        "imageAlt": "TROFAST Storage combination with boxes, light white stained pine/light red, 36 5/8x17 3/8x20 1/2 \"",
-        "url": "https://www.ikea.com/us/en/p/trofast-storage-combination-with-boxes-light-white-stained-pine-light-red-s19533258/"
-      },
-      {
-        "id": "s19533277",
-        "name": "TROFAST",
-        "price": {
-          "currency": "USD",
-          "currentPrice": 159.99,
-          "discounted": false
-        },
-        "measurement": "36 5/8x17 3/8x20 1/2 \"",
-        "typeName": "Storage combination with boxes",
-        "image": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-light-white-stained-pine-gray-blue-dark-gray__1087970_pe860983_s5.jpg",
-        "contextualImageUrl": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-light-white-stained-pine-gray-blue-dark-gray__1102497_pe867004_s5.jpg",
-        "imageAlt": "TROFAST Storage combination with boxes, light white stained pine gray-blue/dark gray, 36 5/8x17 3/8x20 1/2 \"",
-        "url": "https://www.ikea.com/us/en/p/trofast-storage-combination-with-boxes-light-white-stained-pine-gray-blue-dark-gray-s19533277/"
-      },
-      {
-        "id": "s79533241",
-        "name": "TROFAST",
-        "price": {
-          "currency": "USD",
-          "currentPrice": 159.99,
-          "discounted": false
-        },
-        "measurement": "36 5/8x17 3/8x20 1/2 \"",
-        "typeName": "Storage combination with boxes",
-        "image": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-light-white-stained-pine-light-green-gray__1087975_pe860969_s5.jpg",
-        "contextualImageUrl": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-light-white-stained-pine-light-green-gray__1102498_pe867003_s5.jpg",
-        "imageAlt": "TROFAST Storage combination with boxes, light white stained pine/light green-gray, 36 5/8x17 3/8x20 1/2 \"",
-        "url": "https://www.ikea.com/us/en/p/trofast-storage-combination-with-boxes-light-white-stained-pine-light-green-gray-s79533241/"
-      },
-      {
-        "id": "s19480820",
-        "name": "TROFAST",
-        "price": {
-          "currency": "USD",
-          "currentPrice": 159.99,
-          "discounted": false
-        },
-        "measurement": "36 5/8x17 3/8x20 1/2 \"",
-        "typeName": "Storage combination with boxes",
-        "image": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-light-white-stained-pine-gray-blue-light-green-gray__1087956_pe860988_s5.jpg",
-        "contextualImageUrl": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-light-white-stained-pine-gray-blue-light-green-gray__1102493_pe867001_s5.jpg",
-        "imageAlt": "TROFAST Storage combination with boxes, light white stained pine gray-blue/light green-gray, 36 5/8x17 3/8x20 1/2 \"",
-        "url": "https://www.ikea.com/us/en/p/trofast-storage-combination-with-boxes-light-white-stained-pine-gray-blue-light-green-gray-s19480820/"
-      },
-      {
-        "id": "s39480843",
-        "name": "TROFAST",
-        "price": {
-          "currency": "USD",
-          "currentPrice": 159.99,
-          "discounted": false
-        },
-        "measurement": "36 5/8x17 3/8x20 1/2 \"",
-        "typeName": "Storage combination with boxes",
-        "image": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-light-white-stained-pine-gray-blue__1087961_pe860974_s5.jpg",
-        "contextualImageUrl": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-light-white-stained-pine-gray-blue__1102494_pe867002_s5.jpg",
-        "imageAlt": "TROFAST Storage combination with boxes, light white stained pine/gray-blue, 36 5/8x17 3/8x20 1/2 \"",
-        "url": "https://www.ikea.com/us/en/p/trofast-storage-combination-with-boxes-light-white-stained-pine-gray-blue-s39480843/"
-      },
-      {
-        "id": "s39480857",
-        "name": "TROFAST",
-        "price": {
-          "currency": "USD",
-          "currentPrice": 159.99,
-          "discounted": false
-        },
-        "measurement": "36 5/8x17 3/8x20 1/2 \"",
-        "typeName": "Storage combination with boxes",
-        "image": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-light-white-stained-pine-light-red__1087962_pe860975_s5.jpg",
-        "contextualImageUrl": "https://www.ikea.com/us/en/images/products/trofast-storage-combination-with-boxes-light-white-stained-pine-light-red__1102495_pe867006_s5.jpg",
-        "imageAlt": "TROFAST Storage combination with boxes, light white stained pine/light red, 36 5/8x17 3/8x20 1/2 \"",
-        "url": "https://www.ikea.com/us/en/p/trofast-storage-combination-with-boxes-light-white-stained-pine-light-red-s39480857/"
-      }
-    ]
-  },
+
   {
     "id": "s19102659",
     "name": "TROFAST",
@@ -18046,36 +17621,7 @@
       }
     ]
   },
-  {
-    "id": "00472702",
-    "name": "BERGIG",
-    "price": {
-      "currency": "USD",
-      "currentPrice": 129.99,
-      "discounted": false
-    },
-    "measurement": "",
-    "typeName": "Book display with storage",
-    "image": "https://www.ikea.com/us/en/images/products/bergig-book-display-with-storage-white__0844238_pe783371_s5.jpg",
-    "contextualImageUrl": "https://www.ikea.com/us/en/images/products/bergig-book-display-with-storage-white__0844239_pe783372_s5.jpg",
-    "imageAlt": "BERGIG Book display with storage, white",
-    "url": "https://www.ikea.com/us/en/p/bergig-book-display-with-storage-white-00472702/",
-    "categoryPath": [
-      {
-        "name": "Furniture",
-        "key": "fu001"
-      },
-      {
-        "name": "Shelving furniture",
-        "key": "st002"
-      },
-      {
-        "name": "Bookcases",
-        "key": "10382"
-      }
-    ],
-    "variants": []
-  },
+
   {
     "id": "s29228470",
     "name": "TROFAST",
@@ -23465,32 +23011,7 @@
       }
     ]
   },
-  {
-    "id": "00537954",
-    "name": "TRÄDGRÄNSEN",
-    "price": {
-      "currency": "USD",
-      "currentPrice": 19.99,
-      "discounted": false
-    },
-    "measurement": "",
-    "typeName": "Wall decoration, set of 2",
-    "image": "https://www.ikea.com/us/en/images/products/traedgraensen-wall-decoration-set-of-2-ceramic-stones-beige__1137097_pe879571_s5.jpg",
-    "contextualImageUrl": "https://www.ikea.com/us/en/images/products/traedgraensen-wall-decoration-set-of-2-ceramic-stones-beige__1168084_pe891772_s5.jpg",
-    "imageAlt": "TRÄDGRÄNSEN Wall decoration, set of 2, ceramic/stones beige",
-    "url": "https://www.ikea.com/us/en/p/traedgraensen-wall-decoration-set-of-2-ceramic-stones-beige-00537954/",
-    "categoryPath": [
-      {
-        "name": "Home decor & accessories",
-        "key": "de001"
-      },
-      {
-        "name": "Table decor & decorative accessories",
-        "key": "24924"
-      }
-    ],
-    "variants": []
-  },
+
   {
     "id": "00465773",
     "name": "KNOPPÄNG",
@@ -23613,36 +23134,7 @@
       }
     ]
   },
-  {
-    "id": "20518030",
-    "name": "GILLSTAD",
-    "price": {
-      "currency": "USD",
-      "currentPrice": 22.99,
-      "discounted": false
-    },
-    "measurement": "",
-    "typeName": "Wall decoration, set of 3",
-    "image": "https://www.ikea.com/us/en/images/products/gillstad-wall-decoration-set-of-3-sedge-handmade__1110045_pe870334_s5.jpg",
-    "contextualImageUrl": "https://www.ikea.com/us/en/images/products/gillstad-wall-decoration-set-of-3-sedge-handmade__1110166_pe870384_s5.jpg",
-    "imageAlt": "GILLSTAD Wall decoration, set of 3, sedge handmade",
-    "url": "https://www.ikea.com/us/en/p/gillstad-wall-decoration-set-of-3-sedge-handmade-20518030/",
-    "categoryPath": [
-      {
-        "name": "Home decor & accessories",
-        "key": "de001"
-      },
-      {
-        "name": "Wall décor",
-        "key": "10757"
-      },
-      {
-        "name": "Wall art",
-        "key": "10788"
-      }
-    ],
-    "variants": []
-  },
+
   {
     "id": "70568046",
     "name": "BILD",
