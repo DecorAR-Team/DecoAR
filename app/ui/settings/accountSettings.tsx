@@ -20,6 +20,7 @@ export default function AccountSettings ({user}: any) {
 
   return (
     <main className="flex justify-center flex-col items-center min-h-full md:mx-32">
+
       <div className="flex flex-row items-center justify-center mt-10 w-full">
         <Link href="/">
         <IoMdArrowBack className="text-2xl ml-5 md:ml-10 md:text-4xl md:mt-12"/>
@@ -27,6 +28,7 @@ export default function AccountSettings ({user}: any) {
         <h1 className="text-xl font-bold mx-auto w-full text-center md:text-4xl md:text-left md:ml-32 md:mt-12" >
           Account Settings
         </h1>
+        
         <img src={user.image} alt="profile picture" className="w-20 h-20 rounded-full mx-auto mr-10 md:w-36 md:h-36" />
       </div>
       
