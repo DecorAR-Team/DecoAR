@@ -84,3 +84,12 @@ model SubcategoryWithProductIds {
   subcategory_id   String   @db.ObjectId
   subcategory_name String
 }
+
+model User {
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  email     String @unique
+  name      String
+  avatar    String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

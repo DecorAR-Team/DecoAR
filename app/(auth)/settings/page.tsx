@@ -1,9 +1,15 @@
-import AccountSettings from '@/app/ui/settings/accountSettings';
+import AccountSettings from "@/app/ui/settings/accountSettings";
+import { getUserSession } from "@/app/lib/session";
 
-export default function Settings() {
+
+export default async function Settings () {
+  
+  const user = await getUserSession();
+
+
   return (
     <div>
-      <AccountSettings />
+        <AccountSettings user={user} />
     </div>
   );
 }
