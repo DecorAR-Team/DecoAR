@@ -1,10 +1,9 @@
-import AccountSettings from "@/app/ui/settings/accountSettings";
+import AccountSettings from '@/app/ui/settings/accountSettings';
 
-export default function Settings () {
-
+export default function Settings() {
   return (
     <div>
-        <AccountSettings />
+      <AccountSettings />
     </div>
   );
 }

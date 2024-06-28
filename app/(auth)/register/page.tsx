@@ -1,8 +1,8 @@
 'use client';
 
-import LoginHeaders from "@/app/ui/loginHeaders";
+import LoginHeaders from '@/app/ui/loginHeaders';
 
-const { useState } = require("react");
+const { useState } = require('react');
 
 export default function Register() {
   const loginText = 'DecoAR';
@@ -10,10 +10,9 @@ export default function Register() {
 
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
-  const [password, setPassword ] = useState('');
+  const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-custom-bg">
       <LoginHeaders Login={loginText} Message={messageText} />
@@ -71,10 +70,22 @@ export default function Register() {
 
       <div className="mt-4 text-center">
         <span className="text-gray-600 text-sm">
-          By continuing, you agree to the <a href="#" className="text-blue-500 hover:underline">Terms of Use</a>. Read our <a href="#" className="text-blue-500 hover:underline">Privacy Policy</a>.
+          By continuing, you agree to the{' '}
+          <a href="#" className="text-blue-500 hover:underline">
+            Terms of Use
+          </a>
+          . Read our{' '}
+          <a href="#" className="text-blue-500 hover:underline">
+            Privacy Policy
+          </a>
+          .
         </span>
-        <p className="mt-4 text-black font-semibold text-lg">Already have an account?</p>
-        <span className="text-blue-500 hover:underline cursor-pointer font-semibold text-lg">Login</span>
+        <p className="mt-4 text-black font-semibold text-lg">
+          Already have an account?
+        </p>
+        <span className="text-blue-500 hover:underline cursor-pointer font-semibold text-lg">
+          Login
+        </span>
       </div>
     </main>
   );
