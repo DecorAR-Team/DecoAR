@@ -8,11 +8,11 @@ export default function Subcategories({
   tabSubcategories: Subcategory[];
 }) {
   return (
-    <div className="py-4 flex overflow-auto	text-slate-400 no-scrollbar">
+    <div className="py-8 flex gap-4 overflow-auto	text-slate-400 no-scrollbar">
       {tabSubcategories.map((subcategory) => (
         <Link
           href={`/categories/${subcategory.id}`}
-          className="hover:bg-slate-50 p-4"
+          className="hover:bg-slate-50"
           key={subcategory.id}
         >
           <div className=" flex-shrink-0  relative w-[200px] h-[80px]">
