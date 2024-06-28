@@ -7,9 +7,11 @@ export default function Layout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // console.log(searchParams);
+
   return (
-    <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
-      <div className="px-6 py-6 w-full flex-none md:w-64">
+    <div className="flex h-screen flex-col">
+      <div className="px-6 py-6 w-full flex-none md:w-64 md:mx-auto">
         <Search placeholder="Search" />
       </div>
       <div className="px-6 flex-grow md:overflow-y-auto md:p-12">

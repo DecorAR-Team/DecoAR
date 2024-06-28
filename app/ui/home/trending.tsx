@@ -13,16 +13,16 @@ export default function Trending({
       <h2 className={`${quattrocento.className} font-bold text-xl`}>
         Trending now
       </h2>
-      <div className="grid grid-cols-2  py-4 text-slate-400">
+      <div className="grid grid-cols-2  py-4 text-slate-400 gap-3">
         {randomItems.map((subcategory) => (
           <Link
-            className="hover:bg-slate-50 p-4"
+            className="hover:bg-slate-50 "
             href={`/categories/${subcategory.id}`}
             key={subcategory.id}
           >
-            <div className=" relative w-full h-40">
+            <div className=" relative w-full h-40 bg-slate-100">
               <Image
-                className="rounded"
+                className="rounded-lg "
                 src={subcategory.imageUrl}
                 alt={subcategory.name}
                 fill
