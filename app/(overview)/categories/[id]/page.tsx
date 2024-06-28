@@ -32,7 +32,7 @@ export default async function Categories({
       <h1 className="flex flex-row justify-left align-middle ml-5 text-3xl font-semibold">
         Browse furniture
       </h1>
-       <ul>
+       <ul className='pb-12'>
         {products?.map((product) => (
           <li key={product?.id}>
             <CategoryTilesRow product={product} />

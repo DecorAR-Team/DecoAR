@@ -36,7 +36,7 @@ export default function IndividualCategoryTile({
         </div>
 
         <div>
-          <h2 className="w-full text-slate-500 mb-6 pb-12"> ${price.currentPrice} </h2>
+          <h2 className="w-full text-slate-500 mb-6 "> ${price.currentPrice} </h2>
         </div>
       </div>
     </div>
