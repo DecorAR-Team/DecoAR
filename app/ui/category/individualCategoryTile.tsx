@@ -20,7 +20,7 @@ export default function IndividualCategoryTile({
   //TODO fix image container up
   return (
     <div className="flex flex-col items-center overflow-auto no-scrollbar mt-5">
-      <div className='relative '>
+      <div className="relative ">
         <Image
           src={src}
           alt={alt}
@@ -36,7 +36,10 @@ export default function IndividualCategoryTile({
         </div>
 
         <div>
-          <h2 className="w-full text-slate-500 mb-6 "> ${price.currentPrice} </h2>
+          <h2 className="w-full text-slate-500 mb-6 ">
+            {' '}
+            ${price.currentPrice}{' '}
+          </h2>
         </div>
       </div>
     </div>
