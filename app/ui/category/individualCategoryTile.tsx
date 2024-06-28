@@ -19,24 +19,24 @@ export default function IndividualCategoryTile({
 
   //TODO fix image container up
   return (
-    <div className="flex flex-col items-center overflow-auto no-scrollbar mt-10">
-      <div className="items-center">
+    <div className="flex flex-col items-center overflow-auto no-scrollbar mt-5">
+      <div className='relative '>
         <Image
           src={src}
           alt={alt}
           width={335}
           height={185}
-          className="border border-gray-300 rounded-md;"
+          className="border border-gray-300 rounded-md rounded-lg;"
         />
       </div>
 
-      <div className="w-full ml-20">
+      <div className="w-full pl-5">
         <div>
-          <h2 className="w-full font-semibold mt-4"> {name} </h2>
+          <h2 className="w-full font-semibold mt-2"> {name} </h2>
         </div>
 
         <div>
-          <h2 className="w-full text-slate-500"> ${price.currentPrice} </h2>
+          <h2 className="w-full text-slate-500 mb-6 pb-12"> ${price.currentPrice} </h2>
         </div>
       </div>
     </div>
