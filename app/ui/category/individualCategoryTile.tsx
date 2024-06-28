@@ -26,7 +26,7 @@ export default function IndividualCategoryTile({
           alt={alt}
           width={335}
           height={185}
-          className="border border-gray-300 rounded-md rounded-lg;"
+          className="border border-gray-300 rounded-md rounded-xl;"
         />
       </div>
 
