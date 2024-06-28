@@ -41,7 +41,7 @@ type ProductVariantsPrice {
 model Product {
   id                 String                @id @default(auto()) @map("_id") @db.ObjectId
   categoryPath       ProductCategoryPath[]
-  contextualImageUrl String?
+  contextualImageUrl String
   id_                String                @map("id") @unique
   image              String
   imageAlt           String
