@@ -1,6 +1,7 @@
 import {
   HeartIcon,
   HomeIcon,
+  MagnifyingGlassCircleIcon,
   UserCircleIcon,
   WalletIcon,
 } from '@heroicons/react/24/outline';
@@ -16,11 +17,12 @@ export default async function Navbar() {
       href: '/',
       icon: HomeIcon,
     },
-    {
-      name: 'Wallet',
-      href: user ? '/profile/wallet' : 'api/auth/signin',
-      icon: WalletIcon,
-    },
+    // {
+    //   name: 'Wallet',
+    //   href: user ? '/profile/wallet' : 'api/auth/signin',
+    //   icon: WalletIcon,
+    // },
+    { name: 'Browse', href: '/search', icon: MagnifyingGlassCircleIcon },
     {
       name: 'Favorites',
       href: user ? '/profile/favorites' : 'api/auth/signin',

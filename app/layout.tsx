@@ -18,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="en">
-      <body className={fanwoodText.className}>{children}</body>
+      {/* suppressHydrationWarning: Fix hydration warning caused by some chrome extensions, only affects body, not children */}
+      <body className={`${fanwoodText.className} md:max-w-xl md:mx-auto`}>
+        {children}
+      </body>
     </html>
   );
 }
