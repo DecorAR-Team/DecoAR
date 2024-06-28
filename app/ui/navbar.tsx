@@ -5,8 +5,11 @@ import {
   WalletIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
+import { getUserSession } from '../lib/session';
 
-export default function Navbar() {
+export default async function Navbar() {
+  const user = await getUserSession();
+  
   return (
     <div className="fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-slate-200 dark:bg-slate-700 dark:border-slate-600">
       <div className="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">

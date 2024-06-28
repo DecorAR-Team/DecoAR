@@ -21,3 +21,33 @@ export async function fetchSubCategories() {
     throw new Error('Failed to fetch categories.');
   }
 }
+// TODO fix the findMany to findUnique
+export async function fetchSubcategoryWithProductIds(id : string) {
+  try {
+    const subcategorieswithproductIds = await prisma.subcategoryWithProductIds.findMany(
+      {
+        where: {
+          subcategory_id: id
+  }
+  });
+    return subcategorieswithproductIds;
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch categories.');
+  }
+}
+
+export async function fetchProduct(product_id : string) {
+  try {
+    const product = await prisma.product.findUnique(
+      {
+        where: {
+          id_: product_id
+   }
+  } );
+    return product;
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch categories.');
+  }
+}
