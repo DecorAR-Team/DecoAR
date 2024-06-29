@@ -26,7 +26,7 @@ export default function AccountSettings({ user }: any) {
           Account Settings
         </h1>
         <Image
-          src={user.image}
+          src={user?.image}
           alt="profile picture"
           className="rounded-full mx-auto mr-10 md:w-36 md:h-36"
           width={100}
@@ -49,7 +49,7 @@ export default function AccountSettings({ user }: any) {
           <input
             className="border-b-2 border-gray-300 w-1/2 
             md:outline md:rounded md:border-black md:border-0 md:p-3 md:mt-2"
-            defaultValue={user.name.split(' ')[0]}
+            defaultValue={user?.name.split(' ')[0]}
             type="text"
             id="first-name"
             placeholder="First Name"
@@ -63,7 +63,7 @@ export default function AccountSettings({ user }: any) {
           <input
             className="border-b-2 border-gray-300 w-1/2 
             md:outline md:rounded md:border-black md:border-0 md:p-3 md:mt-2"
-            defaultValue={user.name.split(' ')[1]}
+            defaultValue={user?.name.split(' ')[1]}
             type="text"
             id="last-name"
             placeholder="Last Name"
@@ -78,7 +78,7 @@ export default function AccountSettings({ user }: any) {
           <input
             className="border-b-2 border-gray-300 w-1/2 
             md:outline md:rounded md:border-black md:border-0 md:p-3 md:mt-2"
-            defaultValue={user.email}
+            defaultValue={user?.email}
             type="text"
             id="email"
             placeholder="Email"

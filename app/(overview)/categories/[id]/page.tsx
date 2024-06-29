@@ -9,7 +9,7 @@ export default async function Categories({
   params: { id: string };
 }) {
   async function categoryDetails() {
-    'use server';
+    'use server'; //TODO: isn't this a server component?
     const subCategoryWithProductIds = await fetchSubcategoryWithProductIds(
       params.id,
     );
@@ -24,15 +24,16 @@ export default async function Categories({
 
   const products = await categoryDetails();
 
-  console.log(products);
+  // console.log(products);
 
   return (
-    <div>x
+    <div>
+      x
       <h1 className="flex flex-row justify-left align-middle ml-5 mt-10 text-3xl font-semibold mb-5">
         Browse furniture
       </h1>
-      <Search placeholder="Search for products, brands..."  />     
-       <ul>
+      {/* <Search placeholder="Search for products, brands..." /> */}
+      <ul>
         {products?.map((product) => (
           <li key={product?.id}>
             <CategoryTilesRow product={product} />
@@ -43,3 +44,5 @@ export default async function Categories({
     </div>
   );
 }
+
+//TODO change route name to category instead of categories?

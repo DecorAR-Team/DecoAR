@@ -2,9 +2,9 @@ import { Subcategory } from '@prisma/client';
 import { fetchCategories, fetchSubCategories } from '../lib/data';
 import CategoriesTabs from '../ui/home/categories-tabs';
 import Trending from '../ui/home/trending';
+import Search from '../ui/search';
 
 export default async function Home() {
-  //TODO create an (overview) with root page, /[catID]/products and a common layout for these 2 pages: <SearchBar>,<NavBar>
   const categories = await fetchCategories();
   const subcategories = await fetchSubCategories();
 
@@ -29,6 +29,9 @@ export default async function Home() {
   //TODO Subcategories and Trending can be combined?
   return (
     <main>
+      <div className="py-6 w-full flex-none">
+        <Search placeholder="Search" redirectOnFocus={true} />
+      </div>
       <CategoriesTabs categories={categories} subcategories={subcategories} />
       <Trending randomItems={randomItems} />
     </main>
