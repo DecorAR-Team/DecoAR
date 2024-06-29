@@ -7,20 +7,31 @@ export default function SortBy ( { products }) {
   const [sortedProducts, setSortedProducts] = useState(products);
   
     
-
-  const sortLowesttoHighest = (products) => {
-    return products.sort((a, b) => (a.price.currentPrice - b.price.currentPrice));
+  function sortLowesttoHighest(products) {
+    return products.sort((a, b) => (a.price.currentPrice) * 100 - (b.price.currentPrice) * 100);
   }
+  const lowestPrice = sortLowesttoHighest(products.slice());
+  // lowestPrice.forEach(product => {
+  //   console.log(`LTH ${product.name} - $${product.price.currentPrice}`);
+  // });
 
-  console.log("hello", sortLowesttoHighest);
-
-  const sortHighesttoLowest = (products) => {
-    return [...products].sort((a, b) => b.price - a.price);
+  
+  function sortHighesttoLowest(products) {
+    return products.sort((a, b) => (b.price.currentPrice) * 100 - (a.price.currentPrice) * 100);
   }
+  const highestPrice = sortHighesttoLowest(products.slice());
+  // highestPrice.forEach(product => {
+  //   console.log(`HTL ${product.name} - $${product.price.currentPrice}`);
+  // });
 
-  const sortAlphabetically = (products) => {
-    return [...products].sort((a, b) => b.name - a.name);
-  }
+
+  function sortAlphabetically(products) { 
+    return [...products].sort((a, b) => a.name.localeCompare(b.name)); 
+  };
+  const alphabetically = sortAlphabetically(products);  
+  // alphabetically.forEach(product => {
+  //   console.log(`Alphabetically ${product.name} - $${product.price.currentPrice}`);
+  // });
 
   const sortMethods = {
     'lowest': sortLowesttoHighest,
