@@ -50,6 +50,7 @@ model Product {
   price              ProductPrice
   typeName           String
   url                String
+  description        String?
   variants           ProductVariants[]
   productWith3d      ProductWith3d?       
 }
