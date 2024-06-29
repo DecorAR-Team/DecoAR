@@ -17,7 +17,7 @@ export default function Search({
   const router = useRouter();
   const inputRef = useRef<HTMLInputElement>(null);
 
-  console.log(redirectOnFocus);
+  // console.log(redirectOnFocus);
 
   useEffect(() => {
     if (pathname === '/search' && inputRef.current) {
