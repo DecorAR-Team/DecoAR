@@ -10,7 +10,11 @@ export default function RatingComponent() {
     <Rate
       count={5}
       defaultValue={4}
-      style={{ padding: '2px', color: 'gold', fontSize: 12 }}
+      style={{
+        padding: '2px',
+        color: 'gold',
+        fontSize: 25,
+      }}
     />
   );
 }

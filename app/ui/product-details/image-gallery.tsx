@@ -1,13 +1,13 @@
 'use client';
-import { Product, ProductVariants } from '@prisma/client';
 import ReactImageGallery from 'react-image-gallery';
 
 export default function ImageGalleryComponent({
-  product,
   images,
 }: {
-  product: Product | ProductVariants;
-  images: any[];
+  images: {
+    original: string;
+    thumbnail: string;
+  }[];
 }) {
   return (
     //TODO add alt to images
