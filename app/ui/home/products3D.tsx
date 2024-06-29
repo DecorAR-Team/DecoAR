@@ -19,7 +19,7 @@ export default function Products3D({
   // console.log('--------', products3Dlist[0]);
 
   return (
-    <div className="pb-16">
+    <div>
       <h2 className={`${quattrocento.className} font-bold text-xl`}>
         View in 3D
       </h2>

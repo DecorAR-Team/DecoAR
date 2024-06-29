@@ -13,7 +13,7 @@ export default async function Layout({
   return (
     <div className="flex flex-col">
       {/* TODO do we need h-dvh class on wrapper? */}
-      <div className="px-6">{children}</div>
+      <div className="px-6 pb-20">{children}</div>
       <Navbar user={user} />
     </div>
   );

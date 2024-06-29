@@ -34,12 +34,12 @@ export default async function ProductDetails({
       <h1 className="text-xl">{product.name}</h1>
       <p>{product.description}</p>
       <div>
-        <h2>Specifications:</h2>
+        <h2 className="text-lg">Specifications:</h2>
         <p>{product.measurement ?? 'No measurements'}</p>
       </div>
       <Link
         href={routes.details3D(product.id_)}
-        className="bg-blue-600 rounded-lg text-white p-2 w-1/2 text-center ho"
+        className="bg-blue-600 hover:bg-blue-800 rounded-lg text-white p-2 w-1/2 text-center w-full"
       >
         <p>Try it in your home</p>
       </Link>

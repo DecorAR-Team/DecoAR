@@ -21,19 +21,5 @@ export default function ImageGalleryComponent({
         />
       </div>
     </section>
-    // <div className=" flex-shrink-0  relative w-full h-[400px]">
-    //   <Image
-    //     className="rounded-lg "
-    //     src={product.contextualImageUrl || product.image} //TODO fix this, it can be null
-    //     alt={product.imageAlt}
-    //     fill
-    //     priority
-    //     style={{
-    //       objectFit: 'cover',
-    //       objectPosition: 'top',
-    //     }}
-    //     sizes="(max-width: 640px) 100vw, 200px" //TODO: check this
-    //   ></Image>
-    // </div>
   );
 }

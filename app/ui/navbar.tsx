@@ -33,7 +33,7 @@ export default function Navbar({ user }: { user: any }) {
   ];
 
   return (
-    <div className="fixed bottom-0 left-0 z-50 w-full mt-16 h-16 bg-white border-t border-slate-200 dark:bg-slate-700 dark:border-slate-600">
+    <div className="fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-slate-200 dark:bg-slate-700 dark:border-slate-600">
       <div className="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
         {navlinks.map((link) => {
           const LinkIcon = link.icon;
