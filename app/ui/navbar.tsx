@@ -1,3 +1,5 @@
+'use client';
+
 import {
   HeartIcon,
   HomeIcon,
@@ -9,8 +11,7 @@ import Link from 'next/link';
 import { getUserSession } from '../lib/session';
 import Image from 'next/image';
 
-export default async function Navbar() {
-  const user = await getUserSession();
+export default function Navbar({ user }: { user: any }) {
   const navlinks = [
     {
       name: 'Home',
