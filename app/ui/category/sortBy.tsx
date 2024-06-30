@@ -47,7 +47,9 @@ export default function SortBy({ products }) {
       <ul className="pb-12 px-4 sm:px-10">
         {sortedProducts?.map((product) => (
           <li key={product?.id} className="mb-4">
+            {/* <Link href={`/product/${product3D.productId}/details`}> */}
             <CategoryTilesRow product={product} />
+            {/* </Link> */}
           </li>
         ))}
       </ul>
