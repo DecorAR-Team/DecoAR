@@ -7,6 +7,9 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'www.ikea.com',
       },
+      {
+        hostname: 'lh3.googleusercontent.com',
+      },
     ],
   },
 };

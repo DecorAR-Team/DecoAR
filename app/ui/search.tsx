@@ -2,12 +2,28 @@
 
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
+import { useEffect, useRef } from 'react';
 import { useDebouncedCallback } from 'use-debounce';
 
-export default function Search({ placeholder }: { placeholder: string }) {
+export default function Search({
+  placeholder,
+  redirectOnFocus,
+}: {
+  placeholder: string;
+  redirectOnFocus: boolean;
+}) {
   const searchParams = useSearchParams();
   const pathname = usePathname();
-  // const { replace } = useRouter();
+  const router = useRouter();
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  console.log(redirectOnFocus);
+
+  useEffect(() => {
+    if (pathname === '/search' && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [pathname]);
 
   // const handleSearch = useDebouncedCallback((term) => {
   //   console.log(`Searching... ${term}`);
@@ -19,8 +35,12 @@ export default function Search({ placeholder }: { placeholder: string }) {
   //   } else {
   //     params.delete('query');
   //   }
-  //   replace(`${pathname}?${params.toString()}`);
+  //   router.replace(`${pathname}?${params.toString()}`);
   // }, 300);
+
+  const handleFocus = () => {
+    router.push('/search'); // Redirect to the search page from home page
+  };
 
   return (
     <div className="relative flex flex-1 flex-shrink-0">
@@ -28,6 +48,8 @@ export default function Search({ placeholder }: { placeholder: string }) {
         Search
       </label>
       <input
+        ref={inputRef}
+        onFocus={redirectOnFocus ? handleFocus : undefined}
         className="peer block w-full rounded-md border border-slate-400 py-[9px] pl-10 text-sm outline-2 placeholder:text-slate-500"
         placeholder={placeholder}
         // onChange={(e) => {
