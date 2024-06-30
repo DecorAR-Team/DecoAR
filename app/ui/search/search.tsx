@@ -17,26 +17,22 @@ export default function Search({
   const router = useRouter();
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // console.log(redirectOnFocus);
-
   useEffect(() => {
     if (pathname === '/search' && inputRef.current) {
       inputRef.current.focus();
     }
   }, [pathname]);
 
-  // const handleSearch = useDebouncedCallback((term) => {
-  //   console.log(`Searching... ${term}`);
-
-  //   const params = new URLSearchParams(searchParams);
-  //   params.set('page', '1');
-  //   if (term) {
-  //     params.set('query', term);
-  //   } else {
-  //     params.delete('query');
-  //   }
-  //   router.replace(`${pathname}?${params.toString()}`);
-  // }, 300);
+  const handleSearch = useDebouncedCallback((term) => {
+    const params = new URLSearchParams(searchParams);
+    params.set('page', '1');
+    if (term) {
+      params.set('query', term);
+    } else {
+      params.delete('query');
+    }
+    router.replace(`${pathname}?${params.toString()}`);
+  }, 300);
 
   const handleFocus = () => {
     router.push('/search'); // Redirect to the search page from home page
@@ -52,9 +48,9 @@ export default function Search({
         onFocus={redirectOnFocus ? handleFocus : undefined}
         className="peer block w-full rounded-md border border-slate-400 py-[9px] pl-10 text-sm outline-2 placeholder:text-slate-500"
         placeholder={placeholder}
-        // onChange={(e) => {
-        //   handleSearch(e.target.value);
-        // }}
+        onChange={(e) => {
+          handleSearch(e.target.value);
+        }}
         id="search"
         defaultValue={searchParams.get('query')?.toString()}
       />

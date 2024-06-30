@@ -4,8 +4,8 @@ import {
   fetchSubCategories,
 } from '../lib/data';
 import CategoriesTabs from '../ui/home/categories-tabs';
-import Search from '../ui/search';
-import Products3D from '../ui/home/products3D';
+import Search from '../ui/search/search';
+import ProductsList from '../ui/home/productsList';
 
 export default async function Home() {
   const categories = await fetchCategories();
@@ -18,7 +18,7 @@ export default async function Home() {
         <Search placeholder="Search" redirectOnFocus={true} />
       </div>
       <CategoriesTabs categories={categories} subcategories={subcategories} />
-      <Products3D products3Dlist={products3Dlist} />
+      <ProductsList heading={'View in 3D'} productsList={products3Dlist} />
     </main>
   );
 }
