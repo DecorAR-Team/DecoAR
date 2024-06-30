@@ -23,23 +23,25 @@ export default async function Categories({ params }: { params: { id: string } })
 
   return (
     <div>
-      <div className="flex flex-row items-center justify-left w-full ml-4 mt-5">
+      <div className='flex flex-col'>
+        <div className='flex flex-row justify-left align-middle mt-10'>
         <Link href="/">
-          <IoMdArrowBack className="text-2xl" />
+          <IoMdArrowBack className="text-3xl" />
         </Link>
-        <h1 className="flex flex-row justify-left align-middle ml-5 text-3xl font-semibold w-auto">
+        <h1 className="ml-5 text-3xl font-semibold">
           Browse furniture
         </h1>
+        </div >
         <SortBy products={products}/>
       </div>
 
-      <ul className="pb-12">
+      {/* <ul className="pb-12">
         {products?.map((product) => (
           <li key={product?.id}>
             <CategoryTilesRow product={product} />
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 }
