@@ -30,10 +30,10 @@ export default function SortBy({ products }) {
 
   return (
     <div>
-      <div className="flex flex-col align-middle justify-left mt-2 ml-10">
-        <p className="w-full text-right pr-10">Sort by:</p>
+      <div className="flex flex-col items-end mt-2 sm:mt-6 px-4 sm:px-10">
+        <p className="w-full text-right">Sort by:</p>
         <select
-          className="w-full text-right"
+          className="w-full text-right sm:w-auto"
           value={sortOrder}
           onChange={handleSortChange}
         >
@@ -44,12 +44,10 @@ export default function SortBy({ products }) {
         </select>
       </div>
 
-      <ul className="pb-12">
+      <ul className="pb-12 px-4 sm:px-10">
         {sortedProducts?.map((product) => (
-          <li key={product?.id}>
-            {/* <Link href={`/product/${product3D.productId}/details`}> */}
-              <CategoryTilesRow product={product} />
-            {/* </Link> */}
+          <li key={product?.id} className="mb-4">
+            <CategoryTilesRow product={product} />
           </li>
         ))}
       </ul>

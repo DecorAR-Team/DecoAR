@@ -30,7 +30,7 @@ export default function IndividualCategoryTile({
         />
       </div>
 
-      <div className="w-full pl-5">
+      <div className="w-full pl-2">
         <div>
           <h2 className="w-full font-semibold mt-2"> {name} </h2>
         </div>
