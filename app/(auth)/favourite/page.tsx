@@ -1,3 +1,5 @@
+import Navbar from "@/app/ui/navbar";
+
 export default function Favourite () {
 
   return (
@@ -7,7 +9,7 @@ export default function Favourite () {
         Favorites
       </h1>
 
-      
+      <Navbar />
     </div>
   )
 }
