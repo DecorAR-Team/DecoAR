@@ -15,3 +15,15 @@ export async function getSubcategories(categoryId: string) {
     throw new Error('Failed to get subcategories.');
   }
 }
+
+export default async function addToFavourite () {
+  const {userId, productId} = req.body;
+  try {
+    const user = await prisma.User.create({
+      where: {
+        id: userId,
+        favoritedProducts: 
+      },
+    });
+  
+}
