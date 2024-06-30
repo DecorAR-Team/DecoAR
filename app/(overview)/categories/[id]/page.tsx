@@ -19,7 +19,6 @@ export default async function Categories({ params }: { params: { id: string } })
   }
 
   const products = await categoryDetails();
-  // console.log(products);
 
   return (
     <div>
@@ -34,14 +33,6 @@ export default async function Categories({ params }: { params: { id: string } })
         </div >
         <SortBy products={products}/>
       </div>
-
-      {/* <ul className="pb-12">
-        {products?.map((product) => (
-          <li key={product?.id}>
-            <CategoryTilesRow product={product} />
-          </li>
-        ))}
-      </ul> */}
     </div>
   );
 }

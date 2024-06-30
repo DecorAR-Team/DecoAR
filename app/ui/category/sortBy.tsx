@@ -1,7 +1,9 @@
 'use client';
 import { useState, useEffect } from 'react';
 import CategoryTilesRow from './categoryTilesRow';
+import Link from 'next/link';
 
+//TODO: Fix typescript error
 export default function SortBy({ products }) {
   const [sortOrder, setSortOrder] = useState('featured');
   const [sortedProducts, setSortedProducts] = useState(products);
@@ -29,8 +31,12 @@ export default function SortBy({ products }) {
   return (
     <div>
       <div className="flex flex-col align-middle justify-left mt-2 ml-10">
-        <p className='w-full text-right pr-10'>Sort by:</p>
-        <select className='w-full text-right' value={sortOrder} onChange={handleSortChange}>
+        <p className="w-full text-right pr-10">Sort by:</p>
+        <select
+          className="w-full text-right"
+          value={sortOrder}
+          onChange={handleSortChange}
+        >
           <option value="featured">Featured</option>
           <option value="lowest">Price: Low to High</option>
           <option value="highest">Price: High to Low</option>
@@ -41,7 +47,9 @@ export default function SortBy({ products }) {
       <ul className="pb-12">
         {sortedProducts?.map((product) => (
           <li key={product?.id}>
-            <CategoryTilesRow product={product} />
+            {/* <Link href={`/product/${product3D.productId}/details`}> */}
+              <CategoryTilesRow product={product} />
+            {/* </Link> */}
           </li>
         ))}
       </ul>
