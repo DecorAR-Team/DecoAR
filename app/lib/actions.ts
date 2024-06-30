@@ -16,14 +16,21 @@ export async function getSubcategories(categoryId: string) {
   }
 }
 
-export default async function addToFavourite () {
-  const {userId, productId} = req.body;
+export default async function addToFavourite() {
+  const { userId, productId } = req.body;
   try {
     const user = await prisma.User.create({
       where: {
         id: userId,
-        favoritedProducts: 
+      },
+      data: {
+        favoritedProducts: [],
       },
     });
-  
+    res.status(201).send('favorite added successfully');
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal server error');
+  }
 }
+
