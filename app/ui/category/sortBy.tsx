@@ -33,7 +33,7 @@ export default function SortBy({ products }) {
       <div className="flex flex-col items-end mt-2 sm:mt-6 px-4 sm:px-10">
         <p className="w-full text-right">Sort by:</p>
         <select
-          className="w-full text-right sm:w-auto"
+          className="w-full text-right sm:w-auto focus:outline-none"
           value={sortOrder}
           onChange={handleSortChange}
         >
