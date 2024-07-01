@@ -6,8 +6,6 @@ export default async function Layout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // console.log(searchParams);
-  const user = await getUserSession();
 
   return (
     <div className="flex flex-col">
