@@ -16,15 +16,13 @@ export default async function Home() {
 
   const { userId } = await auth();
   const user = await currentUser();
-  
+
   if (userId && user) {
-    
     const email = user?.emailAddresses[0].emailAddress;
-    const name = user?.fullName || user?.firstName;
+    const name = (user?.fullName || user?.firstName) ?? '';
     const image = user?.imageUrl;
 
-
-    await createOrUpdateUser(email, name, image);
+    await createOrUpdateUser(email, name, image, userId);
   }
 
   return (
