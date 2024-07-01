@@ -5,9 +5,10 @@ import {
   HomeIcon,
   MagnifyingGlassCircleIcon,
   UserCircleIcon,
-  WalletIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
+import Image from 'next/image';
+import { routes } from '../lib/route-list';
 import {
   SignInButton,
   SignedIn,
@@ -35,26 +36,22 @@ console.log(isSignedIn, userId)
   const navlinks = [
     {
       name: 'Home',
-      href: '/',
+      href: routes.home,
       icon: HomeIcon,
     },
-    {
-      name: 'Wallet',
-      href: '/profile/wallet',
-      icon: WalletIcon,
-    },
+
     { name: 'Browse', href: '/search', icon: MagnifyingGlassCircleIcon },
     {
       name: 'Favorites',
-      href: '/profile/favorites',
+      href: user ? routes.favorites : routes.signin,
       icon: HeartIcon,
     },
-    // {
-    //   name: user ? user.name : 'Profile',
-    //   href:  '/profile',
-    //   icon: UserCircleIcon,
-    //   bgImage: user ? user.image : '',
-    // },
+    {
+      name: user ? user.name : 'Profile',
+      href: user ? routes.profile : routes.signin,
+      icon: UserCircleIcon,
+      bgImage: user ? user.image : '',
+    },
   ];
 
   return (

@@ -15,3 +15,43 @@ export async function getSubcategories(categoryId: string) {
     throw new Error('Failed to get subcategories.');
   }
 }
+
+export default async function addToFavourite(req, res) {
+  const { userId, productId } = req.body;
+  try {
+    const user = await prisma.User.create({
+      where: {
+        id: userId,
+      },
+      data: {
+        favoritedProducts: [],
+      },
+    });
+    res.status(201).send('favorite added successfully');
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal server error');
+  }
+}
+
+export default async function removeFromFavourite(req, res) {
+  const { userId, productId } = req.body;
+  try {
+    const user = await prisma.User.deleteMany({
+      where: {
+        id: userId,
+      },
+      data: {
+        favoritedProducts: {
+          disconnect: {
+            id: productId,
+          },
+        },
+      },
+    });
+    res.status(201).send('favorite removed successfully');
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal server error');
+  }
+}
