@@ -20,13 +20,15 @@ export default async function Favorite() {
   let favProducts = [];
   for (let productId of productIds) {
     const product = await fetchFavoriteProducts(productId);
-    favProducts.push(product);
+    if (product) {
+      favProducts.push(product);
+    }
   }
 
   return (
     <div>
       {favProducts.map((product) => (
-        // <FavList product={product} />
+        <FavList key={product.id} product={product} />
       ))}
     </div>
   );
