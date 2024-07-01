@@ -52,7 +52,8 @@ model Product {
   url                String
   description        String?
   variants           ProductVariants[]
-  productWith3d      ProductWith3d?       
+  productWith3d      ProductWith3d? 
+
 }
 
 model ProductWith3d {
@@ -89,8 +90,7 @@ model User {
   id                String    @id @default(auto()) @map("_id") @db.ObjectId
   email             String    @unique
   name              String
-  avatar            String?
   createdAt         DateTime  @default(now())
   updatedAt         DateTime  @updatedAt
-  favoriteProducts  Product[]  @relation(fields: [userId], references: [id])
+  favoriteProducts  Product[]  @relation(fields: [userId], references: [id])  
 }

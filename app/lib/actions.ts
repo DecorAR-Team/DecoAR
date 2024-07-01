@@ -16,42 +16,47 @@ export async function getSubcategories(categoryId: string) {
   }
 }
 
-export default async function addToFavourite(req, res) {
-  const { userId, productId } = req.body;
-  try {
-    const user = await prisma.User.create({
-      where: {
-        id: userId,
-      },
-      data: {
-        favoritedProducts: [],
-      },
-    });
-    res.status(201).send('favorite added successfully');
-  } catch (error) {
-    console.error(error);
-    res.status(500).send('Internal server error');
-  }
-}
 
-export default async function removeFromFavourite(req, res) {
-  const { userId, productId } = req.body;
+export async function toggleFavorite(productId: string, email: string) {
   try {
-    const user = await prisma.User.deleteMany({
-      where: {
-        id: userId,
-      },
-      data: {
-        favoritedProducts: {
-          disconnect: {
-            id: productId,
-          },
-        },
-      },
+    // Check if user exists
+    const existingUser = await prisma.user.findUnique({
+      where: { email },
     });
-    res.status(201).send('favorite removed successfully');
+
+    if (!existingUser) {
+      throw new Error('User not found'); // Handle non-existent user
+    }
+
+    // Check if product already exists in favorites
+    const isFavorite = existingUser.favoriteProducts.some(
+      (favProduct) => favProduct.id === productId
+    );
+
+    const updateData = {
+      favoriteProducts: {
+        connect: isFavorite ? undefined : { id: productId }, // Connect if not favorite, disconnect if favorite
+        disconnect: isFavorite ? { id: productId } : undefined,
+      },
+    };
+
+    // Update user with favorite product changes
+    await prisma.user.update({
+      where: { email },
+      data: updateData,
+    });
+
+    // Return message based on favorite status (remove function logic)
+    return {
+      message: isFavorite ? 'Product removed from favorites' : 'Product added to favorites',
+    };
   } catch (error) {
     console.error(error);
-    res.status(500).send('Internal server error');
+    // Handle specific errors (user not found)
+    if (error.message === 'User not found') {
+      return { message: 'User not found' };
+    } else {
+      return { message: 'Internal server error' };
+    }
   }
 }

@@ -1,3 +1,4 @@
+import { auth, currentUser } from '@clerk/nextjs/server';
 import {
   fetchCategories,
   fetchProducts3D,
@@ -6,11 +7,23 @@ import {
 import CategoriesTabs from '../ui/home/categories-tabs';
 import Search from '../ui/search/search';
 import ProductsList from '../ui/home/productsList';
+import { createOrUpdateUser } from '../lib/userfunctions';
 
 export default async function Home() {
   const categories = await fetchCategories();
   const subcategories = await fetchSubCategories();
   const products3Dlist = await fetchProducts3D();
+
+  const { userId } = await auth();
+  const user = await currentUser();
+  
+  if (userId && user) {
+    
+    const email = user?.emailAddresses[0].emailAddress;
+    const name = user?.fullName || user?.firstName;
+
+    await createOrUpdateUser(email, name);
+  }
 
   return (
     <main>
