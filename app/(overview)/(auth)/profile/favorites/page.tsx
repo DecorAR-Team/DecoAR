@@ -5,7 +5,6 @@ import { log } from 'console';
 
 export default async function Favorite() {
   const { userId } = await auth();
-  console.log(userId);
 
   const favorites = await prisma.favorite.findMany({
     where: {
@@ -14,9 +13,7 @@ export default async function Favorite() {
   });
 
   const productIds = favorites.map((favorite) => favorite.productId);
-  console.log(productIds);
 
-  // console.log(favorites);
   let favProducts = [];
   for (let productId of productIds) {
     const product = await fetchFavoriteProducts(productId);
