@@ -92,24 +92,5 @@ model User {
   avatar            String?
   createdAt         DateTime  @default(now())
   updatedAt         DateTime  @updatedAt
-  // Product          Product?  @relation(fields: [productId])
-  productId         String?   @db.ObjectId
-  favoritedProducts Product[] @relation("Favorites")
-}
-
-model Product {
-  id                 String                @id @default(auto()) @map("_id") @db.ObjectId
-  categoryPath       ProductCategoryPath[]
-  contextualImageUrl String
-  id_                String                @unique @map("id")
-  image              String
-  imageAlt           String
-  measurement        String
-  name               String
-  price              ProductPrice
-  typeName           String
-  url                String
-  variants           ProductVariants[]
-  productWith3d      ProductWith3d?
-  favoritedUsers     User[]                @relation("Favorites")
+  favoriteProducts  Product[]  @relation(fields: [userId], references: [id])
 }
