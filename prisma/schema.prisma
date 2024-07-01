@@ -41,7 +41,7 @@ type ProductVariantsPrice {
 model Product {
   id                 String                @id @default(auto()) @map("_id") @db.ObjectId
   categoryPath       ProductCategoryPath[]
-  contextualImageUrl String?
+  contextualImageUrl String
   id_                String                @map("id") @unique
   image              String
   imageAlt           String
@@ -50,32 +50,32 @@ model Product {
   price              ProductPrice
   typeName           String
   url                String
+  description        String?
   variants           ProductVariants[]
   productWith3d      ProductWith3d?       
 }
 
 model ProductWith3d {
-  id          String @id @default(auto()) @map("_id") @db.ObjectId
-  productId   String @unique
+  id          String  @id @default(auto()) @map("_id") @db.ObjectId
+  productId   String  @unique
   productName String
   url         String
   product     Product @relation(fields: [productId], references: [id_])
 }
 
-
 model Category {
-  id   String @id @default(auto()) @map("_id") @db.ObjectId
-  name String
-  subcategories   Subcategory[]   @relation("CategorySubcategory")
+  id            String        @id @default(auto()) @map("_id") @db.ObjectId
+  name          String
+  subcategories Subcategory[] @relation("CategorySubcategory")
 }
 
 model Subcategory {
-  id                  String  @id @default(auto()) @map("_id") @db.ObjectId
-  category_id         String  @db.ObjectId
+  id                  String   @id @default(auto()) @map("_id") @db.ObjectId
+  category_id         String   @db.ObjectId
   imageUrl            String
   name                String
   subcategory_ikea_id String
-  category            Category  @relation(fields: [category_id], references: [id], name: "CategorySubcategory")
+  category            Category @relation(fields: [category_id], references: [id], name: "CategorySubcategory")
 }
 
 model SubcategoryWithProductIds {
@@ -86,10 +86,30 @@ model SubcategoryWithProductIds {
 }
 
 model User {
-  id        String @id @default(auto()) @map("_id") @db.ObjectId
-  email     String @unique
-  name      String
-  avatar    String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id                String    @id @default(auto()) @map("_id") @db.ObjectId
+  email             String    @unique
+  name              String
+  avatar            String?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+  // Product          Product?  @relation(fields: [productId])
+  productId         String?   @db.ObjectId
+  favoritedProducts Product[] @relation("Favorites")
+}
+
+model Product {
+  id                 String                @id @default(auto()) @map("_id") @db.ObjectId
+  categoryPath       ProductCategoryPath[]
+  contextualImageUrl String
+  id_                String                @unique @map("id")
+  image              String
+  imageAlt           String
+  measurement        String
+  name               String
+  price              ProductPrice
+  typeName           String
+  url                String
+  variants           ProductVariants[]
+  productWith3d      ProductWith3d?
+  favoritedUsers     User[]                @relation("Favorites")
 }
