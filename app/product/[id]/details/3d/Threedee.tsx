@@ -1,23 +1,18 @@
 'use client'
 
-import * as THREE from 'three'
-import { createRoot } from 'react-dom/client'
-import React, { useRef, useState } from 'react'
-import { Canvas, useFrame, ThreeElements, useLoader } from '@react-three/fiber'
-import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
+import React, { useRef, useState, useEffect } from 'react'
+import { Canvas} from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei';
+import Model from './model'
 
-export default function Threedee({id}: {id: string}) {
-  // console.log(id)
-  // const threeObj = useLoader(OBJLoader, '3d/assets/armchair.obj')
+export default function Threedee({id}: {id: string }) {
   return (
-    <Canvas>
-      <mesh>
-        {/* <primitive object={threeObj}/> */}
-        <sphereGeometry args={[2, 16, 16]} />
-        <meshStandardMaterial color="purple"/>
-      </mesh>
+    <Canvas camera={{position: [0, 1, 2], fov: 75}}>
+      <ambientLight intensity={0.4}/>
+      <pointLight position={[0, 100, 0]} decay={0}/>
+      <pointLight position={[0, -150, 0]} decay={0.2}/>
+      <Model id={id} />
+      <OrbitControls />
     </Canvas>
   )
 }
-
-// createRoot(document.getElementById('root')).render(<App />)

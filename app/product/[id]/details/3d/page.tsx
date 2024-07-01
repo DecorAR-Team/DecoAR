@@ -1,10 +1,10 @@
 import Threedee from "./Threedee";
 
-export default function Canvas3D({params}: {params: {id: string}}) { //pass params as a prop to child component / fetch URL from server before passing
+export default async function Canvas3D({params}: {params: {id: string}}) { //pass params as a prop to child component / fetch URL from server before passing
   const objectID = params.id;
     return (
           <div className="h-dvh w-full">
-              <Threedee id={objectID}/>
+              <Threedee id={objectID} />
           </div>
     )
 }
