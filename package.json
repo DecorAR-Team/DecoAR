@@ -12,6 +12,8 @@
     "@clerk/nextjs": "^5.1.6",
     "@heroicons/react": "^2.1.4",
     "@prisma/client": "^5.15.1",
+    "@react-three/fiber": "^8.16.8",
+    "@types/three": "^0.166.0",
     "antd": "^5.18.3",
     "clsx": "^2.1.1",
     "formik": "^2.4.6",
