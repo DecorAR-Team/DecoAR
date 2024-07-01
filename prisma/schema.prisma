@@ -38,6 +38,23 @@ type ProductVariantsPrice {
   discounted   Boolean
 }
 
+model Product {
+  id                 String                @id @default(auto()) @map("_id") @db.ObjectId
+  categoryPath       ProductCategoryPath[]
+  contextualImageUrl String
+  id_                String                @map("id") @unique
+  image              String
+  imageAlt           String
+  measurement        String
+  name               String
+  price              ProductPrice
+  typeName           String
+  url                String
+  description        String?
+  variants           ProductVariants[]
+  productWith3d      ProductWith3d?       
+}
+
 model ProductWith3d {
   id          String  @id @default(auto()) @map("_id") @db.ObjectId
   productId   String  @unique

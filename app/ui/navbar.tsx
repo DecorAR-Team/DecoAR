@@ -5,33 +5,28 @@ import {
   HomeIcon,
   MagnifyingGlassCircleIcon,
   UserCircleIcon,
-  WalletIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-import { getUserSession } from '../lib/session';
 import Image from 'next/image';
+import { routes } from '../lib/route-list';
 
 export default function Navbar({ user }: { user: any }) {
   const navlinks = [
     {
       name: 'Home',
-      href: '/',
+      href: routes.home,
       icon: HomeIcon,
     },
-    // {
-    //   name: 'Wallet',
-    //   href: user ? '/profile/wallet' : 'api/auth/signin',
-    //   icon: WalletIcon,
-    // },
+
     { name: 'Browse', href: '/search', icon: MagnifyingGlassCircleIcon },
     {
       name: 'Favorites',
-      href: user ? '/profile/favorites' : 'api/auth/signin',
+      href: user ? routes.favorites : routes.signin,
       icon: HeartIcon,
     },
     {
       name: user ? user.name : 'Profile',
-      href: user ? '/profile' : 'api/auth/signin',
+      href: user ? routes.profile : routes.signin,
       icon: UserCircleIcon,
       bgImage: user ? user.image : '',
     },
