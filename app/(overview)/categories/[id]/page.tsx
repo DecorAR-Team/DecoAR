@@ -1,14 +1,18 @@
 import { fetchProduct, fetchSubcategoryWithProductIds } from '@/app/lib/data';
-import CategoryTilesRow from '@/app/ui/category/categoryTilesRow';
-import Search from '@/app/ui/search';
 import { IoMdArrowBack } from 'react-icons/io';
 import Link from 'next/link';
 import SortBy from '@/app/ui/category/sortBy';
 
-export default async function Categories({ params }: { params: { id: string } }) {
+export default async function Categories({
+  params,
+}: {
+  params: { id: string };
+}) {
   async function categoryDetails() {
     'use server';
-    const subCategoryWithProductIds = await fetchSubcategoryWithProductIds(params.id);
+    const subCategoryWithProductIds = await fetchSubcategoryWithProductIds(
+      params.id,
+    );
     const productsIds = subCategoryWithProductIds[0].products;
     const products = [];
     for (let id of productsIds) {
@@ -22,8 +26,8 @@ export default async function Categories({ params }: { params: { id: string } })
 
   return (
     <div className="p-2">
-      <div className='flex flex-col'>
-        <div className='flex items-center mt-5'>
+      <div className="flex flex-col">
+        <div className="flex items-center mt-5">
           <Link href="/">
             <IoMdArrowBack className="text-2xl sm:text-3xl" />
           </Link>
@@ -31,7 +35,7 @@ export default async function Categories({ params }: { params: { id: string } })
             Browse furniture
           </h1>
         </div>
-        <SortBy products={products}/>
+        <SortBy products={products} />
       </div>
     </div>
   );

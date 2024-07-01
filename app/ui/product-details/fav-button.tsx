@@ -14,11 +14,11 @@ export default function FavButton() {
 
   return (
     <button
-      className="transition-all delay-50 hover:text-slate-600"
+      className="transition-all delay-50 hover:text-blue-600"
       onClick={handleClick}
     >
       {isFav ? (
-        <SolidHeartIcon className="w-12 h-12" />
+        <SolidHeartIcon className="w-12 h-12 text-blue-600" />
       ) : (
         <HeartIcon className="w-12 h-12" />
       )}
