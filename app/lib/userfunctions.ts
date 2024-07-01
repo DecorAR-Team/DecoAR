@@ -1,6 +1,6 @@
 import { prisma } from './data';
 
-export async function createOrUpdateUser(email: string, name: string) {
+export async function createOrUpdateUser(email: string, name: string, image: string) {
   // Check if user already exists in your database
   const existingUser = await prisma.user.findUnique({
     where: { email },
@@ -10,14 +10,15 @@ export async function createOrUpdateUser(email: string, name: string) {
     // User exists, update if necessary
     return prisma.user.update({
       where: { email },
-      data: { name },
+      data: { name , avatar: image},
     });
   } else {
     // User doesn't exist, create a new user
     return prisma.user.create({
       data: {
-        email,
+        email,  
         name,
+        avatar: image,
       },
     });
   }

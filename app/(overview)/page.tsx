@@ -21,8 +21,10 @@ export default async function Home() {
     
     const email = user?.emailAddresses[0].emailAddress;
     const name = user?.fullName || user?.firstName;
+    const image = user?.imageUrl;
 
-    await createOrUpdateUser(email, name);
+
+    await createOrUpdateUser(email, name, image);
   }
 
   return (
