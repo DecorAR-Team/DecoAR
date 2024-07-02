@@ -1,3 +1,5 @@
+import { searchProducts } from './data';
+
 export const routes = {
   home: '/',
   favorites: '/profile/favorites',
@@ -7,4 +9,5 @@ export const routes = {
     `/categories/${subcategoryId}`,
   details: (id: string) => `/product/${id}/details`,
   details3D: (id: string) => `/product/${id}/details/3d`,
+  search: '/search',
 };

@@ -1,5 +1,6 @@
 'use client';
 
+import { routes } from '@/app/lib/route-list';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 import { useEffect, useRef } from 'react';
@@ -18,7 +19,7 @@ export default function Search({
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    if (pathname === '/search' && inputRef.current) {
+    if (pathname === routes.search && inputRef.current) {
       inputRef.current.focus();
     }
   }, [pathname]);
@@ -35,7 +36,7 @@ export default function Search({
   }, 300);
 
   const handleFocus = () => {
-    router.push('/search'); // Redirect to the search page from home page
+    router.push(routes.search); // Redirect to the search page from home page on focus
   };
 
   return (

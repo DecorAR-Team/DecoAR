@@ -37,7 +37,7 @@ export default function Navbar() {
       icon: HomeIcon,
     },
 
-    { name: 'Browse', href: '/search', icon: MagnifyingGlassCircleIcon },
+    { name: 'Browse', href: routes.search, icon: MagnifyingGlassCircleIcon },
     {
       name: 'Favorites',
       href: routes.favorites,
