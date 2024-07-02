@@ -18,10 +18,11 @@ export default async function ProductList({
   const email = user?.email;
 
   return (
+    //TODO fix mapping issue
     <div className="grid grid-cols-2  py-4 text-slate-400 gap-x-3 gap-y-5">
       {products.map(async (item) => {
         const isFavorite = email ? await checkFavorite(item.id, email) : false;
-        // console.log('ProductList: ', isFavorite);
+        console.log('ProductList: ', isFavorite);
 
         return (
           <Link

@@ -1,10 +1,10 @@
 'use client';
 
 import { toggleFavorite } from '@/app/lib/actions';
-import { useAuth, useUser } from '@clerk/nextjs';
 import { HeartIcon } from '@heroicons/react/24/outline';
 import { HeartIcon as SolidHeartIcon } from '@heroicons/react/24/solid';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function FavButton({
   productId,
@@ -21,18 +21,12 @@ export default function FavButton({
   } | null;
 }) {
   const [isFav, setIsFav] = useState(isFavorite);
-
-  // const { user } = useUser();
-  // const { userId } = useAuth();
-
-  // const email = user?.emailAddresses[0].emailAddress;
-  // console.log(userId);
-  // console.log(email);
+  const router = useRouter();
 
   const handleClick = (e: any) => {
     e.stopPropagation();
     if (!user?.email || !user?.clerkId) {
-      return;
+      return router.push('/sign-in');
     }
     setIsFav(!isFav);
     toggleFavorite(productId, user.email, user.clerkId);

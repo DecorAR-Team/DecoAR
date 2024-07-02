@@ -1,8 +1,9 @@
-import { currentUser } from '@clerk/nextjs/server';
+import { auth, currentUser } from '@clerk/nextjs/server';
 import { prisma } from './data';
 
 export async function getUserInfo() {
   const user = await currentUser();
+  // const authObj = auth();
 
   if (!user) {
     return null;
