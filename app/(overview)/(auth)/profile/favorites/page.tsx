@@ -1,7 +1,9 @@
-import { quattrocento } from '@/app/layout';
 import { fetchFavoriteProducts, prisma } from '@/app/lib/data';
 import ProductList from '@/app/ui/product-list';
 import { auth } from '@clerk/nextjs/server';
+import { Quattrocento } from 'next/font/google';
+
+const quattrocento = Quattrocento({ weight: '700', subsets: ['latin'] });
 
 export default async function Favorite() {
   const { userId } = auth();

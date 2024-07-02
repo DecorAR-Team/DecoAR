@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import { Fanwood_Text, Quattrocento } from 'next/font/google';
+import { Fanwood_Text } from 'next/font/google';
 import './globals.css';
 import { ClerkProvider } from '@clerk/nextjs';
 
 const fanwoodText = Fanwood_Text({ weight: '400', subsets: ['latin'] });
-export const quattrocento = Quattrocento({ weight: '700', subsets: ['latin'] });
+// export const quattrocento = Quattrocento({ weight: '700', subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'DecoAR app',
