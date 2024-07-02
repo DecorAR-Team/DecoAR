@@ -65,6 +65,20 @@ export async function fetchFavoriteProducts(id: string) {
   }
 }
 
+export async function fetch3DModel(product_id: string) {
+  try {
+    const product3D = await prisma.productWith3d.findUnique({
+      where: {
+        productId: product_id,
+      },
+    });
+    return product3D!.url;
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch 3D model.');
+  }
+}
+
 export async function fetchProducts3D() {
   try {
     const products3D = await prisma.productWith3d.findMany({
