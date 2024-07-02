@@ -51,7 +51,7 @@ export default async function Canvas3D({ params }: { params: { id: string } }) {
                   className="flex mx-auto"
                 />
                 <DrawerClose>
-                  <Button variant="outline">Close</Button>
+                  <Button className="outline">Close</Button>
                 </DrawerClose>
               </DrawerFooter>
             </DrawerContent>
