@@ -32,19 +32,13 @@ export default async function Canvas3D({ params }: { params: { id: string } }) {
         </div>
         <div className="h-dvh w-full sm:w-dvw">
           <div>
-            <div className="modal">
-              <div className="modal-background">
-                <div className="modal-content">
-                  <Image
-                    src={qrImage || ''}
-                    alt="QRCode-for-3d-model"
-                    height={150}
-                    width={150}
-                    className="flex mx-auto"
-                  />
-                </div>
-              </div>
-            </div>
+            <Image
+              src={qrImage || ''}
+              alt="QRCode-for-3d-model"
+              height={150}
+              width={150}
+              className="flex mx-auto"
+            />
           </div>
           <Threedee id={objectID} />
         </div>
