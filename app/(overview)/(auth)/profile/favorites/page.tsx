@@ -1,3 +1,4 @@
+import { quattrocento } from '@/app/layout';
 import { fetchFavoriteProducts, prisma } from '@/app/lib/data';
 import ProductList from '@/app/ui/product-list';
 import { auth } from '@clerk/nextjs/server';
@@ -23,6 +24,9 @@ export default async function Favorite() {
 
   return (
     <div>
+      <h2 className={`${quattrocento.className} font-bold text-xl`}>
+        Your favorite items
+      </h2>
       <ProductList products={favProducts} isFavoriteList={true} />
     </div>
   );

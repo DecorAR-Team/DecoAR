@@ -6,11 +6,10 @@ export default async function Layout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <div className="flex flex-col">
       {/* TODO do we need h-dvh class on wrapper? */}
-      <div className="px-6 pb-20 ">{children}</div>
+      <div className="px-6 pb-20 pt-5">{children}</div>
       <Navbar />
     </div>
   );
