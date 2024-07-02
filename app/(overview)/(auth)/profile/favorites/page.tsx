@@ -1,5 +1,6 @@
 import { quattrocento } from '@/app/layout';
 import { fetchFavoriteProducts, prisma } from '@/app/lib/data';
+import BackButton from '@/app/ui/back-arrow';
 import ProductList from '@/app/ui/product-list';
 import { auth } from '@clerk/nextjs/server';
 
@@ -24,6 +25,7 @@ export default async function Favorite() {
 
   return (
     <div>
+      <BackButton font={quattrocento} />
       <h2 className={`${quattrocento.className} font-bold text-xl`}>
         Your favorite items
       </h2>
