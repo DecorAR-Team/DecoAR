@@ -1,4 +1,3 @@
-import { auth, currentUser } from '@clerk/nextjs/server';
 import {
   fetchCategories,
   fetchProducts3D,
@@ -14,6 +13,7 @@ export default async function Home() {
   const subcategories = await fetchSubCategories();
   const products3Dlist = await fetchProducts3D();
 
+  //TODO Charbel i changed it to below
   // const { userId } = await auth();
   // const user = await currentUser();
 
@@ -34,7 +34,7 @@ export default async function Home() {
   return (
     <main>
       <div className="py-6 w-full flex-none">
-        <Search placeholder="Search" redirectOnFocus={true} />
+        <Search redirectOnFocus={true} />
       </div>
       <CategoriesTabs categories={categories} subcategories={subcategories} />
       <Products3DList
