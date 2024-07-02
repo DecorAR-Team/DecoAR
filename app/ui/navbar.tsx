@@ -7,7 +7,6 @@ import {
   UserCircleIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-import Image from 'next/image';
 import { routes } from '../lib/route-list';
 import {
   SignInButton,
@@ -18,17 +17,14 @@ import {
   useSession,
   useAuth,
 } from '@clerk/nextjs';
+import { usePathname } from 'next/navigation';
+import clsx from 'clsx';
 
 export default function Navbar() {
   const { session } = useSession();
-  // console.log(session?.user);
-
   const { user } = useUser();
-  // console.log(user?.firstName);
-  // console.log(user)
-
   const { isSignedIn, userId } = useAuth();
-  // console.log(isSignedIn, userId);
+  const pathname = usePathname();
 
   const navlinks = [
     {
@@ -37,18 +33,12 @@ export default function Navbar() {
       icon: HomeIcon,
     },
 
-    { name: 'Browse', href: '/search', icon: MagnifyingGlassCircleIcon },
+    { name: 'Browse', href: routes.search, icon: MagnifyingGlassCircleIcon },
     {
       name: 'Favorites',
       href: routes.favorites,
       icon: HeartIcon,
     },
-    // {
-    //   name: user?.firstName ,
-    //   href: routes.profile,
-    //   icon: UserCircleIcon,
-    //   bgImage: user?.imageUrl,
-    // },
   ];
 
   return (
@@ -60,25 +50,32 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="inline-flex flex-col gap-2 items-center justify-center px-5 hover:bg-slate-50 dark:hover:bg-slate-800 group  py-2"
+              className={clsx(
+                'inline-flex gap-2 items-center justify-center px-5 hover:bg-slate-50 dark:hover:bg-slate-800 group  py-2 text-slate-500 dark:text-slate-400 ',
+                { 'border-t-2 border-t-blue-600': pathname === link.href },
+              )}
             >
-              <LinkIcon className="aria-hidden size-5 text-slate-500 dark:text-slate-400 group-hover:text-slate-600 dark:group-hover:text-slate-500" />
+              <LinkIcon
+                className={clsx('aria-hidden size-5 ', {
+                  ' text-blue-600': pathname === link.href,
+                })}
+              />
             </Link>
           );
         })}
         <SignedOut>
-          <SignInButton>
-            <Link
-              href={'/sign-in'}
-              className="inline-flex flex-col gap-2 items-center justify-center px-5 hover:bg-slate-50 dark:hover:bg-slate-800 group  py-2"
-            >
-              <UserCircleIcon className="aria-hidden size-5 text-slate-500 dark:text-slate-400 group-hover:text-slate-600 dark:group-hover:text-slate-500" />
-            </Link>
-          </SignInButton>
+          <Link
+            href={'/sign-in'}
+            className="inline-flex flex-col gap-2 items-center justify-center px-5 hover:bg-slate-50 dark:hover:bg-slate-800 group  py-2"
+          >
+            <SignInButton>
+              <UserCircleIcon className="aria-hidden size-5" />
+            </SignInButton>
+          </Link>
         </SignedOut>
         <SignedIn>
           <div className="inline-flex flex-col gap-2 items-center justify-center px-5 hover:bg-slate-50 dark:hover:bg-slate-800 group  py-2">
-            <UserButton />
+            <UserButton afterSignOutUrl={'/'} />
           </div>
         </SignedIn>
       </div>

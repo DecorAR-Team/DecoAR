@@ -13,7 +13,7 @@ interface Product3D {
   product: Product;
 }
 
-export default function ProductsList({
+export default function Products3DList({
   heading,
   productsList,
 }: {

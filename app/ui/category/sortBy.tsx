@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import CategoryTilesRow from './categoryTilesRow';
 import Link from 'next/link';
 import { Product } from '@prisma/client';
+import { routes } from '@/app/lib/route-list';
 
 //TODO: Fix typescript error
 export default function SortBy({ products }: { products: any }) {
@@ -52,7 +53,7 @@ export default function SortBy({ products }: { products: any }) {
             product: any, //TODO fix any
           ) => (
             <li key={product?.id} className="mb-4">
-              <Link href={`/product/${product.id_}/details`}>
+              <Link href={routes.details(product.id_)}>
                 <CategoryTilesRow product={product} />
               </Link>
             </li>

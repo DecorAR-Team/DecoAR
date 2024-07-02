@@ -1,4 +1,21 @@
+import { auth, currentUser } from '@clerk/nextjs/server';
 import { prisma } from './data';
+
+export async function getUserInfo() {
+  const user = await currentUser();
+  // const authObj = auth();
+
+  if (!user) {
+    return null;
+  }
+
+  return {
+    email: user.emailAddresses[0].emailAddress,
+    name: user.fullName || user.firstName || '',
+    image: user.imageUrl,
+    clerkId: user.id,
+  };
+}
 
 export async function createOrUpdateUser(
   email: string,

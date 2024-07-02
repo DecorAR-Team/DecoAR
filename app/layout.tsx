@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Fanwood_Text, Quattrocento } from 'next/font/google';
 import './globals.css';
-import { ClerkProvider } from '@clerk/nextjs'
+import { ClerkProvider } from '@clerk/nextjs';
 
 const fanwoodText = Fanwood_Text({ weight: '400', subsets: ['latin'] });
 export const quattrocento = Quattrocento({ weight: '700', subsets: ['latin'] });
@@ -22,7 +22,6 @@ export default function RootLayout({
       <html suppressHydrationWarning lang="en">
         {/* suppressHydrationWarning: Fix hydration warning caused by some chrome extensions, only affects body, not children */}
         <body className={`${fanwoodText.className} md:max-w-xl md:mx-auto`}>
-          
           {children}
         </body>
       </html>

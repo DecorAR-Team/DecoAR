@@ -1,4 +1,4 @@
-import { getPagesCount, searchProducts } from '@/app/lib/data';
+import { getPagesCount } from '@/app/lib/data';
 import Pagination from '@/app/ui/search/pagination';
 import Search from '@/app/ui/search/search';
 import SearchList from '@/app/ui/search/search-list';
@@ -17,8 +17,8 @@ export default async function SearchPage({
   const totalPages = await getPagesCount(query);
 
   return (
-    <div className="py-6 w-full flex-none">
-      <Search placeholder="Search products" redirectOnFocus={true} />
+    <div className="pb-5 w-full flex-none">
+      <Search redirectOnFocus={true} />
       <Suspense key={query + currentPage} fallback={'LOADING...'}>
         <SearchList query={query} currentPage={currentPage} />
       </Suspense>
