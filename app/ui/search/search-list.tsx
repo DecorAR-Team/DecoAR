@@ -1,9 +1,9 @@
-import { quattrocento } from '@/app/layout';
 import { searchProducts } from '@/app/lib/data';
 import { routes } from '@/app/lib/route-list';
 import { formatPrice } from '@/app/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
+import { quattrocento } from '@/app/layout';
 
 export default async function SearchList({
   query,
@@ -15,8 +15,10 @@ export default async function SearchList({
   const filteredProducts = await searchProducts(query, currentPage);
 
   return (
-    <div>
-      <h2 className={`${quattrocento.className} font-bold text-xl`}>Results</h2>
+    <div className="py-6">
+      <h2 className={`${quattrocento.className} font-bold text-xl`}>
+        Browse products
+      </h2>
       <div className="grid grid-cols-2  py-4 text-slate-400 gap-x-3 gap-y-5">
         {filteredProducts.map((item) => (
           <Link
