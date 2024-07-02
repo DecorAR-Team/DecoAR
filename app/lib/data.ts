@@ -30,12 +30,17 @@ export async function fetchSubCategories() {
   }
 }
 // TODO fix the findMany to findUnique
-export async function fetchSubcategoryWithProductIds(id: string) {
+export async function fetchSubcategoryWithProductIds(ikeaId: string) {
   try {
     const subcategorieswithproductIds =
       await prisma.subcategoryWithProductIds.findMany({
+        include: {
+          subcategory: true,
+        },
         where: {
-          subcategory_id: id,
+          subcategory: {
+            subcategory_ikea_id: ikeaId,
+          },
         },
       });
     return subcategorieswithproductIds;
@@ -50,6 +55,9 @@ export async function fetchProduct(product_id: string) {
     const product = await prisma.product.findUnique({
       where: {
         id_: product_id,
+      },
+      include: {
+        productWith3d: true,
       },
     });
     return product;

@@ -1,3 +1,4 @@
+import { routes } from '@/app/lib/route-list';
 import { Subcategory } from '@prisma/client';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -11,7 +12,7 @@ export default function Subcategories({
     <div className="py-8 flex gap-4 overflow-auto	text-slate-400 no-scrollbar">
       {tabSubcategories.map((subcategory) => (
         <Link
-          href={`/categories/${subcategory.id}`}
+          href={routes.subCategoryProducts(subcategory.subcategory_ikea_id)}
           className="hover:bg-slate-50"
           key={subcategory.id}
         >

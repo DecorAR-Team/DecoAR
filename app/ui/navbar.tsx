@@ -51,7 +51,7 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               className={clsx(
-                'inline-flex flex-col gap-2 items-center justify-center px-5 hover:bg-slate-50 dark:hover:bg-slate-800 group  py-2 text-slate-500 dark:text-slate-400 ',
+                'inline-flex gap-2 items-center justify-center px-5 hover:bg-slate-50 dark:hover:bg-slate-800 group  py-2 text-slate-500 dark:text-slate-400 ',
                 { 'border-t-2 border-t-blue-600': pathname === link.href },
               )}
             >

@@ -6,7 +6,7 @@ export const routes = {
   signin: 'api/auth/signin',
   profile: '/profile',
   subCategoryProducts: (subcategoryId: string) =>
-    `/categories/${subcategoryId}`,
+    `/subcategory/${subcategoryId}`,
   details: (id: string) => `/product/${id}/details`,
   details3D: (id: string) => `/product/${id}/details/3d`,
   search: '/search',
