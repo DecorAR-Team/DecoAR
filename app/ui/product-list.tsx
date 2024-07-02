@@ -5,7 +5,7 @@ import { routes } from '../lib/route-list';
 import Image from 'next/image';
 import FavButton from './product-details/fav-button';
 import { checkFavorite } from '../lib/actions';
-import { currentUser } from '@clerk/nextjs/server';
+import { getUserInfo } from '../lib/userfunctions';
 
 export default async function ProductList({
   products,
@@ -14,18 +14,14 @@ export default async function ProductList({
   products: Product[];
   isFavoriteList?: boolean;
 }) {
-  const user = await currentUser();
-  let email: string = '';
-  if (user) {
-    email = user?.emailAddresses[0].emailAddress;
-  }
-  console.log(email);
+  const user = await getUserInfo();
+  const email = user?.email;
 
   return (
     <div className="grid grid-cols-2  py-4 text-slate-400 gap-x-3 gap-y-5">
       {products.map(async (item) => {
-        const isFavorite = await checkFavorite(item.id, email);
-        console.log(isFavorite);
+        const isFavorite = email ? await checkFavorite(item.id, email) : false;
+        console.log('ProductList: ', isFavorite);
 
         return (
           <Link
@@ -56,7 +52,11 @@ export default async function ProductList({
                 </span>
               </div>
               {isFavoriteList && (
-                <FavButton productId={item.id} isFavorite={isFavorite} />
+                <FavButton
+                  productId={item.id}
+                  isFavorite={isFavorite}
+                  user={user}
+                />
               )}
             </div>
           </Link>

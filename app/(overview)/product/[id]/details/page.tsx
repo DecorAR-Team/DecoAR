@@ -1,4 +1,4 @@
-import { fetchProduct, fetchUserById } from '@/app/lib/data';
+import { fetchProduct } from '@/app/lib/data';
 import { Product } from '@prisma/client';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import ImageGalleryComponent from '@/app/ui/product-details/image-gallery';
@@ -7,13 +7,20 @@ import RatingComponent from '@/app/ui/product-details/rating';
 import Link from 'next/link';
 import { routes } from '@/app/lib/route-list';
 import FavButton from '@/app/ui/product-details/fav-button';
+import { checkFavorite } from '@/app/lib/actions';
+import { getUserInfo } from '@/app/lib/userfunctions';
 
 export default async function ProductDetails({
   params,
 }: {
   params: { id: string };
 }) {
+  const user = await getUserInfo();
+  const email = user?.email;
+
   const product = (await fetchProduct(params.id)) as Product;
+  const isFavorite = email ? await checkFavorite(product.id, email) : false;
+  console.log('ProductDetails: ', isFavorite);
 
   const images = product.variants.map((variant) => {
     return {
@@ -34,7 +41,11 @@ export default async function ProductDetails({
               ({getRandomNumber(200)})
             </span>
           </div>
-          <FavButton productId={product.id} />
+          <FavButton
+            productId={product.id}
+            isFavorite={isFavorite}
+            user={user}
+          />
         </div>
       </div>
       <div>
@@ -61,7 +72,7 @@ export default async function ProductDetails({
       </div>
       <Link
         href={routes.details3D(product.id_)}
-        className="transition-all delay-50 bg-blue-600 hover:bg-blue-800 rounded-lg text-white p-2 w-1/2 text-center w-full"
+        className="transition-all delay-50 bg-blue-600 hover:bg-blue-800 rounded-lg text-white p-2 text-center w-full"
       >
         <p>Try it in your home</p>
       </Link>

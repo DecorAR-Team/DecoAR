@@ -6,28 +6,42 @@ import { HeartIcon } from '@heroicons/react/24/outline';
 import { HeartIcon as SolidHeartIcon } from '@heroicons/react/24/solid';
 import { useState } from 'react';
 
-export default function FavButton({ productId }: { productId: string }) {
-  const [isFav, setIsFav] = useState(false);
+export default function FavButton({
+  productId,
+  isFavorite,
+  user,
+}: {
+  productId: string;
+  isFavorite: boolean;
+  user: {
+    email: string;
+    name: string | null;
+    image: string;
+    clerkId: string;
+  } | null;
+}) {
+  const [isFav, setIsFav] = useState(isFavorite);
 
-  const { user } = useUser();
-  const { userId } = useAuth();
+  // const { user } = useUser();
+  // const { userId } = useAuth();
 
-  const email = user?.emailAddresses[0].emailAddress;
-  console.log(userId);
-  console.log(email);
+  // const email = user?.emailAddresses[0].emailAddress;
+  // console.log(userId);
+  // console.log(email);
 
-  const handleClick = () => {
-    if (!email || !userId) {
+  const handleClick = (e: any) => {
+    e.stopPropagation();
+    if (!user?.email || !user?.clerkId) {
       return;
     }
     setIsFav(!isFav);
-    toggleFavorite(productId, email, userId);
+    toggleFavorite(productId, user.email, user.clerkId);
   };
 
   return (
     <button
       className="transition-all delay-50 hover:text-blue-600"
-      onClick={handleClick}
+      onClick={(e) => handleClick(e)}
     >
       {isFav ? (
         <SolidHeartIcon className="w-12 h-12 text-blue-600" />
