@@ -18,14 +18,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html suppressHydrationWarning lang="en">
-      {/* suppressHydrationWarning: Fix hydration warning caused by some chrome extensions, only affects body, not children */}
-      <ClerkProvider>
+    <ClerkProvider>
+      <html suppressHydrationWarning lang="en">
+        {/* suppressHydrationWarning: Fix hydration warning caused by some chrome extensions, only affects body, not children */}
         <body className={`${fanwoodText.className} md:max-w-xl md:mx-auto`}>
           {children}
         </body>
-      </ClerkProvider>
-    </html>
+      </html>
+    </ClerkProvider>
   );
 }
 
