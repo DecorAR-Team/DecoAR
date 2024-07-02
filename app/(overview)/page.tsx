@@ -6,8 +6,8 @@ import {
 } from '../lib/data';
 import CategoriesTabs from '../ui/home/categories-tabs';
 import Search from '../ui/search/search';
-import ProductsList from '../ui/home/productsList';
 import { createOrUpdateUser } from '../lib/userfunctions';
+import Products3DList from '../ui/home/products3DList';
 
 export default async function Home() {
   const categories = await fetchCategories();
@@ -31,7 +31,7 @@ export default async function Home() {
         <Search placeholder="Search" redirectOnFocus={true} />
       </div>
       <CategoriesTabs categories={categories} subcategories={subcategories} />
-      <ProductsList heading={'View in 3D'} productsList={products3Dlist} />
+      <Products3DList heading={'View in 3D'} productsList={products3Dlist} />
     </main>
   );
 }
