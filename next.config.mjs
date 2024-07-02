@@ -10,6 +10,10 @@ const nextConfig = {
       {
         hostname: 'lh3.googleusercontent.com',
       },
+      {
+        hostname: 'www.youtube.com',
+        protocol: 'https',
+      },
     ],
   },
 };
