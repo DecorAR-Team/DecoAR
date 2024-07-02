@@ -21,14 +21,14 @@ import {
 
 export default function Navbar() {
   const { session } = useSession();
-  console.log(session?.user);
+  // console.log(session?.user);
 
   const { user } = useUser();
-  console.log(user?.firstName);
+  // console.log(user?.firstName);
   // console.log(user)
 
   const { isSignedIn, userId } = useAuth();
-  console.log(isSignedIn, userId);
+  // console.log(isSignedIn, userId);
 
   const navlinks = [
     {

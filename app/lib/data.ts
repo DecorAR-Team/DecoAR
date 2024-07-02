@@ -51,6 +51,20 @@ export async function fetchProduct(product_id: string) {
   }
 }
 
+export async function fetchFavoriteProducts(id: string) {
+  try {
+    const product = await prisma.product.findUnique({
+      where: {
+        id,
+      },
+    });
+    return product;
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch categories.');
+  }
+}
+
 export async function fetch3DModel(product_id: string) {
   try {
     const product3D = await prisma.productWith3d.findUnique({
@@ -63,7 +77,6 @@ export async function fetch3DModel(product_id: string) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch 3D model.');
   }
-
 }
 
 export async function fetchProducts3D() {
@@ -133,4 +146,18 @@ export async function getPagesCount(query: string) {
   const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
 
   return totalPages;
+}
+
+export async function fetchUserById(id: string) {
+  try {
+    const user = await prisma.user.findUnique({
+      where: {
+        id,
+      },
+    });
+    return user;
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch user.');
+  }
 }

@@ -1,4 +1,4 @@
-import { fetchProduct } from '@/app/lib/data';
+import { fetchProduct, fetchUserById } from '@/app/lib/data';
 import { Product } from '@prisma/client';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import ImageGalleryComponent from '@/app/ui/product-details/image-gallery';
@@ -34,7 +34,7 @@ export default async function ProductDetails({
               ({getRandomNumber(200)})
             </span>
           </div>
-          <FavButton />
+          <FavButton productId={product.id} />
         </div>
       </div>
       <div>

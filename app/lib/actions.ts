@@ -1,5 +1,6 @@
 'use server';
 
+import { message } from 'antd';
 import { prisma } from './data';
 
 export async function getSubcategories(categoryId: string) {
@@ -16,42 +17,43 @@ export async function getSubcategories(categoryId: string) {
   }
 }
 
-export default async function addToFavourite(req, res) {
-  const { userId, productId } = req.body;
+export async function toggleFavorite(
+  productId: string,
+  email: string,
+  userClerkId: string,
+) {
   try {
-    const user = await prisma.User.create({
-      where: {
-        id: userId,
-      },
-      data: {
-        favoritedProducts: [],
-      },
+    // Check if user exists
+    const existingUser = await prisma.user.findFirst({
+      where: { email },
+      include: { Favorite: true },
     });
-    res.status(201).send('favorite added successfully');
-  } catch (error) {
-    console.error(error);
-    res.status(500).send('Internal server error');
-  }
-}
 
-export default async function removeFromFavourite(req, res) {
-  const { userId, productId } = req.body;
-  try {
-    const user = await prisma.User.deleteMany({
-      where: {
-        id: userId,
-      },
-      data: {
-        favoritedProducts: {
-          disconnect: {
-            id: productId,
-          },
+    if (!existingUser) {
+      throw new Error('User not found');
+    }
+
+    const existingFavorite = existingUser.Favorite.find(
+      (favorite) => favorite.productId === productId,
+    );
+
+    if (existingFavorite) {
+      await prisma.favorite.delete({
+        where: { id: existingFavorite.id },
+      });
+      return { message: `Removed from favorites ${existingFavorite.id}` };
+    } else {
+      await prisma.favorite.create({
+        data: {
+          userId: existingUser.id,
+          productId: productId,
+          userClerkId,
         },
-      },
-    });
-    res.status(201).send('favorite removed successfully');
+      });
+      return { message: `Added to favorites ${productId}` };
+    }
   } catch (error) {
-    console.error(error);
-    res.status(500).send('Internal server error');
+    console.error('Database Error:', error);
+    throw new Error('Failed to toggle favorite.');
   }
 }
