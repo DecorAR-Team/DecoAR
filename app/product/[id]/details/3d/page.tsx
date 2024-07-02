@@ -5,6 +5,7 @@ import { IoMdArrowBack } from 'react-icons/io';
 import { TbAugmentedReality } from 'react-icons/tb';
 import Image from 'next/image';
 import QRCode from 'qrcode';
+import ProductLayout from './productLayout';
 
 export default async function Canvas3D({ params }: { params: { id: string } }) {
   const objectID = params.id;
@@ -19,27 +20,36 @@ export default async function Canvas3D({ params }: { params: { id: string } }) {
   const qrImage = await generateQR(`https://www.youtube.com`);
 
   return (
-    <div>
-      <div className="flex justify-between">
-        <Link href={`/product/${objectID}/details`}>
-          <IoMdArrowBack className="text-2xl sm:text-3xl mt-5" />
-        </Link>
-        <button>
-          <TbAugmentedReality className="text-3xl sm:text-3xl mt-5" />
-        </button>
-      </div>
-      <div className="h-dvh w-full sm:w-dvw">
-        <div>
-          <Image
-            src={qrImage || ''}
-            alt="qrcode-for-3d-model"
-            height={300}
-            width={300}
-          />
+    <ProductLayout>
+      <div>
+        <div className="flex justify-between">
+          <Link href={`/product/${objectID}/details`}>
+            <IoMdArrowBack className="text-2xl sm:text-3xl mt-5" />
+          </Link>
+          <button>
+            <TbAugmentedReality className="text-3xl sm:text-3xl mt-5" />
+          </button>
         </div>
-        <Threedee id={objectID} />
+        <div className="h-dvh w-full sm:w-dvw">
+          <div>
+            <div className="modal">
+              <div className="modal-background">
+                <div className="modal-content">
+                  <Image
+                    src={qrImage || ''}
+                    alt="QRCode-for-3d-model"
+                    height={150}
+                    width={150}
+                    className="flex mx-auto"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <Threedee id={objectID} />
+        </div>
+        <Navbar />
       </div>
-      <Navbar />
-    </div>
+    </ProductLayout>
   );
 }
