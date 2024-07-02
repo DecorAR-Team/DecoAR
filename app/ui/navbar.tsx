@@ -75,7 +75,7 @@ export default function Navbar() {
         </SignedOut>
         <SignedIn>
           <div className="inline-flex flex-col gap-2 items-center justify-center px-5 hover:bg-slate-50 dark:hover:bg-slate-800 group  py-2">
-            <UserButton />
+            <UserButton afterSignOutUrl={'/'} />
           </div>
         </SignedIn>
       </div>
