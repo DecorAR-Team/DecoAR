@@ -5,36 +5,50 @@ import {
   HomeIcon,
   MagnifyingGlassCircleIcon,
   UserCircleIcon,
-  WalletIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-import { getUserSession } from '../lib/session';
 import Image from 'next/image';
+import { routes } from '../lib/route-list';
+import {
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+  useUser,
+  useSession,
+  useAuth,
+} from '@clerk/nextjs';
 
-export default function Navbar({ user }: { user: any }) {
+export default function Navbar() {
+  const { session } = useSession();
+  // console.log(session?.user);
+
+  const { user } = useUser();
+  // console.log(user?.firstName);
+  // console.log(user)
+
+  const { isSignedIn, userId } = useAuth();
+  // console.log(isSignedIn, userId);
+
   const navlinks = [
     {
       name: 'Home',
-      href: '/',
+      href: routes.home,
       icon: HomeIcon,
     },
-    // {
-    //   name: 'Wallet',
-    //   href: user ? '/profile/wallet' : 'api/auth/signin',
-    //   icon: WalletIcon,
-    // },
+
     { name: 'Browse', href: '/search', icon: MagnifyingGlassCircleIcon },
     {
       name: 'Favorites',
-      href: user ? '/profile/favorites' : 'api/auth/signin',
+      href: routes.favorites,
       icon: HeartIcon,
     },
-    {
-      name: user ? user.name : 'Profile',
-      href: user ? '/profile' : 'api/auth/signin',
-      icon: UserCircleIcon,
-      bgImage: user ? user.image : '',
-    },
+    // {
+    //   name: user?.firstName ,
+    //   href: routes.profile,
+    //   icon: UserCircleIcon,
+    //   bgImage: user?.imageUrl,
+    // },
   ];
 
   return (
@@ -48,23 +62,25 @@ export default function Navbar({ user }: { user: any }) {
               href={link.href}
               className="inline-flex flex-col gap-2 items-center justify-center px-5 hover:bg-slate-50 dark:hover:bg-slate-800 group  py-2"
             >
-              {user && link.name === user.name ? ( //TODO: more elegant way to check if the LinkIcon is Profile and user is logged in, to show userImg?
-                <Image
-                  src={user.image!}
-                  alt={user.name!}
-                  width={20}
-                  height={20}
-                  className="rounded-full"
-                />
-              ) : (
-                <LinkIcon className="aria-hidden size-5 text-slate-500 dark:text-slate-400 group-hover:text-slate-600 dark:group-hover:text-slate-500" />
-              )}
-              <span className="text-sm text-slate-500 dark:text-slate-400 group-hover:text-slate-600 dark:group-hover:text-slate-500]">
-                {link.name}
-              </span>
+              <LinkIcon className="aria-hidden size-5 text-slate-500 dark:text-slate-400 group-hover:text-slate-600 dark:group-hover:text-slate-500" />
             </Link>
           );
         })}
+        <SignedOut>
+          <SignInButton>
+            <Link
+              href={'/sign-in'}
+              className="inline-flex flex-col gap-2 items-center justify-center px-5 hover:bg-slate-50 dark:hover:bg-slate-800 group  py-2"
+            >
+              <UserCircleIcon className="aria-hidden size-5 text-slate-500 dark:text-slate-400 group-hover:text-slate-600 dark:group-hover:text-slate-500" />
+            </Link>
+          </SignInButton>
+        </SignedOut>
+        <SignedIn>
+          <div className="inline-flex flex-col gap-2 items-center justify-center px-5 hover:bg-slate-50 dark:hover:bg-slate-800 group  py-2">
+            <UserButton />
+          </div>
+        </SignedIn>
       </div>
     </div>
   );

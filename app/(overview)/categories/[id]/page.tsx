@@ -1,7 +1,7 @@
 import { fetchProduct, fetchSubcategoryWithProductIds } from '@/app/lib/data';
-import CategoryTilesRow from '@/app/ui/category/categoryTilesRow';
-import Loadmore from '@/app/ui/category/loadmore';
-import Search from '@/app/ui/search';
+import { IoMdArrowBack } from 'react-icons/io';
+import Link from 'next/link';
+import SortBy from '@/app/ui/category/sortBy';
 
 export default async function Categories({
   params,
@@ -9,7 +9,7 @@ export default async function Categories({
   params: { id: string };
 }) {
   async function categoryDetails() {
-    'use server'; //TODO: isn't this a server component?
+    'use server';
     const subCategoryWithProductIds = await fetchSubcategoryWithProductIds(
       params.id,
     );
@@ -24,25 +24,19 @@ export default async function Categories({
 
   const products = await categoryDetails();
 
-  // console.log(products);
-
   return (
-    <div>
-      x
-      <h1 className="flex flex-row justify-left align-middle ml-5 mt-10 text-3xl font-semibold mb-5">
-        Browse furniture
-      </h1>
-      {/* <Search placeholder="Search for products, brands..." /> */}
-      <ul>
-        {products?.map((product) => (
-          <li key={product?.id}>
-            <CategoryTilesRow product={product} />
-          </li>
-        ))}
-      </ul>
-      <Loadmore />
+    <div className="p-2">
+      <div className="flex flex-col">
+        <div className="flex items-center mt-5">
+          <Link href="/">
+            <IoMdArrowBack className="text-2xl sm:text-3xl" />
+          </Link>
+          <h1 className="ml-3 text-3xl font-semibold sm:ml-5 sm:text-4xl">
+            Browse furniture
+          </h1>
+        </div>
+        <SortBy products={products} />
+      </div>
     </div>
   );
 }
-
-//TODO change route name to category instead of categories?

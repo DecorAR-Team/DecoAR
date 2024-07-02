@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^5.1.6",
     "@heroicons/react": "^2.1.4",
     "@prisma/client": "^5.15.1",
+    "antd": "^5.18.3",
     "clsx": "^2.1.1",
     "formik": "^2.4.6",
     "next": "14.2.4",
@@ -18,6 +20,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
+    "react-image-gallery": "^1.3.0",
+    "react-rater": "^6.0.5",
     "react-router-dom": "^6.23.1",
     "use-debounce": "^10.0.1"
   },
@@ -25,6 +29,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-image-gallery": "^1.2.4",
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
     "postcss": "^8",
