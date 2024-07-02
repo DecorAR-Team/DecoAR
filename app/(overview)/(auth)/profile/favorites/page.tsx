@@ -1,10 +1,10 @@
-import { fetchFavoriteProducts, fetchProduct, prisma } from '@/app/lib/data';
-import FavList from '@/app/ui/fav-list/fav-list';
+import { quattrocento } from '@/app/layout';
+import { fetchFavoriteProducts, prisma } from '@/app/lib/data';
+import ProductList from '@/app/ui/product-list';
 import { auth } from '@clerk/nextjs/server';
-import { log } from 'console';
 
 export default async function Favorite() {
-  const { userId } = await auth();
+  const { userId } = auth();
 
   const favorites = await prisma.favorite.findMany({
     where: {
@@ -24,9 +24,10 @@ export default async function Favorite() {
 
   return (
     <div>
-      {favProducts.map((product) => (
-        <FavList key={product.id} product={product} />
-      ))}
+      <h2 className={`${quattrocento.className} font-bold text-xl`}>
+        Your favorite items
+      </h2>
+      <ProductList products={favProducts} />
     </div>
   );
 }

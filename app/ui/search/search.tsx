@@ -1,15 +1,15 @@
 'use client';
 
+import { searchPlaceholder } from '@/app/lib/constants';
+import { routes } from '@/app/lib/route-list';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 import { useEffect, useRef } from 'react';
 import { useDebouncedCallback } from 'use-debounce';
 
 export default function Search({
-  placeholder,
   redirectOnFocus,
 }: {
-  placeholder: string;
   redirectOnFocus: boolean;
 }) {
   const searchParams = useSearchParams();
@@ -18,7 +18,7 @@ export default function Search({
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    if (pathname === '/search' && inputRef.current) {
+    if (pathname === routes.search && inputRef.current) {
       inputRef.current.focus();
     }
   }, [pathname]);
@@ -35,7 +35,7 @@ export default function Search({
   }, 300);
 
   const handleFocus = () => {
-    router.push('/search'); // Redirect to the search page from home page
+    router.push(routes.search); // Redirect to the search page from home page on focus
   };
 
   return (
@@ -47,7 +47,7 @@ export default function Search({
         ref={inputRef}
         onFocus={redirectOnFocus ? handleFocus : undefined}
         className="peer block w-full rounded-md border border-slate-400 py-[9px] pl-10 text-sm outline-2 placeholder:text-slate-500"
-        placeholder={placeholder}
+        placeholder={searchPlaceholder}
         onChange={(e) => {
           handleSearch(e.target.value);
         }}

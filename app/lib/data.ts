@@ -4,7 +4,11 @@ export const prisma = new PrismaClient();
 
 export async function fetchCategories() {
   try {
-    const categories = await prisma.category.findMany();
+    const categories = await prisma.category.findMany({
+      orderBy: {
+        name: 'asc',
+      },
+    });
     return categories;
   } catch (error) {
     console.error('Database Error:', error);
@@ -14,7 +18,11 @@ export async function fetchCategories() {
 
 export async function fetchSubCategories() {
   try {
-    const subcategories = await prisma.subcategory.findMany();
+    const subcategories = await prisma.subcategory.findMany({
+      orderBy: {
+        name: 'asc',
+      },
+    });
     return subcategories;
   } catch (error) {
     console.error('Database Error:', error);
@@ -22,12 +30,17 @@ export async function fetchSubCategories() {
   }
 }
 // TODO fix the findMany to findUnique
-export async function fetchSubcategoryWithProductIds(id: string) {
+export async function fetchSubcategoryWithProductIds(ikeaId: string) {
   try {
     const subcategorieswithproductIds =
       await prisma.subcategoryWithProductIds.findMany({
+        include: {
+          subcategory: true,
+        },
         where: {
-          subcategory_id: id,
+          subcategory: {
+            subcategory_ikea_id: ikeaId,
+          },
         },
       });
     return subcategorieswithproductIds;
@@ -42,6 +55,9 @@ export async function fetchProduct(product_id: string) {
     const product = await prisma.product.findUnique({
       where: {
         id_: product_id,
+      },
+      include: {
+        productWith3d: true,
       },
     });
     return product;
@@ -84,6 +100,11 @@ export async function fetchProducts3D() {
     const products3D = await prisma.productWith3d.findMany({
       include: {
         product: true,
+      },
+      orderBy: {
+        product: {
+          name: 'asc',
+        },
       },
     });
     return products3D;
