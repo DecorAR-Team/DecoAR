@@ -9,21 +9,25 @@ import { getUserInfo } from '../lib/userfunctions';
 
 export default async function ProductList({
   products,
-  isFavoriteList = false,
 }: {
   products: Product[];
-  isFavoriteList?: boolean;
 }) {
   const user = await getUserInfo();
   const email = user?.email;
 
-  return (
-    //TODO fix mapping issue
-    <div className="grid grid-cols-2  py-4 text-slate-400 gap-x-3 gap-y-5">
-      {products.map(async (item) => {
-        const isFavorite = email ? await checkFavorite(item.id, email) : false;
-        console.log('ProductList: ', isFavorite);
+  //add isFavorite prop to each product
+  const favProducts = [];
+  for (let product of products) {
+    const isFavorite = email ? await checkFavorite(product.id, email) : false;
+    favProducts.push({
+      ...product,
+      isFavorite,
+    });
+  }
 
+  return (
+    <div className="grid grid-cols-2  py-4 text-slate-400 gap-x-3 gap-y-5">
+      {favProducts.map((item) => {
         return (
           <Link
             className="hover:bg-slate-50"
@@ -52,13 +56,11 @@ export default async function ProductList({
                   {formatPrice(item.price.currentPrice, item.price.currency)}
                 </span>
               </div>
-              {isFavoriteList && (
-                <FavButton
-                  productId={item.id}
-                  isFavorite={isFavorite}
-                  user={user}
-                />
-              )}
+              <FavButton
+                productId={item.id}
+                isFavorite={item.isFavorite}
+                user={user}
+              />
             </div>
           </Link>
         );

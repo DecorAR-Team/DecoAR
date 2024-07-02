@@ -33,7 +33,7 @@ export default async function Home() {
 
   return (
     <main>
-      <div className="py-6 w-full flex-none">
+      <div className="pb-5 w-full flex-none">
         <Search redirectOnFocus={true} />
       </div>
       <CategoriesTabs categories={categories} subcategories={subcategories} />

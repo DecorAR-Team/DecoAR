@@ -11,7 +11,7 @@ export default function ImageGalleryComponent({
 }) {
   return (
     //TODO add alt to images
-    <section className="container flex-grow mx-auto max-w-[1200px] border-b py-5">
+    <section className="container flex-grow mx-auto max-w-[1200px] border-b pb-5">
       <div className="container mx-auto">
         <ReactImageGallery
           showBullets={false}

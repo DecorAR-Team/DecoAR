@@ -25,7 +25,7 @@ export default async function ProductDetails({
 
   const product = (await fetchProduct(params.id)) as ProductFull;
   const isFavorite = email ? await checkFavorite(product.id, email) : false;
-  // console.log('Product: ', product);
+  // console.log('Product: ', isFavorite, product);
 
   const productImages = [
     {

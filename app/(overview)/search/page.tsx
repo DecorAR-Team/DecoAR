@@ -17,7 +17,7 @@ export default async function SearchPage({
   const totalPages = await getPagesCount(query);
 
   return (
-    <div className="py-6 w-full flex-none">
+    <div className="pb-5 w-full flex-none">
       <Search redirectOnFocus={true} />
       <Suspense key={query + currentPage} fallback={'LOADING...'}>
         <SearchList query={query} currentPage={currentPage} />

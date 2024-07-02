@@ -71,10 +71,15 @@ export async function toggleFavorite(
         },
       });
       console.log(`Added to favorites ${productId}`);
-      revalidatePath(routes.favorites);
     }
   } catch (error) {
     console.error('Database Error:', error);
     throw new Error('Failed to toggle favorite.');
   }
 }
+
+export const revalidate = (...routes: any[]) => {
+  for (const route of routes) {
+    revalidatePath(route);
+  }
+};

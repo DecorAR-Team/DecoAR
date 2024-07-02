@@ -27,7 +27,7 @@ export default async function Favorite() {
       <h2 className={`${quattrocento.className} font-bold text-xl`}>
         Your favorite items
       </h2>
-      <ProductList products={favProducts} isFavoriteList={true} />
+      <ProductList products={favProducts} />
     </div>
   );
 }
