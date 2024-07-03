@@ -1,6 +1,6 @@
-import { fetchFavoriteProducts, prisma } from '@/app/lib/data';
-import ArrowBack from '@/app/ui/arrow-back';
-import ProductList from '@/app/ui/product-list';
+import { fetchFavoriteProducts, prisma } from '@/lib/data';
+import ArrowBack from '@/components/ui/arrow-back';
+import ProductList from '@/components/ui/product-list';
 import { auth } from '@clerk/nextjs/server';
 import { Quattrocento } from 'next/font/google';
 

@@ -1,4 +1,4 @@
-import { routes } from '@/app/lib/route-list';
+import { routes } from '@/lib/route-list';
 import { Subcategory } from '@prisma/client';
 import Image from 'next/image';
 import Link from 'next/link';

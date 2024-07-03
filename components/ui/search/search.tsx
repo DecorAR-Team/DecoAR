@@ -1,7 +1,7 @@
 'use client';
 
-import { searchPlaceholder } from '@/app/lib/constants';
-import { routes } from '@/app/lib/route-list';
+import { searchPlaceholder } from '@/lib/constants';
+import { routes } from '@/lib/route-list';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 import { useEffect, useRef } from 'react';
