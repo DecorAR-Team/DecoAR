@@ -16,6 +16,7 @@ import {
   DrawerTrigger,
 } from '@/components/ui/drawer';
 import { Button } from 'antd';
+import { isMobile } from 'react-device-detect'
 
 export default async function Canvas3D({ params }: { params: { id: string } }) {
   const objectID = params.id;
@@ -28,36 +29,46 @@ export default async function Canvas3D({ params }: { params: { id: string } }) {
   };
   const qrImage = await generateQR(`https://www.youtube.com`);
 
+  console.log(isMobile)
+
   return (
-    <div>
-      <div className="flex justify-around">
-        <Link href={`/product/${objectID}/details`}>
-          <IoMdArrowBack className="text-2xl sm:text-3xl mt-5" />
-        </Link>
-        <Drawer>
-          <DrawerTrigger>
-            <TbAugmentedReality className="text-3xl sm:text-3xl mt-5" />
-          </DrawerTrigger>
-          <DrawerContent>
-            <DrawerFooter>
-              <Image
-                src={qrImage || ''}
-                alt="QRCode-for-3d-model"
-                height={250}
-                width={250}
-                className="flex mx-auto"
-              />
-              <DrawerClose>
-                <Button className="outline">Close</Button>
-              </DrawerClose>
-            </DrawerFooter>
-          </DrawerContent>
-        </Drawer>
+    <>
+      <div>
+        <div className="flex justify-around">
+          <Link href={`/product/${objectID}/details`}>
+            <IoMdArrowBack className="text-2xl sm:text-3xl mt-5" />
+          </Link>
+          { !isMobile ? 
+            <Drawer>
+            <DrawerTrigger>
+              <TbAugmentedReality className="text-3xl sm:text-3xl mt-5" />
+            </DrawerTrigger>
+            <DrawerContent>
+              <DrawerFooter>
+                <Image
+                  src={qrImage || ''}
+                  alt="QRCode-for-3d-model"
+                  height={250}
+                  width={250}
+                  className="flex mx-auto"
+                />
+                <DrawerClose>
+                  <Button className="outline">Close</Button>
+                </DrawerClose>
+              </DrawerFooter>
+            </DrawerContent>
+          </Drawer>
+          : 
+            <Link href={`/product/${objectID}/details/3d/AR`}>
+              <TbAugmentedReality className="text-3xl sm:text-3xl mt-5" />
+            </Link>
+          }
+        </div>
+        <div className="h-dvh w-full sm:w-dvw">
+          <Threedee id={objectID} />
+        </div>
+        <Navbar />
       </div>
-      <div className="h-dvh w-full sm:w-dvw">
-        <Threedee id={objectID} />
-      </div>
-      <Navbar />
-    </div>
+    </>
   );
 }

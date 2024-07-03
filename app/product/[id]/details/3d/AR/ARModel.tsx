@@ -5,7 +5,6 @@ import { Canvas } from "@react-three/fiber";
 import { ARButton, XR } from '@react-three/xr';
 import Reticle from "./RecticleModel";
 
-
 export default function ARModel({ objectID }: { objectID: string}) {
   return (
     <>
@@ -17,7 +16,6 @@ export default function ARModel({ objectID }: { objectID: string}) {
           <ambientLight intensity={0.4}/>
           <pointLight position={[0, 100, 0]} decay={0}/>
           <pointLight position={[0, -150, 0]} decay={0.2}/>
-            {/* <Model id={objectID}/> */}
             <Reticle id={objectID}/>
           </XR>
         </Canvas>
