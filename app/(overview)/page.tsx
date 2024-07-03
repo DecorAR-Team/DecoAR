@@ -2,29 +2,17 @@ import {
   fetchCategories,
   fetchProducts3D,
   fetchSubCategories,
-} from '../lib/data';
-import CategoriesTabs from '../ui/home/categories-tabs';
-import Search from '../ui/search/search';
-import { createOrUpdateUser, getUserInfo } from '../lib/userfunctions';
-import Products3DList from '../ui/home/products3DList';
+} from '@/lib/data';
+import CategoriesTabs from '@/components/ui/home/categories-tabs';
+import Search from '@/components/ui/search/search';
+import { createOrUpdateUser, getUserInfo } from '@/lib/userfunctions';
+import Products3DList from '@/components/ui/home/products3DList';
 import { ModeToggle } from '@/components/ui/mode-toggler';
 
 export default async function Home() {
   const categories = await fetchCategories();
   const subcategories = await fetchSubCategories();
   const products3Dlist = await fetchProducts3D();
-
-  //TODO Charbel i changed it to below
-  // const { userId } = await auth();
-  // const user = await currentUser();
-
-  // if (userId && user) {
-  //   const email = user?.emailAddresses[0].emailAddress;
-  //   const name = (user?.fullName || user?.firstName) ?? '';
-  //   const image = user?.imageUrl;
-
-  //   await createOrUpdateUser(email, name, image, userId);
-  // }
 
   const user = await getUserInfo();
 

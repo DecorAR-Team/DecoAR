@@ -7,7 +7,7 @@ import {
   UserCircleIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-import { routes } from '../lib/route-list';
+import { routes } from '../../lib/route-list';
 import {
   SignInButton,
   SignedIn,

@@ -1,8 +1,8 @@
-import { getPagesCount } from '@/app/lib/data';
-import ArrowBack from '@/app/ui/arrow-back';
-import Pagination from '@/app/ui/search/pagination';
-import Search from '@/app/ui/search/search';
-import SearchList from '@/app/ui/search/search-list';
+import { getPagesCount } from '@/lib/data';
+import ArrowBack from '@/components/ui/arrow-back';
+import Pagination from '@/components/ui/search/pagination';
+import Search from '@/components/ui/search/search';
+import SearchList from '@/components/ui/search/search-list';
 import { Suspense } from 'react';
 
 export default async function SearchPage({
