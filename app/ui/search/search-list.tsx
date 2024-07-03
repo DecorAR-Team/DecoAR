@@ -3,7 +3,9 @@ import { routes } from '@/app/lib/route-list';
 import { formatPrice } from '@/app/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
-import { quattrocento } from '@/app/layout';
+import { Quattrocento } from 'next/font/google';
+
+const quattrocento = Quattrocento({ weight: '700', subsets: ['latin'] });
 
 export default async function SearchList({
   query,

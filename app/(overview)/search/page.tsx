@@ -1,4 +1,5 @@
 import { getPagesCount } from '@/app/lib/data';
+import ArrowBack from '@/app/ui/arrow-back';
 import Pagination from '@/app/ui/search/pagination';
 import Search from '@/app/ui/search/search';
 import SearchList from '@/app/ui/search/search-list';
@@ -18,6 +19,8 @@ export default async function SearchPage({
 
   return (
     <div className="pb-5 w-full flex-none">
+      <ArrowBack />
+
       <Search redirectOnFocus={true} />
       <Suspense key={query + currentPage} fallback={'LOADING...'}>
         <SearchList query={query} currentPage={currentPage} />

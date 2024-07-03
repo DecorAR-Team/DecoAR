@@ -10,6 +10,7 @@ import FavButton from '@/app/ui/product-details/fav-button';
 import { checkFavorite } from '@/app/lib/actions';
 import { getUserInfo } from '@/app/lib/userfunctions';
 import { ArrowPathIcon } from '@heroicons/react/24/outline';
+import ArrowBack from '@/app/ui/arrow-back';
 
 type ProductFull = Product & {
   productWith3d?: ProductWith3d;
@@ -53,6 +54,8 @@ export default async function ProductDetails({
 
   return (
     <section className="flex flex-col gap-6">
+      <ArrowBack />
+      {/* <Breadcrumbs /> */}
       <div className="">
         <ImageGalleryComponent images={images} />
         <div className="row flex justify-between items-center py-4 text-slate-300">

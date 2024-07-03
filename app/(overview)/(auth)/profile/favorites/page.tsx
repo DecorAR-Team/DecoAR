@@ -1,7 +1,10 @@
-import { quattrocento } from '@/app/layout';
 import { fetchFavoriteProducts, prisma } from '@/app/lib/data';
+import ArrowBack from '@/app/ui/arrow-back';
 import ProductList from '@/app/ui/product-list';
 import { auth } from '@clerk/nextjs/server';
+import { Quattrocento } from 'next/font/google';
+
+const quattrocento = Quattrocento({ weight: '700', subsets: ['latin'] });
 
 export default async function Favorite() {
   const { userId } = auth();
@@ -24,7 +27,8 @@ export default async function Favorite() {
 
   return (
     <div>
-      <h2 className={`${quattrocento.className} font-bold text-xl`}>
+      <ArrowBack />
+      <h2 className={`${quattrocento.className} text-slate-700 text-xl`}>
         Your favorite items
       </h2>
       <ProductList products={favProducts} />

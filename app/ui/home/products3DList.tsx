@@ -1,9 +1,11 @@
-import { quattrocento } from '@/app/layout';
 import { routes } from '@/app/lib/route-list';
 import { formatPrice } from '@/app/lib/utils';
 import { Product } from '@prisma/client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Quattrocento } from 'next/font/google';
+
+const quattrocento = Quattrocento({ weight: '700', subsets: ['latin'] });
 
 interface Product3D {
   id: string;
