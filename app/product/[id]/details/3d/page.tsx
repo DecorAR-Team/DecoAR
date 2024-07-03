@@ -19,7 +19,6 @@ import { Button } from 'antd';
 
 export default async function Canvas3D({ params }: { params: { id: string } }) {
   const objectID = params.id;
-
   const generateQR = async (text: string) => {
     try {
       return await QRCode.toDataURL(text);
