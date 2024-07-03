@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import { formatPrice } from '../lib/utils';
+import { formatPrice } from '../../lib/utils';
 import { Product } from '@prisma/client';
-import { routes } from '../lib/route-list';
+import { routes } from '../../lib/route-list';
 import Image from 'next/image';
 import FavButton from './product-details/fav-button';
-import { checkFavorite } from '../lib/actions';
-import { getUserInfo } from '../lib/userfunctions';
+import { checkFavorite } from '../../lib/actions';
+import { getUserInfo } from '../../lib/userfunctions';
 
 export default async function ProductList({
   products,

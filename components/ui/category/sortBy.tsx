@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import CategoryTilesRow from './categoryTilesRow';
 import Link from 'next/link';
 import { Product } from '@prisma/client';
-import { routes } from '@/app/lib/route-list';
+import { routes } from '@/lib/route-list';
 
 //TODO: Fix typescript error
 export default function SortBy({ products }: { products: any }) {

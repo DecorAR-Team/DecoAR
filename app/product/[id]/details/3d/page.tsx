@@ -1,5 +1,5 @@
 import Threedee from './Threedee';
-import Navbar from '@/app/ui/navbar';
+import Navbar from '@/components/ui/navbar';
 import Link from 'next/link';
 import { IoMdArrowBack } from 'react-icons/io';
 import { TbAugmentedReality } from 'react-icons/tb';
@@ -16,7 +16,7 @@ import {
   DrawerTrigger,
 } from '@/components/ui/drawer';
 import { Button } from 'antd';
-import ArrowBack from '@/app/ui/arrow-back';
+import ArrowBack from '@/components/ui/arrow-back';
 
 export default async function Canvas3D({ params }: { params: { id: string } }) {
   const objectID = params.id;
@@ -32,13 +32,13 @@ export default async function Canvas3D({ params }: { params: { id: string } }) {
 
   return (
     <div>
-      <div className="flex justify-around">
+      <div className="flex flex-row md:max-w-xl md:mx-auto justify-between items-center">
         <div className="mt-5">
           <ArrowBack />
         </div>
         <Drawer>
           <DrawerTrigger>
-            <TbAugmentedReality className="text-3xl sm:text-3xl mt-5" />
+            <TbAugmentedReality className="text-3xl sm:text-3xl mt-2" />
           </DrawerTrigger>
           <DrawerContent>
             <DrawerFooter>
@@ -59,7 +59,7 @@ export default async function Canvas3D({ params }: { params: { id: string } }) {
       <div className="h-dvh w-full sm:w-dvw">
         <Threedee id={objectID} />
       </div>
-      <Navbar />
+      {/* <Navbar /> */}
     </div>
   );
 }
