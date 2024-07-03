@@ -5,7 +5,6 @@ import { IoMdArrowBack } from 'react-icons/io';
 import { TbAugmentedReality } from 'react-icons/tb';
 import Image from 'next/image';
 import QRCode from 'qrcode';
-import ProductLayout from './productLayout';
 import {
   Drawer,
   DrawerClose,
@@ -31,38 +30,35 @@ export default async function Canvas3D({ params }: { params: { id: string } }) {
   const qrImage = await generateQR(`https://www.youtube.com`);
 
   return (
-    <ProductLayout>
-      <div>
-        <div className="flex justify-around">
-          <Link href={`/product/${objectID}/details`}>
-            <IoMdArrowBack className="text-2xl sm:text-3xl mt-5" />
-          </Link>
-          <Drawer>
-            <DrawerTrigger>
-              <TbAugmentedReality className="text-3xl sm:text-3xl mt-5" />
-            </DrawerTrigger>
-            <DrawerContent>
-              <DrawerFooter>
-                <Image
-                  src={qrImage || ''}
-                  alt="QRCode-for-3d-model"
-                  height={250}
-                  width={250}
-                  className="flex mx-auto"
-                />
-                <DrawerClose>
-                  <Button className="outline">Close</Button>
-                </DrawerClose>
-              </DrawerFooter>
-            </DrawerContent>
-          </Drawer>
-        </div>
-        <div className="h-dvh w-full sm:w-dvw">
-          <div></div>
-          <Threedee id={objectID} />
-        </div>
-        <Navbar />
+    <div>
+      <div className="flex justify-around">
+        <Link href={`/product/${objectID}/details`}>
+          <IoMdArrowBack className="text-2xl sm:text-3xl mt-5" />
+        </Link>
+        <Drawer>
+          <DrawerTrigger>
+            <TbAugmentedReality className="text-3xl sm:text-3xl mt-5" />
+          </DrawerTrigger>
+          <DrawerContent>
+            <DrawerFooter>
+              <Image
+                src={qrImage || ''}
+                alt="QRCode-for-3d-model"
+                height={250}
+                width={250}
+                className="flex mx-auto"
+              />
+              <DrawerClose>
+                <Button className="outline">Close</Button>
+              </DrawerClose>
+            </DrawerFooter>
+          </DrawerContent>
+        </Drawer>
       </div>
-    </ProductLayout>
+      <div className="h-dvh w-full sm:w-dvw">
+        <Threedee id={objectID} />
+      </div>
+      <Navbar />
+    </div>
   );
 }

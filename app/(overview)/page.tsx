@@ -7,6 +7,7 @@ import CategoriesTabs from '../ui/home/categories-tabs';
 import Search from '../ui/search/search';
 import { createOrUpdateUser, getUserInfo } from '../lib/userfunctions';
 import Products3DList from '../ui/home/products3DList';
+import { ModeToggle } from '@/components/ui/mode-toggler';
 
 export default async function Home() {
   const categories = await fetchCategories();
@@ -33,8 +34,9 @@ export default async function Home() {
 
   return (
     <main>
-      <div className="pb-5 w-full flex-none">
+      <div className="pb-5 w-full flex gap-2">
         <Search redirectOnFocus={true} />
+        <ModeToggle />
       </div>
       <CategoriesTabs categories={categories} subcategories={subcategories} />
       <Products3DList
