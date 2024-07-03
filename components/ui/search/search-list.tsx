@@ -1,6 +1,6 @@
 import { searchProducts } from '@/lib/data';
 import { routes } from '@/lib/route-list';
-import { formatPrice } from '@/app/lib/utils';
+import { formatPrice } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Quattrocento } from 'next/font/google';
