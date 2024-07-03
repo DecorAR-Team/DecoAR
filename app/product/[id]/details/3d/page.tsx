@@ -16,6 +16,7 @@ import {
   DrawerTrigger,
 } from '@/components/ui/drawer';
 import { Button } from 'antd';
+import ArrowBack from '@/app/ui/arrow-back';
 
 export default async function Canvas3D({ params }: { params: { id: string } }) {
   const objectID = params.id;
@@ -32,9 +33,9 @@ export default async function Canvas3D({ params }: { params: { id: string } }) {
   return (
     <div>
       <div className="flex justify-around">
-        <Link href={`/product/${objectID}/details`}>
-          <IoMdArrowBack className="text-2xl sm:text-3xl mt-5" />
-        </Link>
+        <div className="mt-5">
+          <ArrowBack />
+        </div>
         <Drawer>
           <DrawerTrigger>
             <TbAugmentedReality className="text-3xl sm:text-3xl mt-5" />
