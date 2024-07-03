@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react'
 import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
-export default function Model({id, position}: {id: string, position: any}) {
+export default function Model({id, position}: {id: string, position?: any}) {
     const url = `/assets/${id + ".glb"}`
     const threeObj = useLoader(GLTFLoader, url, (loader) => {
         const dracoLoader = new DRACOLoader();
