@@ -1,9 +1,9 @@
-import { routes } from '@/app/lib/route-list';
-import { formatPrice } from '@/app/lib/utils';
+import { routes } from '@/lib/route-list';
 import { Product } from '@prisma/client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Quattrocento } from 'next/font/google';
+import { formatPrice } from '@/lib/utils';
 
 const quattrocento = Quattrocento({ weight: '700', subsets: ['latin'] });
 

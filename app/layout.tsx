@@ -3,6 +3,7 @@ import { Fanwood_Text } from 'next/font/google';
 import './globals.css';
 import { ClerkProvider } from '@clerk/nextjs';
 import { ThemeProvider } from '@/components/theme-provider';
+import Navbar from '../components/ui/navbar';
 
 const fanwoodText = Fanwood_Text({ weight: '400', subsets: ['latin'] });
 // export const quattrocento = Quattrocento({ weight: '700', subsets: ['latin'] });
@@ -30,6 +31,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             {children}
+            <Navbar />
           </ThemeProvider>
         </body>
       </html>

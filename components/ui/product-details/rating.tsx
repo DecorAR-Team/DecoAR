@@ -1,6 +1,6 @@
 'use client';
 
-import { getRandomNumber } from '@/app/lib/utils';
+import { getRandomNumber } from '@/lib/utils';
 import { Rate } from 'antd';
 
 export default function RatingComponent() {

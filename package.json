@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "if [ \"$NODE_ENV\" != \"development\" ]; then prisma generate --no-engine; else prisma generate; fi"
   },
   "dependencies": {
     "@clerk/nextjs": "^5.1.6",

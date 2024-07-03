@@ -1,11 +1,11 @@
 'use client';
 
-import { revalidate, toggleFavorite } from '@/app/lib/actions';
+import { revalidate, toggleFavorite } from '@/lib/actions';
 import { HeartIcon } from '@heroicons/react/24/outline';
 import { HeartIcon as SolidHeartIcon } from '@heroicons/react/24/solid';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { routes } from '@/app/lib/route-list';
+import { routes } from '@/lib/route-list';
 
 export default function FavButton({
   productId,
