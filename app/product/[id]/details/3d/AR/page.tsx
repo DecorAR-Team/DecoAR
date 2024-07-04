@@ -1,3 +1,4 @@
+import ArrowBack from "@/components/ui/arrow-back";
 import ARModel from "./ARModel";
 
 export default function CanvasAR({ params }: { params: { id: string } }) {
