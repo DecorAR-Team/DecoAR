@@ -22,7 +22,7 @@ export default async function SearchPage({
     <div className="pb-5 w-full flex-none">
       <ArrowBack />
 
-      <Search redirectOnFocus={true} />.
+      <Search redirectOnFocus={true} />
       <Suspense key={query + currentPage} fallback={<Skeleton className="rounded-full" />}>
         <SearchList query={query} currentPage={currentPage} />
       </Suspense>
