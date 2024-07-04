@@ -28,7 +28,7 @@ export default async function Canvas3D({ params }: { params: { id: string } }) {
       console.error(err);
     }
   };
-  const qrImage = await generateQR(`https://www.youtube.com`);
+  const qrImage = await generateQR(`https:decoar.vercel.app/product/${objectID}/details/3d/AR`);
 
   console.log(isMobile)
 
@@ -39,7 +39,7 @@ export default async function Canvas3D({ params }: { params: { id: string } }) {
           <div className="mt-5">
             <ArrowBack />
           </div>
-          { !isMobile ? 
+          { !isMobile ? //TODO make this use client
             <Drawer>
             <DrawerTrigger>
               <TbAugmentedReality className="text-3xl sm:text-3xl mt-2" />
@@ -68,7 +68,6 @@ export default async function Canvas3D({ params }: { params: { id: string } }) {
         <div className="h-dvh w-full sm:w-dvw">
           <Threedee id={objectID} />
         </div>
-        {/* <Navbar /> */}
       </div>
     </>
   );
