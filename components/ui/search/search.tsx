@@ -46,7 +46,7 @@ export default function Search({
       <input
         ref={inputRef}
         onFocus={redirectOnFocus ? handleFocus : undefined}
-        className="peer block w-full rounded-md border border-slate-400 py-[9px] pl-10 text-sm outline-2 placeholder:text-slate-500"
+        className="peer block w-full rounded-md border border-slate-400 py-[9px] pl-10 text-sm outline-2 placeholder:text-slate-500 dark:placeholder:text-slate-100"
         placeholder={searchPlaceholder}
         onChange={(e) => {
           handleSearch(e.target.value);
