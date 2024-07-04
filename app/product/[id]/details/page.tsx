@@ -24,7 +24,10 @@ export default async function ProductDetails({
   const user = await getUserInfo();
   const email = user?.email;
 
+  //TODO - check later
+  if (!params.id) return 
   const product = (await fetchProduct(params.id)) as ProductFull;
+  if (!product.id) return 
   const isFavorite = email ? await checkFavorite(product.id, email) : false;
   // console.log('Product: ', isFavorite, product);
 
@@ -56,7 +59,6 @@ export default async function ProductDetails({
     <section className="flex flex-col gap-6 md:max-w-xl md:mx-auto">
       <div className="px-6 pb-20 pt-5">
         <ArrowBack />
-        {/* <Breadcrumbs /> */}
         <div className="">
           <ImageGalleryComponent images={images} />
           <div className="row flex justify-between items-center py-4 text-slate-300">
