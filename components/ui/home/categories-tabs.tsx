@@ -36,7 +36,7 @@ export default function CategoriesTabs({
           <button
             className={clsx(
               { 'border-slate-800': activeTab === category.id },
-              'text-nowrap px-4 py-7 border-b-2 cursor-pointer transition-all delay-50 hover:bg-slate-50 hover:border-slate-900',
+              'text-nowrap px-4 py-7 border-b-2 dark:border-slate-200 cursor-pointer transition-all delay-50 hover:bg-slate-50 hover:border-slate-900 dark:hover:border-slate-900 dark:text-slate-100',
             )}
             key={category.id}
             onClick={(e) => handleChange(e)}
