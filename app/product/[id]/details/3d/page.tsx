@@ -1,18 +1,8 @@
 import Threedee from './Threedee';
-import Link from 'next/link';
-import { TbAugmentedReality } from 'react-icons/tb';
-import Image from 'next/image';
 import QRCode from 'qrcode';
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerFooter,
-  DrawerTrigger,
-} from '@/components/ui/drawer';
-import { Button } from 'antd';
+
 import ArrowBack from '@/components/ui/arrow-back';
-import { isMobile } from 'react-device-detect'
+import ArButton from './ArButton';
 
 export default async function Canvas3D({ params }: { params: { id: string } }) {
   const objectID = params.id;
@@ -23,9 +13,7 @@ export default async function Canvas3D({ params }: { params: { id: string } }) {
       console.error(err);
     }
   };
-  const qrImage = await generateQR(`https:decoar.vercel.app/product/${objectID}/details/3d/AR`);
-
-  console.log(isMobile)
+  const qrImage = await generateQR(`https://decoar.vercel.app/product/${objectID}/details/3d/AR`);
 
   return (
     <>
@@ -34,31 +22,7 @@ export default async function Canvas3D({ params }: { params: { id: string } }) {
           <div className="mt-5">
             <ArrowBack />
           </div>
-          { !isMobile ? //TODO make this use client
-            <Drawer>
-            <DrawerTrigger>
-              <TbAugmentedReality className="text-3xl sm:text-3xl mt-2" />
-            </DrawerTrigger>
-            <DrawerContent>
-              <DrawerFooter>
-                <Image
-                  src={qrImage || ''}
-                  alt="QRCode-for-3d-model"
-                  height={250}
-                  width={250}
-                  className="flex mx-auto"
-                />
-                <DrawerClose>
-                  <Button className="outline">Close</Button>
-                </DrawerClose>
-              </DrawerFooter>
-            </DrawerContent>
-          </Drawer>
-          : 
-            <Link href={`/product/${objectID}/details/3d/AR`}>
-              <TbAugmentedReality className="text-3xl sm:text-3xl mt-5" />
-            </Link>
-          }
+          <ArButton qrImage={qrImage} objectID={objectID} />
         </div>
         <div className="h-dvh w-full sm:w-dvw">
           <Threedee id={objectID} />
