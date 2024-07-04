@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Quattrocento } from 'next/font/google';
 import { formatPrice } from '@/lib/utils';
+import { Suspense } from 'react';
+import { Skeleton } from '@/components/ui/skeleton';
 
 const quattrocento = Quattrocento({ weight: '700', subsets: ['latin'] });
 
@@ -35,6 +37,7 @@ export default function Products3DList({
             key={item.productId}
           >
             <div className="relative w-full h-40 bg-slate-100">
+            <Suspense fallback={<Skeleton className="w-full h-40 rounded-lg" />}>
               <Image
                 className="rounded-lg "
                 src={item.product.contextualImageUrl}
@@ -47,6 +50,7 @@ export default function Products3DList({
                 }}
                 sizes="(max-width: 640px) 100vw, 200px" //TODO: check this
               ></Image>
+              </Suspense>
             </div>
             <p className=" text-slate-800 mt-2">{item.productName}</p>
             <p className=" text-slate-600">{item.product.typeName}</p>

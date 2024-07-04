@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import { Suspense } from 'react';
+import { Skeleton } from '@/components/ui/skeleton';
 
 type IndividualCategoryTileProps = {
   src: string;
@@ -21,6 +23,7 @@ export default function IndividualCategoryTile({
   return (
     <div className="flex flex-col items-center overflow-auto no-scrollbar mt-5">
       <div className="relative ">
+      <Suspense fallback={<Skeleton className="w-[335px] h-[185px] rounded-lg" />}>
         <Image
           src={src}
           alt={alt}
@@ -28,6 +31,7 @@ export default function IndividualCategoryTile({
           height={185}
           className="border border-gray-300 rounded-md rounded-xl;"
         />
+        </Suspense>
       </div>
 
       <div className="w-full pl-2">

@@ -2,6 +2,8 @@ import { routes } from '@/lib/route-list';
 import { Subcategory } from '@prisma/client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Suspense } from 'react';
+import { Skeleton } from '@/components/ui/skeleton';
 
 export default function Subcategories({
   tabSubcategories,
@@ -17,6 +19,7 @@ export default function Subcategories({
           key={subcategory.id}
         >
           <div className=" flex-shrink-0  relative w-[200px] h-[80px]">
+          <Suspense fallback={<Skeleton className="w-[200px] h-[80px] rounded-lg" />}>
             <Image
               className="rounded-lg"
               src={subcategory.imageUrl}
@@ -29,6 +32,7 @@ export default function Subcategories({
               }}
               sizes="(max-width: 640px) 100vw, 200px" //TODO: check this
             ></Image>
+            </Suspense>
           </div>
           <p className="py-3 text-slate-800">{subcategory.name}</p>
         </Link>
