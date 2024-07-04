@@ -1,6 +1,4 @@
 import { fetchProduct, fetchSubcategoryWithProductIds } from '@/lib/data';
-import { IoMdArrowBack } from 'react-icons/io';
-import Link from 'next/link';
 import SortBy from '@/components/ui/category/sortBy';
 import ArrowBack from '@/components/ui/arrow-back';
 

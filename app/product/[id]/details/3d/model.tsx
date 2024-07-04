@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react'
+
 import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
