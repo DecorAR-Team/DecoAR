@@ -5,6 +5,8 @@ import { ClerkProvider } from '@clerk/nextjs';
 import { ThemeProvider } from '@/components/theme-provider';
 import Navbar from '../components/ui/navbar';
 
+import { StoreProvider } from '@/store/StoreProvider';
+
 const fanwoodText = Fanwood_Text({ weight: '400', subsets: ['latin'] });
 // export const quattrocento = Quattrocento({ weight: '700', subsets: ['latin'] });
 
@@ -20,6 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <StoreProvider>
     <ClerkProvider>
       <html suppressHydrationWarning lang="en">
         {/* suppressHydrationWarning: Fix hydration warning caused by some chrome extensions, only affects body, not children */}
@@ -36,6 +39,7 @@ export default function RootLayout({
         </body>
       </html>
     </ClerkProvider>
+    </StoreProvider>
   );
 }
 
