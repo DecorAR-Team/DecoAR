@@ -9,9 +9,11 @@ export default function ARModel({ objectID }: { objectID: string}) {
   return (
     <>
         <ArrowBack className="mt-5"/>
-        <ARButton sessionInit={{
-          requiredFeatures: ['hit-test']
-        }}/>
+        <div >
+          <ARButton className="bottom-20" sessionInit={{
+            requiredFeatures: ['hit-test']
+          }}/>
+        </div>
         <Canvas>
           <XR>
           <ambientLight intensity={0.4}/>
