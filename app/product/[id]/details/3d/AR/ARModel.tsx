@@ -3,10 +3,12 @@
 import { Canvas } from "@react-three/fiber";
 import { ARButton, XR } from '@react-three/xr';
 import Reticle from "./RecticleModel";
+import ArrowBack from "@/components/ui/arrow-back";
 
 export default function ARModel({ objectID }: { objectID: string}) {
   return (
     <>
+        <ArrowBack className="mt-5"/>
         <ARButton sessionInit={{
           requiredFeatures: ['hit-test']
         }}/>
