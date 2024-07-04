@@ -1,3 +1,5 @@
+'use client'
+
 import ArrowBack from "@/components/ui/arrow-back";
 
 export default function Custom404() {
