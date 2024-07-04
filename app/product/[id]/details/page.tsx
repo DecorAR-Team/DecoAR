@@ -88,7 +88,7 @@ export default async function ProductDetails({
             ))}
           </div>
         </div>
-        <p>{product.description}</p>
+        <p className="my-4">{product.description}</p>
 
         <div>
           <h2 className="text-lg">Specifications:</h2>
@@ -102,7 +102,7 @@ export default async function ProductDetails({
         {product.productWith3d && (
           <Link
             href={routes.details3D(product.id_)}
-            className="inline-flex gap-2 items-center justify-center transition-all delay-50 bg-blue-600 hover:bg-blue-800 rounded-lg text-white p-2 text-center w-full"
+            className="inline-flex gap-2 items-center justify-center transition-all delay-50 bg-blue-600 hover:bg-blue-800 rounded-lg text-white p-2 text-center w-full my-2"
           >
             <ArrowPathIcon className="aria-hidden size-5" />
             View in 3D
