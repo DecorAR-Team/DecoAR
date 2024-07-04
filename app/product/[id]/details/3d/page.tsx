@@ -1,7 +1,5 @@
 import Threedee from './Threedee';
-import Navbar from '@/components/ui/navbar';
 import Link from 'next/link';
-import { IoMdArrowBack } from 'react-icons/io';
 import { TbAugmentedReality } from 'react-icons/tb';
 import Image from 'next/image';
 import QRCode from 'qrcode';
@@ -9,10 +7,7 @@ import {
   Drawer,
   DrawerClose,
   DrawerContent,
-  DrawerDescription,
   DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
   DrawerTrigger,
 } from '@/components/ui/drawer';
 import { Button } from 'antd';
@@ -68,7 +63,6 @@ export default async function Canvas3D({ params }: { params: { id: string } }) {
         <div className="h-dvh w-full sm:w-dvw">
           <Threedee id={objectID} />
         </div>
-        {/* <Navbar /> */}
       </div>
     </>
   );

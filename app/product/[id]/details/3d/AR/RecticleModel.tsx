@@ -1,5 +1,5 @@
 import { OrbitControls } from "@react-three/drei";
-import { Interactive, useHitTest, useXR, XRInteractionHandler } from "@react-three/xr";
+import { Interactive, useHitTest, useXR } from "@react-three/xr";
 import { RefObject, useRef, useState } from "react";
 import Model from "../model";
 import { useThree } from "@react-three/fiber";

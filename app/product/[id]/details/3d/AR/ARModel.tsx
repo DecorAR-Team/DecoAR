@@ -1,6 +1,5 @@
 'use client'
 
-import Model from "../model"
 import { Canvas } from "@react-three/fiber";
 import { ARButton, XR } from '@react-three/xr';
 import Reticle from "./RecticleModel";
