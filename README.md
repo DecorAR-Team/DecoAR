@@ -63,16 +63,20 @@ DecoAR is a cutting-edge web application that harnesses augmented reality (AR) t
 
 ### Built With
 
-- [![Next.js][Next.js]][Next-url]
-- [![TypeScript][TypeScript]][TypeScript-url]
-- [![Redux][Redux]][Redux-url]
-- [![Clerk Authentication][ClerkAuth]][ClerkAuth-url]
-- [![Git][Git]][Git-url]
-- [![GitHub][GitHub]][GitHub-url]
-- [![Shadcn][Shadcn]][Shadcn-url]
-- [![ESLint][ESLint]][ESLint-url]
-- [![Prettier][Prettier]][Prettier-url]
-
+ [![Next.js][Next.js]][Next-url]
+ [![TypeScript][TypeScript]][TypeScript-url]
+ [![Redux][Redux]][Redux-url]
+ [![ClerkAuth][ClerkAuth]][ClerkAuth-url]
+ [![Prisma][Prisma]][Prisma-url]
+ [![MongoDB][Mongo-Db]][Mongo-Db-url]
+ [![Threejs][Threejs]][Threejs-url]
+ [![TailwindCSS][TailwindCSS]][TailwindCSS-url]
+ [![Vercel][Vercel]][Vercel-url]
+ [![Git][Git]][Git-url]
+ [![GitHub][GitHub]][GitHub-url]
+ [![Shadcn][Shadcn]][Shadcn-url]
+ [![ESLint][ESLint]][ESLint-url]
+ [![Prettier][Prettier]][Prettier-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -212,12 +216,20 @@ DecoAr Organization: [Github](https://github.com/DecorAR-Team/DecoAR)
 [Git]: https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white
 [GitHub-url]: https://github.com/
 [GitHub]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
-
 [Shadcn-url]: https://ui.shadcn.com/
 [Shadcn]: https://img.shields.io/badge/shadcn%2Fui-000?logo=shadcnui&logoColor=fff&style=for-the-badge
-
 [Redux]: https://img.shields.io/badge/redux-%23593D88?style=for-the-badge&logo=redux&logoColor=white
 [Redux-url]: https://redux-toolkit.js.org/
-
-[ClerkAuth]: https://img.shields.io/badge/-Clerk-6C47FF?style=flat&logo=clerk&logoColor=white
+[ClerkAuth]: https://img.shields.io/badge/Clerk-6C47FF?logo=clerk&logoColor=fff&style=for-the-badge
 [ClerkAuth-url]: https://clerk.com/
+[Mongo-Db]: https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white
+[Mongo-Db-url]: https://www.mongodb.com/docs/atlas/getting-started/
+[Threejs]: https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white
+[Threejs-url]: https://threejs.org/
+[TailwindCSS]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
+[TailwindCSS-url]: https://tailwindcss.com/docs/installation
+
+[Vercel]: https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white
+[Vercel-url]: https://vercel.com/docs
+[Prisma]: https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white
+[Prisma-url]:https://www.prisma.io/docs
