@@ -29,7 +29,7 @@ export async function fetchSubCategories() {
     throw new Error('Failed to fetch categories.');
   }
 }
-// TODO fix the findMany to findUnique
+
 export async function fetchSubcategoryWithProductIds(ikeaId: string) {
   try {
     const subcategorieswithproductIds =

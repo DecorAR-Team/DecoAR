@@ -39,7 +39,7 @@ export default async function SearchList({
                   objectFit: 'cover',
                   objectPosition: 'center',
                 }}
-                sizes="(max-width: 640px) 100vw, 200px" //TODO: check this
+                sizes="(max-width: 640px) 100vw, 200px" 
               ></Image>
             </div>
             <p className=" text-slate-800 mt-2">{item.name}</p>

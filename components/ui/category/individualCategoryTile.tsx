@@ -17,9 +17,7 @@ export default function IndividualCategoryTile({
   name,
   price,
 }: IndividualCategoryTileProps) {
-  // console.log(src, alt, name, price);
 
-  //TODO fix image container up
   return (
     <div className="flex flex-col items-center overflow-auto no-scrollbar mt-5">
       <div className="relative ">
