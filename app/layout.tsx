@@ -39,4 +39,4 @@ export default function RootLayout({
   );
 }
 
-//TODO create dark mode https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually
+

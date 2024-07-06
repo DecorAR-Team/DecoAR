@@ -10,7 +10,7 @@ export default function ImageGalleryComponent({
   }[];
 }) {
   return (
-    //TODO add alt to images
+
     <section className=" flex-grow mx-auto max-w-[1200px] border-b pb-5">
       <div className=" mx-auto">
         <ReactImageGallery
