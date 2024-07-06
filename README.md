@@ -182,7 +182,7 @@ Distributed under the MIT License. See `license.txt` for more information.
 
 ## Contact
 
-DecoAr Organization: [Github](https://github.com/DecorAR-Team/DecoAR) - [LinkedIn](https://www.linkedin.com/company/decoar/) - decoarteam@gmail.com
+DecoAr Organization: [Github](https://github.com/DecorAR-Team/DecoAR) - [LinkedIn](https://www.linkedin.com/company/decoar-team) - decoarteam@gmail.com
 
 Tetiana Bortnyk - [Github](https://github.com/tatyanabortnik) - [LinkedIn](https://www.linkedin.com/in/tetianabortnyk/) - tatyanabortnik@gmail.com
 
