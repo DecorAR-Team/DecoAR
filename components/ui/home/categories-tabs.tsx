@@ -21,7 +21,7 @@ export default function CategoriesTabs({
 
   function handleChange(event: React.MouseEvent<HTMLButtonElement>) {
     const target = event.target as HTMLButtonElement;
-    setActiveTab(target.dataset.id!); //TODO fix this !
+    setActiveTab(target.dataset.id!); 
     setTabSubcategories(
       subcategories.filter(
         (subcategory) => subcategory.category_id === target.dataset.id!,

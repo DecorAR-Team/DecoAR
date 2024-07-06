@@ -45,7 +45,7 @@ export default async function ProductList({
                   objectFit: 'cover',
                   objectPosition: 'center',
                 }}
-                sizes="(max-width: 640px) 100vw, 200px" //TODO: check this
+                sizes="(max-width: 640px) 100vw, 200px" 
               ></Image>
             </div>
             <div className="flex justify-between">

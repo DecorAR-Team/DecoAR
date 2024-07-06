@@ -24,7 +24,6 @@ export default async function ProductDetails({
   const user = await getUserInfo();
   const email = user?.email;
 
-  //TODO - check later
   if (!params.id) return 
   const product = (await fetchProduct(params.id)) as ProductFull;
   if (!product.id) return 
