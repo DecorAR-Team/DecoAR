@@ -47,7 +47,7 @@
 
 ## About The Project
 
-DecoAR is a cutting-edge web application that harnesses augmented reality (AR) technology to help users visualize furniture and decor in their own living spaces before making a purchase. Browse through a comprehensive catalog of products, view high-quality 3D models, and place them in your environment using your device's camera.
+DecoAR is a web application that harnesses augmented reality (AR) technology to help users visualize furniture and decor in their own living spaces before making a purchase. Browse through a comprehensive catalog of products, view high-quality 3D models, and place them in your environment using your device's camera.
 
 <div align='center'>
 <img src="public/signinpage.png" alt="signin page" height="400">
@@ -77,6 +77,7 @@ DecoAR is a cutting-edge web application that harnesses augmented reality (AR) t
  [![Shadcn][Shadcn]][Shadcn-url]
  [![ESLint][ESLint]][ESLint-url]
  [![Prettier][Prettier]][Prettier-url]
+ 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -181,18 +182,16 @@ Distributed under the MIT License. See `license.txt` for more information.
 
 ## Contact
 
+DecoAr Organization: [Github](https://github.com/DecorAR-Team/DecoAR) - [LinkedIn](https://www.linkedin.com/company/decoar/) - decoarteam@gmail.com
+
 Tetiana Bortnyk - [Github](https://github.com/tatyanabortnik) - [LinkedIn](https://www.linkedin.com/in/tetianabortnyk/) - tatyanabortnik@gmail.com
-<!-- TODO fill SIndhus linkedin -->
-Sindhu Yogu - [Github](https://github.com/Sind96) - [LinkedIn]() - sindy96jan@gmail.com
+
+Sindhu Yogu - [Github](https://github.com/Sind96) - [LinkedIn](www.linkedin.com/in/sindhu-yogu-657057318) - sindy96jan@gmail.com
+
+Sulo Siguur- [Github](https://github.com/Runicsaber) - [LinkedIn](https://www.linkedin.com/in/sulo-siigur-34a932225/) - sulo.siigur@gmail.com
 
 Charbel Rouhana - [Github](https://github.com/Charbel-r) - [LinkedIn](https://www.linkedin.com/in/charbel-rouhana-0b6311135/) - charbelmrouhana@gmail.com
 
-<!--TODO fill Sulos linkedin -->
-Sulo Siguur- [Github](https://github.com/Runicsaber) - [LinkedIn]() - sulo.siigur@gmail.com
-
-
-
-DecoAr Organization: [Github](https://github.com/DecorAR-Team/DecoAR)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -233,3 +232,4 @@ DecoAr Organization: [Github](https://github.com/DecorAR-Team/DecoAR)
 [Vercel-url]: https://vercel.com/docs
 [Prisma]: https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white
 [Prisma-url]:https://www.prisma.io/docs
+
