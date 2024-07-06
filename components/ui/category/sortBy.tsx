@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { routes } from '@/lib/route-list';
 import { Product } from '@prisma/client';
 
-export default function SortBy({ products }: { products: Product[] }) {
+export default function SortBy({ products }: { products: any }) {
   const [sortOrder, setSortOrder] = useState('featured');
   const [sortedProducts, setSortedProducts] = useState(products);
 
@@ -48,7 +48,7 @@ export default function SortBy({ products }: { products: Product[] }) {
       <ul className="pb-12 px-4 sm:px-10">
         {sortedProducts?.map(
           (
-            product: Product
+            product: any,
           ) => (
             <li key={product?.id} className="mb-4">
               <Link href={routes.details(product.id_)}>
