@@ -16,7 +16,7 @@ import {
 export default function ArButton({qrImage, objectID}: {qrImage: string | undefined, objectID: string}) {
   return (
     <>
-    { !isMobile ? //TODO make this use client
+    { !isMobile ? 
         <Drawer>
         <DrawerTrigger>
           <TbAugmentedReality className="text-3xl sm:text-3xl mt-2" />

@@ -30,7 +30,7 @@ export default function Subcategories({
                 objectFit: 'cover',
                 objectPosition: 'center',
               }}
-              sizes="(max-width: 640px) 100vw, 200px" //TODO: check this
+              sizes="(max-width: 640px) 100vw, 200px" 
             ></Image>
             </Suspense>
           </div>
