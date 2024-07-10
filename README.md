@@ -95,11 +95,6 @@ Follow these easy steps to get a local copy up and running.
   - [Clerk Authentication](https://dashboard.clerk.com/):
     Create an project and get Clerk_Publishable_key and Clerk_Security_Key
 
-- Create a Database:
-
-  - [MongoDB Database](https://cloud.mongodb.com/v2/667ad5e61adbb32502264a5b#/overview):
-    Set up your database account.
-
 ### Installation
 
 1. Clone the repo
@@ -114,8 +109,8 @@ Follow these easy steps to get a local copy up and running.
    MONGODB_URI=[ENTER_MONGODB_CONNECTION_STRING]
    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=[ENTER_CLERK_PUBLISHABLE_KEY]
    CLERK_SECRET_KEY=[ENTER_CLERK_SECRET_KEY]
-   NEXT_PUBLIC_CLERK_SIGN_IN_URL=[ENTER_CLERK_SIGN_IN_URL]
-   NEXT_PUBLIC_CLERK_SIGN_UP_URL=[ENTER_CLERK_SIGN_UP_URL]
+   NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+   NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
    ```
 
 3. Install NPM packages
@@ -126,7 +121,7 @@ Follow these easy steps to get a local copy up and running.
 
 4. Database Setup
 
-- Before running the project locally, you need to create a MongoDB database named decoar.
+- Before running the project locally, you need to create a MongoDB database named "decoar".
 
 - Inside the decoar database, create the following collections:
 
