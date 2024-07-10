@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/DecorAR-Team/DecoAR">
-    <img src="public/Logo.png" alt="Logo" height="320" >
+    <img src="public/Logo.png" alt="Logo" height="100" >
   </a>
 
 <h3 align="center">DecoAR</h3>
@@ -50,34 +50,29 @@
 DecoAR is a web application that harnesses augmented reality (AR) technology to help users visualize furniture and decor in their own living spaces before making a purchase. Browse through a comprehensive catalog of products, view high-quality 3D models, and place them in your environment using your device's camera.
 
 <div align='center'>
-<img src="public/signinpage.png" alt="signin page" height="400">
-<img src="public/home-dark-mode.png" alt="Home page" height="400">
-<img src="public/Product.png" alt="Logo"  height="400"><br><br>
-<img src="public/Browse.app.png" alt="Logo"  height="400">
-<img src="public/favorites.app.png" alt="Logo"  height="400"><br>
-<img src="public/3d-A.app.png" alt="Logo"  height="400">
-<img src="public/3d-B.png" alt="Logo"  height="400"><br>
+<img src="public/Image1.png" alt="image1" height="400"> <br>
+<img src="public/Image2.png" alt="image2" height="400"> <br>
+<img src="public/Image3.png" alt="image3"  height="400"><br>
 </div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
- [![Next.js][Next.js]][Next-url]
- [![TypeScript][TypeScript]][TypeScript-url]
- [![Redux][Redux]][Redux-url]
- [![ClerkAuth][ClerkAuth]][ClerkAuth-url]
- [![Prisma][Prisma]][Prisma-url]
- [![MongoDB][Mongo-Db]][Mongo-Db-url]
- [![Threejs][Threejs]][Threejs-url]
- [![TailwindCSS][TailwindCSS]][TailwindCSS-url]
- [![Vercel][Vercel]][Vercel-url]
- [![Git][Git]][Git-url]
- [![GitHub][GitHub]][GitHub-url]
- [![Shadcn][Shadcn]][Shadcn-url]
- [![ESLint][ESLint]][ESLint-url]
- [![Prettier][Prettier]][Prettier-url]
- 
+[![Next.js][Next.js]][Next-url]
+[![TypeScript][TypeScript]][TypeScript-url]
+[![Redux][Redux]][Redux-url]
+[![ClerkAuth][ClerkAuth]][ClerkAuth-url]
+[![Prisma][Prisma]][Prisma-url]
+[![MongoDB][Mongo-Db]][Mongo-Db-url]
+[![Threejs][Threejs]][Threejs-url]
+[![TailwindCSS][TailwindCSS]][TailwindCSS-url]
+[![Vercel][Vercel]][Vercel-url]
+[![Git][Git]][Git-url]
+[![GitHub][GitHub]][GitHub-url]
+[![Shadcn][Shadcn]][Shadcn-url]
+[![ESLint][ESLint]][ESLint-url]
+[![Prettier][Prettier]][Prettier-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -95,14 +90,10 @@ Follow these easy steps to get a local copy up and running.
   npm install npm@latest -g
   ```
 
-- Obtain API key for 
+- Obtain API key for
 
-    - [Clerk Authentication](https://dashboard.clerk.com/):
-     Create an project and get Clerk_Publishable_key and Clerk_Security_Key
-
-    - [MongoDb Database](https://cloud.mongodb.com/v2/667ad5e61adbb32502264a5b#/overview):
-    Create a Database 
-
+  - [Clerk Authentication](https://dashboard.clerk.com/):
+    Create an project and get Clerk_Publishable_key and Clerk_Security_Key
 
 ### Installation
 
@@ -112,46 +103,50 @@ Follow these easy steps to get a local copy up and running.
    git clone git@github.com:DecorAR-Team/DecoAR.git
    ```
 
-2. Create your own .env file and insert Clerk Api Keys, and database connection URI:
+2. Create your own .env file and copy the description below replacing the placeholder information with the Clerk Api Keys and database connection URI:
 
    ```sh
-   cp .env.local.template .env.local
+   MONGODB_URI=[ENTER_MONGODB_CONNECTION_STRING]
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=[ENTER_CLERK_PUBLISHABLE_KEY]
+   CLERK_SECRET_KEY=[ENTER_CLERK_SECRET_KEY]
+   NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+   NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
    ```
-  
+
 3. Install NPM packages
+
    ```sh
    npm install
    ```
 
 4. Database Setup
 
-  - Before running the project locally, you need to create a MongoDB database named decoar.
+- Before running the project locally, you need to create a MongoDB database named "decoar".
 
-  - Inside the decoar database, create the following collections:
+- Inside the decoar database, create the following collections:
 
-    ```sh
-    Category
-    Product
-    ProductWith3d
-    Subcategory
-    SubcategoryWithProductIds
-    ```
+  ```sh
+  Category
+  Product
+  ProductWith3d
+  Subcategory
+  SubcategoryWithProductIds
+  ```
 
-  - Insert JSON data into the collections:
-    ```
-    Navigate to each collection (e.g., Category) in MongoDB Compass.
-    Click on Add Data and then Import File.
-    Select the appropriate JSON file from lib/json directory on your local machine and click Open.
-    Repeat this process for each collection, importing the corresponding JSON files.
-    ```
+- Insert JSON data into the collections:
+  ```
+  Navigate to each collection (e.g., Category) in MongoDB Compass.
+  Click on Add Data and then Import File.
+  Select the appropriate JSON file from lib/json directory on your local machine and click Open.
+  Repeat this process for each collection, importing the corresponding JSON files.
+  ```
 
-5. Start the app 
-    ```sh
-    npm run dev
-    ```
+5. Start the app
+   ```sh
+   npm run dev
+   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- CONTRIBUTING -->
 
@@ -192,25 +187,19 @@ Sulo Siguur- [Github](https://github.com/Runicsaber) - [LinkedIn](https://www.li
 
 Charbel Rouhana - [Github](https://github.com/Charbel-r) - [LinkedIn](https://www.linkedin.com/in/charbel-rouhana-0b6311135/) - charbelmrouhana@gmail.com
 
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-
 [ESLint]: https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white
 [ESLint-url]: https://eslint.org/
-
 [Prettier]: https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E
 [Prettier-url]: https://prettier.io/
-
 [TypeScript-url]: https://www.typescriptlang.org/
 [TypeScript]: https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=for-the-badge
-
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
-
 [Git-url]: https://git-scm.com/
 [Git]: https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white
 [GitHub-url]: https://github.com/
@@ -227,9 +216,7 @@ Charbel Rouhana - [Github](https://github.com/Charbel-r) - [LinkedIn](https://ww
 [Threejs-url]: https://threejs.org/
 [TailwindCSS]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
 [TailwindCSS-url]: https://tailwindcss.com/docs/installation
-
 [Vercel]: https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white
 [Vercel-url]: https://vercel.com/docs
 [Prisma]: https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white
-[Prisma-url]:https://www.prisma.io/docs
-
+[Prisma-url]: https://www.prisma.io/docs
