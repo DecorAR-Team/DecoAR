@@ -21,7 +21,7 @@ export default function CategoriesTabs({
 
   function handleChange(event: React.MouseEvent<HTMLButtonElement>) {
     const target = event.target as HTMLButtonElement;
-    setActiveTab(target.dataset.id!); 
+    setActiveTab(target.dataset.id!);
     setTabSubcategories(
       subcategories.filter(
         (subcategory) => subcategory.category_id === target.dataset.id!,
@@ -31,7 +31,10 @@ export default function CategoriesTabs({
 
   return (
     <>
-      <div className="flex overflow-auto gap-4	text-slate-400 no-scrollbar">
+      <div
+        className="flex overflow-auto gap-4	text-slate-400 no-scrollbar"
+        data-testid="category-tabs"
+      >
         {categories.map((category) => (
           <button
             className={clsx(

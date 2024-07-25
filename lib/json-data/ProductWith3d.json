@@ -1,80 +1,82 @@
-[{
-  "_id": {
-    "$oid": "667ad8c6547fb73491fc9143"
+[
+  {
+    "_id": {
+      "$oid": "667ad8c6547fb73491fc9143"
+    },
+    "productId": "10219178",
+    "productName": "ADDE",
+    "url": "https://web-api.ikea.com/dimma/assets/1.2/10219178/PS01_S01_NV01/isp3/glb_draco/10219178_PS01_S01_NV01_ISP3_2.0_3396b27fbd7d4c95b6459e4afa0b9917.glb?cn=pip"
   },
-  "productId": "10219178",
-  "productName": "ADDE",
-  "url": "https://web-api.ikea.com/dimma/assets/1.2/10219178/PS01_S01_NV01/isp3/glb_draco/10219178_PS01_S01_NV01_ISP3_2.0_3396b27fbd7d4c95b6459e4afa0b9917.glb?cn=pip"
-},
-{
-  "_id": {
-    "$oid": "667ad8c6547fb73491fc9140"
+  {
+    "_id": {
+      "$oid": "667ad8c6547fb73491fc9140"
+    },
+    "productId": "s69216757",
+    "productName": "FRIHETEN",
+    "url": "https://web-api.ikea.com/dimma/assets/geomagical/39216754/PS01_S01_NV01/simple/glb_draco/G-39216754-f25e21c62bb42236a3c337e5b312c6e2e0af6675_32b57f91c53445e0b9e6460ba2f5593d.glb"
   },
-  "productId": "s69216757",
-  "productName": "FRIHETEN",
-  "url": "https://web-api.ikea.com/dimma/assets/geomagical/39216754/PS01_S01_NV01/simple/glb_draco/G-39216754-f25e21c62bb42236a3c337e5b312c6e2e0af6675_32b57f91c53445e0b9e6460ba2f5593d.glb"
-},
-{
-  "_id": {
-    "$oid": "667ad8c6547fb73491fc9146"
+  {
+    "_id": {
+      "$oid": "667ad8c6547fb73491fc9146"
+    },
+    "productId": "s99431982",
+    "productName": "LAGKAPTEN",
+    "url": "https://web-api.ikea.com/dimma/assets/1.2/99431982/PS01_S01_NV01/isp1/glb_draco/99431982_PS01_S01_NV01_ISP1_2.0_0fb41bcccb494937b4c9ce0e6e64d875.glb?cn=pip"
   },
-  "productId": "s99431982",
-  "productName": "LAGKAPTEN",
-  "url": "https://web-api.ikea.com/dimma/assets/1.2/99431982/PS01_S01_NV01/isp1/glb_draco/99431982_PS01_S01_NV01_ISP1_2.0_0fb41bcccb494937b4c9ce0e6e64d875.glb?cn=pip"
-},
-{
-  "_id": {
-    "$oid": "667ad8c6547fb73491fc9142"
+  {
+    "_id": {
+      "$oid": "667ad8c6547fb73491fc9142"
+    },
+    "productId": "70078463",
+    "productName": "PELLO",
+    "url": "https://web-api.ikea.com/dimma/assets/geomagical/50078464/PS01_S01_NV01/simple/glb_draco/G-50078464-64f22ff99df8ee9b49ab96011a4f831a3d093fd1_232940f2effe49d39c637af82ee6fc7e.glb?cn=pip"
   },
-  "productId": "70078463",
-  "productName": "PELLO",
-  "url": "https://web-api.ikea.com/dimma/assets/geomagical/50078464/PS01_S01_NV01/simple/glb_draco/G-50078464-64f22ff99df8ee9b49ab96011a4f831a3d093fd1_232940f2effe49d39c637af82ee6fc7e.glb?cn=pip"
-},
-{
-  "_id": {
-    "$oid": "667ad8c6547fb73491fc9147"
+  {
+    "_id": {
+      "$oid": "667ad8c6547fb73491fc9147"
+    },
+    "productId": "s59417153",
+    "productName": "LAGKAPTEN",
+    "url": "https://web-api.ikea.com/dimma/assets/1.2/59417153/PS01_S01_NV01/isp3/glb_draco/59417153_PS01_S01_NV01_ISP3_2.0_e2f9cf54f68940468580f2273a3d1e01.glb?cn=pip"
   },
-  "productId": "s59417153",
-  "productName": "LAGKAPTEN",
-  "url": "https://web-api.ikea.com/dimma/assets/1.2/59417153/PS01_S01_NV01/isp3/glb_draco/59417153_PS01_S01_NV01_ISP3_2.0_e2f9cf54f68940468580f2273a3d1e01.glb?cn=pip"
-},
-{
-  "_id": {
-    "$oid": "667ad8c6547fb73491fc9145"
+  {
+    "_id": {
+      "$oid": "667ad8c6547fb73491fc9145"
+    },
+    "productId": "s89209826",
+    "productName": "BESTÅ",
+    "url": "https://web-api.ikea.com/dimma/assets/1.2/89209826/PS01_S01_NV01/isp3/glb_draco/89209826_PS01_S01_NV01_ISP3_2.0_7197bac1babb48ed85f4b1ef608adf4d.glb?cn=pip"
   },
-  "productId": "s89209826",
-  "productName": "BESTÅ",
-  "url": "https://web-api.ikea.com/dimma/assets/1.2/89209826/PS01_S01_NV01/isp3/glb_draco/89209826_PS01_S01_NV01_ISP3_2.0_7197bac1babb48ed85f4b1ef608adf4d.glb?cn=pip"
-},
-{
-  "_id": {
-    "$oid": "667ad8c6547fb73491fc9144"
+  {
+    "_id": {
+      "$oid": "667ad8c6547fb73491fc9144"
+    },
+    "productId": "90568903",
+    "productName": "ÖSTANÖ",
+    "url": "https://web-api.ikea.com/dimma/assets/geomagical/50568900/PS01_S01_NV01/simple/glb_draco/G-50568900-053a31aeb64b232da6b2ab370f0384b286101c2b_853c7afc44714e168cfb592c7336aed7.glb?cn=pip"
   },
-  "productId": "90568903",
-  "productName": "ÖSTANÖ",
-  "url": "https://web-api.ikea.com/dimma/assets/geomagical/50568900/PS01_S01_NV01/simple/glb_draco/G-50568900-053a31aeb64b232da6b2ab370f0384b286101c2b_853c7afc44714e168cfb592c7336aed7.glb?cn=pip"
-},
-{
-  "_id": {
-    "$oid": "667ad8c6547fb73491fc9141"
+  {
+    "_id": {
+      "$oid": "667ad8c6547fb73491fc9141"
+    },
+    "productId": "s19384116",
+    "productName": "UPPLAND",
+    "url": "https://web-api.ikea.com/dimma/assets/1.2/19384116/PS01_S01_NV01/isp3/glb_draco/19384116_PS01_S01_NV01_ISP3_2.0_d0e9b84105cb437f912058794571b78c.glb?cn=pip"
   },
-  "productId": "s19384116",
-  "productName": "EKTORP",
-  "url": "https://web-api.ikea.com/dimma/assets/1.2/19384116/PS01_S01_NV01/isp3/glb_draco/19384116_PS01_S01_NV01_ISP3_2.0_d0e9b84105cb437f912058794571b78c.glb?cn=pip"
-},
-{
-  "_id": {
-    "$oid": "667ad8c6547fb73491fc9148"
+  {
+    "_id": {
+      "$oid": "667ad8c6547fb73491fc9148"
+    },
+    "productId": "10489820",
+    "productName": "KABOMBA",
+    "url": "https://web-api.ikea.com/dimma/assets/1.2/10489820/PS01_S01_NV01/iqp3/glb_draco/10489820_PS01_S01_NV01_IQP3_2.0_70dc47e637fa4a55800d154bdbc23b2b.glb?cn=pip"
   },
-  "productId": "10489820",
-  "productName": "KABOMBA",
-  "url": "https://web-api.ikea.com/dimma/assets/1.2/10489820/PS01_S01_NV01/iqp3/glb_draco/10489820_PS01_S01_NV01_IQP3_2.0_70dc47e637fa4a55800d154bdbc23b2b.glb?cn=pip"
-},
-{
-  "_id": {
-    "$oid": "667ad8c6547fb73491fc9149"
-  },
-  "productId": "10442045",
-  "productName": "STILREN",
-  "url": "https://web-api.ikea.com/dimma/assets/1.2/10442045/PS01_S01_NV01/iqp3/glb_draco/10442045_PS01_S01_NV01_iqp3_v1.4.6_2230a6d2624e4f4196add4e621a53eb0.glb?cn=pip"
-}]
+  {
+    "_id": {
+      "$oid": "667ad8c6547fb73491fc9149"
+    },
+    "productId": "10442045",
+    "productName": "STILREN",
+    "url": "https://web-api.ikea.com/dimma/assets/1.2/10442045/PS01_S01_NV01/iqp3/glb_draco/10442045_PS01_S01_NV01_iqp3_v1.4.6_2230a6d2624e4f4196add4e621a53eb0.glb?cn=pip"
+  }
+]
