@@ -24,9 +24,9 @@ export default async function ProductDetails({
   const user = await getUserInfo();
   const email = user?.email;
 
-  if (!params.id) return 
+  if (!params.id) return;
   const product = (await fetchProduct(params.id)) as ProductFull;
-  if (!product.id) return 
+  if (!product.id) return;
   const isFavorite = email ? await checkFavorite(product.id, email) : false;
   // console.log('Product: ', isFavorite, product);
 
@@ -80,7 +80,7 @@ export default async function ProductDetails({
             {product.categoryPath.map((subcategory) => (
               <button
                 key={subcategory.key}
-                className="p-[3px] border rounded-lg border-slate-400 p text-slate-400 text-sm hover:scale-105 transition-all delay-50 hover:bg-slate-50 hover:border-slate-800"
+                className="p-[3px] border rounded-lg border-slate-400 p text-slate-400 text-sm hover:scale-105 transition-all delay-50"
               >
                 {subcategory.name}
               </button>

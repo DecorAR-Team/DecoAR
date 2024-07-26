@@ -28,7 +28,9 @@ export default async function Favorite() {
   return (
     <div>
       <ArrowBack />
-      <h2 className={`${quattrocento.className} text-slate-700 text-xl`}>
+      <h2
+        className={`${quattrocento.className} text-slate-700 text-xl dark:text-slate-300`}
+      >
         Your favorite items
       </h2>
       <ProductList products={favProducts} />

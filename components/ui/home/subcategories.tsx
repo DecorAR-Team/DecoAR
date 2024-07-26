@@ -15,26 +15,30 @@ export default function Subcategories({
       {tabSubcategories.map((subcategory) => (
         <Link
           href={routes.subCategoryProducts(subcategory.subcategory_ikea_id)}
-          className="hover:bg-slate-50 "
+          className="hover:bg-slate-50 dark:hover:bg-slate-50/10 transition-all delay-50 rounded-lg "
           key={subcategory.id}
         >
           <div className=" flex-shrink-0  relative w-[200px] h-[80px]">
-          <Suspense fallback={<Skeleton className="w-[200px] h-[80px] rounded-lg" />}>
-            <Image
-              className="rounded-lg"
-              src={subcategory.imageUrl}
-              alt={subcategory.name}
-              fill
-              priority
-              style={{
-                objectFit: 'cover',
-                objectPosition: 'center',
-              }}
-              sizes="(max-width: 640px) 100vw, 200px" 
-            ></Image>
+            <Suspense
+              fallback={<Skeleton className="w-[200px] h-[80px] rounded-lg" />}
+            >
+              <Image
+                className="rounded-lg"
+                src={subcategory.imageUrl}
+                alt={subcategory.name}
+                fill
+                priority
+                style={{
+                  objectFit: 'cover',
+                  objectPosition: 'center',
+                }}
+                sizes="(max-width: 640px) 100vw, 200px"
+              ></Image>
             </Suspense>
           </div>
-          <p className="py-3 text-slate-800 dark:text-slate-100">{subcategory.name}</p>
+          <p className="py-3 text-slate-800 dark:text-slate-100">
+            {subcategory.name}
+          </p>
         </Link>
       ))}
     </div>

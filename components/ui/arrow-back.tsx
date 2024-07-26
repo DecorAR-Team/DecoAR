@@ -13,7 +13,7 @@ export default function ArrowBack(font: any) {
   return (
     <button
       onClick={handleBack}
-      className={`${font.className} flex items-center align-middle space-x-2 pb-4 text-slate-800`}
+      className={`${font.className} flex items-center align-middle space-x-2 pb-4 text-slate-800 dark:text-slate-300`}
     >
       <IoMdArrowBack className="w-6 h-6" />
       <span>Back</span>
