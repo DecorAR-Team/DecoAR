@@ -21,7 +21,7 @@ export default function CategoriesTabs({
 
   function handleChange(event: React.MouseEvent<HTMLButtonElement>) {
     const target = event.target as HTMLButtonElement;
-    setActiveTab(target.dataset.id!); 
+    setActiveTab(target.dataset.id!);
     setTabSubcategories(
       subcategories.filter(
         (subcategory) => subcategory.category_id === target.dataset.id!,
@@ -36,7 +36,7 @@ export default function CategoriesTabs({
           <button
             className={clsx(
               { 'border-slate-800': activeTab === category.id },
-              'text-nowrap px-4 py-7 border-b-2 dark:border-slate-200 cursor-pointer transition-all delay-50 hover:bg-slate-50 hover:border-slate-900 dark:hover:border-slate-900 dark:text-slate-100',
+              'text-nowrap px-4 py-7 border-b-2 cursor-pointer transition-all hover:bg-slate-50 hover:border-slate-900 dark:text-slate-100 dark:hover:bg-slate-50/10 dark:border-slate-200 delay-50',
             )}
             key={category.id}
             onClick={(e) => handleChange(e)}

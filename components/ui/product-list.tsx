@@ -30,11 +30,11 @@ export default async function ProductList({
       {favProducts.map((item) => {
         return (
           <Link
-            className="hover:bg-slate-50"
+            className="hover:bg-slate-50 dark:hover:bg-slate-50/10 transition-all delay-50 rounded-lg"
             href={routes.details(item.id_)}
             key={item.id_}
           >
-            <div className="relative w-full h-40 bg-slate-100">
+            <div className="relative w-full h-40 bg-slate-100/0">
               <Image
                 className="rounded-lg "
                 src={item.contextualImageUrl}
@@ -45,13 +45,17 @@ export default async function ProductList({
                   objectFit: 'cover',
                   objectPosition: 'center',
                 }}
-                sizes="(max-width: 640px) 100vw, 200px" 
+                sizes="(max-width: 640px) 100vw, 200px"
               ></Image>
             </div>
             <div className="flex justify-between">
               <div>
-                <p className=" text-slate-800 mt-2">{item.name}</p>
-                <p className=" text-slate-600">{item.typeName}</p>
+                <p className=" text-slate-800 mt-2 dark:text-slate-100">
+                  {item.name}
+                </p>
+                <p className=" text-slate-600 dark:text-slate-300">
+                  {item.typeName}
+                </p>
                 <span className=" text-slate-400">
                   {formatPrice(item.price.currentPrice, item.price.currency)}
                 </span>
