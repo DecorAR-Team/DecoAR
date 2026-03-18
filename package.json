@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "if [ \"$NODE_ENV\" != \"development\" ]; then prisma generate --no-engine; else prisma generate; fi"
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@clerk/nextjs": "^5.1.6",
@@ -24,6 +24,7 @@
     "antd": "^5.18.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "dotenv": "^17.3.1",
     "lucide-react": "^0.400.0",
     "next": "14.2.4",
     "next-themes": "^0.3.0",
